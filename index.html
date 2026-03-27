@@ -135,7 +135,7 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 
 /* Arrow + View label */
 .wi-access{display:flex;flex-direction:column;align-items:center;gap:6px}
-.warr{width:48px;height:48px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;transition:transform .3s cubic-bezier(.16,1,.3,1),color .3s,width .35s,height .35s;flex-shrink:0;color:var(--ink)}
+.warr{width:48px;height:48px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .15s,width .35s,height .35s;flex-shrink:0;color:var(--white)}
 .wi-access-label{font-family:var(--mono);font-size:.58rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);max-height:0;overflow:hidden;opacity:0;transition:max-height .4s,opacity .3s .1s}
 
 /* SERVICES */
@@ -326,7 +326,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi:hover .wname{font-size:clamp(1.6rem,2.5vw,2.4rem);white-space:normal}
 .wi:hover .wtag{color:var(--mid)}
 .wi:hover .wmeta{color:var(--mid)}
-.wi:hover .warr{width:56px;height:56px;border-color:var(--accent);color:var(--accent);transform:rotate(-45deg)}
+.wi:hover .warr{width:56px;height:56px;background:var(--accent);color:var(--white);transform:none}
 .wi:hover .wi-desc{max-height:120px;opacity:1;margin-top:10px}
 .wi:hover .wi-access-label{max-height:24px;opacity:1}</style>
 </head>
@@ -399,7 +399,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
         <div class="wi-right">
           <div class="wmeta">2022 – 2024</div>
           <div class="wi-access">
-            <div class="warr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <span class="wi-access-label">View</span>
           </div>
         </div>
@@ -418,7 +418,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
         <div class="wi-right">
           <div class="wmeta">2024 – 2025</div>
           <div class="wi-access">
-            <div class="warr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <span class="wi-access-label">View</span>
           </div>
         </div>
@@ -474,15 +474,15 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     <div class="ct-cards rv">
       <a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false" class="ct-card">
         <span class="ct-card-label">Work</span>
-        <span class="ct-card-arrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
       <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="ct-card">
         <span class="ct-card-label">LinkedIn</span>
-        <span class="ct-card-arrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
       <a href="mailto:caique.castro89@gmail.com" class="ct-card ct-card-accent">
         <span class="ct-card-label">Contact</span>
-        <span class="ct-card-arrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
     </div>
   </section>
