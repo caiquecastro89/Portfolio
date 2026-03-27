@@ -74,9 +74,9 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 
 /* MARQUEE */
 .mq-wrap{background:var(--ink);padding:15px 0;overflow:hidden;white-space:nowrap}
-.mq-track{display:inline-flex;animation:mq 22s linear infinite}
-.mq-item{font-family:var(--display);font-size:.88rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--bg);padding:0 36px;display:flex;align-items:center;gap:36px}
-.mq-item::after{content:'✦';color:var(--accent);font-size:.65rem}
+.mq-track{display:inline-flex;gap:48px;animation:mq 22s linear infinite}
+.mq-item{font-family:var(--display);font-size:.88rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--bg);padding:0;display:inline-flex;align-items:center;white-space:nowrap}
+.mq-item::after{content:'✦';color:var(--accent);font-size:.65rem;margin-left:48px}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* WORK */
