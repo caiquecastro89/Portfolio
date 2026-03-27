@@ -169,7 +169,7 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 .ct-card-accent:hover{background:#d93e22!important}
 .ct-card-label{font-family:var(--display);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;letter-spacing:-.02em}
 .ct-card-arrow{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(250,250,248,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s,transform .2s}
-.ct-card:hover .ct-card-arrow{border-color:rgba(250,250,248,.6);transform:rotate(-45deg)}
+.ct-card:hover .ct-card-arrow{border-color:rgba(250,250,248,.6)}
 .ct-card-accent .ct-card-arrow{border-color:rgba(255,255,255,.4)}
 footer{background:var(--ink);border-top:1px solid rgba(250,250,248,.05);padding:18px 48px;display:flex;align-items:center;justify-content:space-between}
 footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,250,248,.18)}
@@ -221,8 +221,8 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .cnxt:hover{background:#1a1917}
 .cnxt-lbl{font-family:var(--mono);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,250,248,.3);margin-bottom:10px}
 .cnxt-t{font-family:var(--display);font-size:clamp(1.4rem,2.8vw,2.4rem);font-weight:800;letter-spacing:-.02em;color:var(--white)}
-.cnxt-arr{width:54px;height:54px;border-radius:50%;border:1.5px solid rgba(250,250,248,.2);display:flex;align-items:center;justify-content:center;color:var(--white);transition:border-color .2s,color .2s;flex-shrink:0}
-.cnxt:hover .cnxt-arr{border-color:var(--green);color:var(--green)}
+.cnxt-arr{width:54px;height:54px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--ink);transition:background .2s,color .2s;flex-shrink:0}
+.cnxt:hover .cnxt-arr{border-color:var(--white);color:var(--white);background:var(--accent)}
 
 .rv{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
 .rv.on{opacity:1;transform:translateY(0)}
@@ -249,7 +249,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi:hover{background:none!important;min-height:auto!important;color:var(--ink)!important}
   .wi-desc{display:none!important}
   .wi-access-label{display:none!important}
-  .warr{color:var(--ink)!important;border-color:var(--ink)!important}
+  .warr{background:var(--accent)!important;color:var(--white)!important}
   .wmeta{color:var(--mid)!important}
   .wtag{color:var(--mid)!important}
   .wname{font-size:clamp(1.3rem,5vw,1.8rem)!important}
@@ -328,7 +328,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi:hover .wmeta{color:var(--mid)}
 .wi:hover .warr{width:56px;height:56px;background:var(--accent);color:var(--white);transform:none}
 .wi:hover .wi-desc{max-height:120px;opacity:1;margin-top:10px}
-.wi:hover .wi-access-label{max-height:24px;opacity:1}</style>
+.wi:hover .wi-access-label{max-height:24px;opacity:1}
+</style>
+
 </head>
 <body>
 
@@ -361,7 +363,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
           Get in touch
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="btn-secondary">LinkedIn <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="btn-secondary">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><span class="hero-stat-label">Current company</span><span class="hero-stat-val">NTT Data</span></div>
@@ -802,6 +804,15 @@ function sp(name){
   window.scrollTo(0,0);
   setTimeout(rev,80);
   currentPage = name;
+  // Show mobile contact CTA immediately on case pages
+  var mobileBtn = document.getElementById('navCtaMobile');
+  if(mobileBtn){
+    if(name === 'ion' || name === 'ids'){
+      mobileBtn.classList.add('visible');
+    } else {
+      mobileBtn.classList.remove('visible');
+    }
+  }
 }
 
 window.addEventListener('popstate', function(e){
