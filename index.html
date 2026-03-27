@@ -108,11 +108,10 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 .wi-left{
   display:flex;flex-direction:column;justify-content:center;
   padding:36px 0;
-  flex:0 0 280px;
-  width:280px;
-  transition:padding .45s cubic-bezier(.16,1,.3,1), width .45s cubic-bezier(.16,1,.3,1), flex-basis .45s cubic-bezier(.16,1,.3,1);
+  flex:0 0 320px;
+  width:320px;
+  transition:width .45s cubic-bezier(.16,1,.3,1), flex-basis .45s cubic-bezier(.16,1,.3,1);
 }
-.wi:hover .wi-left{padding:72px 0 72px 72px;max-width:420px;color:var(--ink);opacity:1!important;visibility:visible!important}
 
 /* CENTER: image — fills full height */
 /* wi-img now handled by wi-img-wrap */
@@ -126,26 +125,18 @@ nav.sc{border-color:rgba(13,12,10,.08)}
   gap:16px;
   transition:padding .45s cubic-bezier(.16,1,.3,1);
 }
-.wi:hover .wi-right{padding:72px 72px 72px 0;color:var(--ink)}
-.wi:hover .wi-left{padding:72px 0 72px 72px;flex:0 0 380px;width:380px;color:var(--ink)}
 
 /* Text elements */
 .wtags{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
 .wtag{font-family:var(--mono);font-size:.57rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);transition:color .3s}
-.wname{font-family:var(--display);font-size:clamp(1.3rem,2vw,1.8rem);font-weight:700;letter-spacing:-.015em;transition:font-size .45s cubic-bezier(.16,1,.3,1)}
-.wi:hover .wname{font-size:clamp(2rem,3.2vw,3rem);color:var(--ink)!important}
+.wname{font-family:var(--display);font-size:clamp(1.3rem,2vw,1.8rem);font-weight:700;letter-spacing:-.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:font-size .45s cubic-bezier(.16,1,.3,1)}
 .wi-desc{font-size:.9rem;font-weight:300;line-height:1.7;max-width:400px;color:var(--mid)!important;margin-top:0;max-height:0;overflow:hidden;opacity:0;transition:max-height .45s cubic-bezier(.16,1,.3,1),opacity .35s .1s,margin-top .4s}
-.wi:hover .wi-desc{max-height:120px;opacity:1;margin-top:10px}
 .wmeta{font-family:var(--mono);font-size:.62rem;font-weight:400;letter-spacing:.08em;color:var(--mid);white-space:nowrap;transition:color .3s}
-.wi:hover .wmeta{color:var(--mid)}
-.wi:hover .wtag{color:var(--mid)}
 
 /* Arrow + View label */
 .wi-access{display:flex;flex-direction:column;align-items:center;gap:6px}
 .warr{width:48px;height:48px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;transition:transform .3s cubic-bezier(.16,1,.3,1),color .3s,width .35s,height .35s;flex-shrink:0;color:var(--ink)}
-.wi:hover .warr{width:56px;height:56px;border-color:var(--accent);color:var(--accent);transform:rotate(-45deg)}
 .wi-access-label{font-family:var(--mono);font-size:.58rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);max-height:0;overflow:hidden;opacity:0;transition:max-height .4s,opacity .3s .1s}
-.wi:hover .wi-access-label{max-height:24px;opacity:1}
 
 /* SERVICES */
 .services-sec{padding:72px 48px 56px;background:var(--ink)}
@@ -328,7 +319,16 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   pointer-events:none;
 }
 .hero-photo{position:relative;z-index:1;width:100%;aspect-ratio:800/1066;object-fit:cover;object-position:center 15%;display:block;border-radius:56px}
-</style>
+
+/* Work item hover */
+.wi:hover .wi-left{padding:36px 0;flex:0 0 400px;width:400px;color:var(--ink)}
+.wi:hover .wi-right{padding:36px 0;color:var(--ink)}
+.wi:hover .wname{font-size:clamp(1.6rem,2.5vw,2.4rem);white-space:normal}
+.wi:hover .wtag{color:var(--mid)}
+.wi:hover .wmeta{color:var(--mid)}
+.wi:hover .warr{width:56px;height:56px;border-color:var(--accent);color:var(--accent);transform:rotate(-45deg)}
+.wi:hover .wi-desc{max-height:120px;opacity:1;margin-top:10px}
+.wi:hover .wi-access-label{max-height:24px;opacity:1}</style>
 </head>
 <body>
 
