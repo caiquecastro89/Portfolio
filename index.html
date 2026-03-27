@@ -272,7 +272,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 }
 
 /* SVG noise filter */
-.noise-filter{position:fixed;width:0;height:0;pointer-events:none}
 
 /* Glow circle behind case image */
 .wi-img-wrap{
@@ -294,7 +293,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   border-radius:50%;
   bottom:60px;left:50%;
   transform:translateX(-50%);
-  filter:blur(80px) url(#noise);
+  filter:blur(80px);
   opacity:.55;
   z-index:0;
   pointer-events:none;
@@ -323,7 +322,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   top:50%;left:50%;
   transform:translate(-50%,-50%);
   background:radial-gradient(circle,var(--accent) 0%,transparent 70%);
-  filter:blur(70px) url(#noise);
+  filter:blur(70px);
   opacity:.55;
   z-index:0;
   pointer-events:none;
@@ -332,19 +331,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 </style>
 </head>
 <body>
-<!-- SVG noise filter — Figma Duo mode, baseFreq 0.65, density 100%, black+white 25% -->
-<svg class="noise-filter" xmlns="http://www.w3.org/2000/svg" style="position:fixed;width:0;height:0;pointer-events:none">
-  <defs>
-    <filter id="noise" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise"/>
-      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
-      <feComponentTransfer in="grayNoise" result="clampedNoise">
-        <feFuncA type="linear" slope="0.25"/>
-      </feComponentTransfer>
-      <feBlend in="SourceGraphic" in2="clampedNoise" mode="overlay"/>
-    </filter>
-  </defs>
-</svg>
+
 <div id="cur"></div>
 <div id="cur-ring"></div>
 
