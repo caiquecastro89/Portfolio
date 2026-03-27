@@ -40,8 +40,8 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 .nav-links a:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .nav-cta{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:#fff;padding:0 24px;height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:100px;transition:background .2s,transform .15s;cursor:none;box-sizing:border-box}
 .nav-cta:hover{background:#d93e22;transform:scale(1.03)}
-.nav-cta-mobile{display:none;font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:#fff;padding:13px 20px;min-height:44px;border-radius:100px;transition:background .2s,opacity .3s,transform .3s;cursor:none;opacity:0;pointer-events:none;transform:translateY(-4px)}
-.nav-cta-mobile.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.nav-cta-mobile{display:none;font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:#fff;padding:13px 20px;min-height:44px;border-radius:100px;transition:background .2s,opacity .2s;cursor:none;opacity:0;pointer-events:none}
+.nav-cta-mobile.visible{opacity:1;pointer-events:auto}
 .nav-cta-mobile:hover{background:#d93e22}
 
 /* HERO + ABOUT merged */
@@ -232,7 +232,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 @media(max-width:900px){
   nav{padding:16px 24px}.nav-links,.nav-cta{display:none}
   #cur,#cur-ring{display:none!important}
-  .nav-cta-mobile{display:flex;align-items:center;gap:6px}
+  .nav-cta-mobile{display:flex!important;align-items:center;gap:6px}
   .hero-about{display:flex;flex-direction:column}
   .hero-left{padding:32px 24px 40px;order:1}
   .hero-right{order:2;width:100%!important;max-width:100%!important;padding:0 24px 24px}
@@ -804,15 +804,7 @@ function sp(name){
   window.scrollTo(0,0);
   setTimeout(rev,80);
   currentPage = name;
-  // Show mobile contact CTA immediately on case pages
-  var mobileBtn = document.getElementById('navCtaMobile');
-  if(mobileBtn){
-    if(name === 'ion' || name === 'ids'){
-      mobileBtn.classList.add('visible');
-    } else {
-      mobileBtn.classList.remove('visible');
-    }
-  }
+  showMobileCTA(name);
 }
 
 window.addEventListener('popstate', function(e){
@@ -868,6 +860,16 @@ window.addEventListener('scroll',function(){
   var mobileBtn=document.getElementById('navCtaMobile');
   if(mobileBtn){mobileBtn.classList.toggle('visible',y>threshold)}
 });
+function showMobileCTA(name){
+  var btn = document.getElementById('navCtaMobile');
+  if(!btn) return;
+  if(name === 'ion' || name === 'ids'){
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+}
+
 function rev(){
   var els=document.querySelectorAll('.page.active .rv');
   var io=new IntersectionObserver(function(entries){
