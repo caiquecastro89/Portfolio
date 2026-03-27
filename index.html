@@ -294,7 +294,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   border-radius:50%;
   bottom:60px;left:50%;
   transform:translateX(-50%);
-  filter:blur(80px);
+  filter:blur(80px) url(#noise);
   opacity:.55;
   z-index:0;
   pointer-events:none;
@@ -318,13 +318,13 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 /* Glow behind hero photo */
 .hero-glow{
   position:absolute;
-  width:380px;height:380px;
+  width:420px;height:420px;
   border-radius:50%;
   top:50%;left:50%;
   transform:translate(-50%,-50%);
   background:radial-gradient(circle,var(--accent) 0%,transparent 70%);
-  filter:blur(70px);
-  opacity:.5;
+  filter:blur(70px) url(#noise);
+  opacity:.55;
   z-index:0;
   pointer-events:none;
 }
@@ -332,14 +332,16 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 </style>
 </head>
 <body>
-<!-- SVG noise filter -->
-<svg class="noise-filter" xmlns="http://www.w3.org/2000/svg">
+<!-- SVG noise filter — Figma Duo mode, baseFreq 0.65, density 100%, black+white 25% -->
+<svg class="noise-filter" xmlns="http://www.w3.org/2000/svg" style="position:fixed;width:0;height:0;pointer-events:none">
   <defs>
-    <filter id="noise" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="linearRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noiseOut"/>
-      <feColorMatrix type="saturate" values="0" in="noiseOut" result="grayNoise"/>
-      <feBlend in="SourceGraphic" in2="grayNoise" mode="overlay" result="blended"/>
-      <feComposite in="blended" in2="SourceGraphic" operator="in"/>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+      <feComponentTransfer in="grayNoise" result="clampedNoise">
+        <feFuncA type="linear" slope="0.25"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="clampedNoise" mode="overlay"/>
     </filter>
   </defs>
 </svg>
