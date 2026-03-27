@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -116,25 +116,7 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 .wi:hover .wi-left{padding:72px 0 72px 72px;max-width:420px}
 
 /* CENTER: image — fills full height */
-.wi-img{
-  overflow:hidden;
-  align-self:flex-end;
-  border-radius:16px 16px 0 0;
-  height:274px;
-  width:580px;
-  flex-shrink:1;
-  flex-grow:0;
-  margin-top:24px;
-  transition:height .5s cubic-bezier(.16,1,.3,1), width .5s cubic-bezier(.16,1,.3,1), margin-top .5s cubic-bezier(.16,1,.3,1);
-}
-.wi-img img{
-  width:100%;height:100%;
-  display:block;
-  object-fit:cover;object-position:center top;
-  transition:transform .5s cubic-bezier(.16,1,.3,1);
-}
-.wi:hover .wi-img{height:582px;width:966px;margin-top:24px}
-.wi:hover .wi-img img{transform:scale(1.02)}
+/* wi-img now handled by wi-img-wrap */
 
 /* RIGHT: date + arrow */
 .wi-right{
@@ -158,7 +140,7 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 .wmeta{font-family:var(--mono);font-size:.62rem;font-weight:400;letter-spacing:.08em;color:var(--mid);white-space:nowrap;transition:color .3s}
 .wi:hover .wmeta{color:rgba(250,250,248,.4)}
 
-/* Arrow + Acessar label */
+/* Arrow + View label */
 .wi-access{display:flex;flex-direction:column;align-items:center;gap:6px}
 .warr{width:48px;height:48px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;transition:transform .3s cubic-bezier(.16,1,.3,1),color .3s,width .35s,height .35s;flex-shrink:0;color:var(--ink)}
 .wi:hover .warr{width:56px;height:56px;border-color:var(--green);color:var(--green);transform:rotate(-45deg)}
@@ -288,6 +270,15 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .tli{grid-template-columns:80px 1fr}
   .cimg{margin:32px -24px}.ccap{padding:0 24px}
 }
+
+/* Glow circle behind case image */
+.wi-img-wrap{position:relative;align-self:flex-end;height:274px;width:580px;flex-shrink:1;flex-grow:0;margin-top:24px;transition:height .5s cubic-bezier(.16,1,.3,1),width .5s cubic-bezier(.16,1,.3,1),margin-top .5s cubic-bezier(.16,1,.3,1)}
+.wi:hover .wi-img-wrap{height:582px;width:966px;margin-top:24px}
+.wi-glow{position:absolute;width:340px;height:340px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-60%);filter:blur(80px);opacity:.35;z-index:0;pointer-events:none;transition:opacity .5s,width .5s,height .5s}
+.wi:hover .wi-glow{opacity:.25;width:500px;height:500px}
+.wi-img{overflow:hidden;border-radius:16px 16px 0 0;height:100%;width:100%;position:relative;z-index:1;transition:border-radius .4s}
+.wi-img img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.wi:hover .wi-img img{transform:scale(1.02)}
 </style>
 </head>
 <body>
@@ -297,11 +288,11 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 <nav id="nav">
   <a class="nav-logo" href="#" onclick="sp('home');return false">Caique Castro</a>
   <ul class="nav-links">
-    <li><a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false">Projetos</a></li>
-    <li><a href="#" onclick="sp('home');setTimeout(function(){gt('services')},80);return false">Sobre</a></li>
+    <li><a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false">Work</a></li>
+    <li><a href="#" onclick="sp('home');setTimeout(function(){gt('services')},80);return false">About</a></li>
   </ul>
-  <a class="nav-cta" href="mailto:caique.castro89@gmail.com">Entrar em contato <svg width="12" height="12" viewBox="0 0 14 14" fill="none" style="vertical-align:middle"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-  <a class="nav-cta-mobile" id="navCtaMobile" href="mailto:caique.castro89@gmail.com">Contato <svg width="11" height="11" viewBox="0 0 14 14" fill="none" style="vertical-align:middle"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+  <a class="nav-cta" href="mailto:caique.castro89@gmail.com">Get in touch <svg width="12" height="12" viewBox="0 0 14 14" fill="none" style="vertical-align:middle"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+  <a class="nav-cta-mobile" id="navCtaMobile" href="mailto:caique.castro89@gmail.com">Contact <svg width="11" height="11" viewBox="0 0 14 14" fill="none" style="vertical-align:middle"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
 </nav>
 
 <!-- HOME -->
@@ -309,23 +300,23 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 
   <section class="hero-about">
     <div class="hero-left">
-      <div class="hero-badge"><span class="dot"></span>Aberto a novas oportunidades</div>
+      <div class="hero-badge"><span class="dot"></span>Open to new opportunities</div>
       <h1 class="hero-title">
         <span class="ln"><span>Me chamo</span></span>
         <span class="ln"><span>Caique<span class="red">.</span></span></span>
       </h1>
-      <p class="hero-desc">Sou um Product Designer com mais de 12 anos de experiência na interseção entre design e tecnologia · com foco em UX, acessibilidade digital e design systems para produtos de grande escala.</p>
+      <p class="hero-desc">I'm a Product Designer with 12+ years of experience at the intersection of design and technology · focused on UX, digital accessibility and design systems for large-scale products.</p>
       <div class="hero-cta-row">
         <a href="mailto:caique.castro89@gmail.com" class="btn-primary">
-          Entrar em contato
+          Get in touch
           <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
         </a>
         <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="btn-secondary">LinkedIn <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><span class="hero-stat-label">Empresa atual</span><span class="hero-stat-val">NTT Data</span></div>
-        <div class="hero-stat"><span class="hero-stat-label">Experiência</span><span class="hero-stat-val">12+ anos</span></div>
-        <div class="hero-stat"><span class="hero-stat-label">Foco</span><span class="hero-stat-val">UX · a11y · DS</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">Current company</span><span class="hero-stat-val">NTT Data</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">Experience</span><span class="hero-stat-val">12+ anos</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">Focus</span><span class="hero-stat-val">UX · a11y · DS</span></div>
       </div>
     </div>
     <div class="hero-right">
@@ -334,44 +325,50 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   </section>
 
   <div class="mq-wrap"><div class="mq-track">
-    <span class="mq-item">UX Research</span><span class="mq-item">Design Systems</span><span class="mq-item">Acessibilidade</span><span class="mq-item">Product Strategy</span><span class="mq-item">Figma</span><span class="mq-item">Mobile &amp; Web</span><span class="mq-item">Usability Testing</span>
-    <span class="mq-item">UX Research</span><span class="mq-item">Design Systems</span><span class="mq-item">Acessibilidade</span><span class="mq-item">Product Strategy</span><span class="mq-item">Figma</span><span class="mq-item">Mobile &amp; Web</span><span class="mq-item">Usability Testing</span>
+    <span class="mq-item">UX Research</span><span class="mq-item">Design Systems</span><span class="mq-item">Accessibility</span><span class="mq-item">Product Strategy</span><span class="mq-item">Figma</span><span class="mq-item">Mobile &amp; Web</span><span class="mq-item">Usability Testing</span>
+    <span class="mq-item">UX Research</span><span class="mq-item">Design Systems</span><span class="mq-item">Accessibility</span><span class="mq-item">Product Strategy</span><span class="mq-item">Figma</span><span class="mq-item">Mobile &amp; Web</span><span class="mq-item">Usability Testing</span>
   </div></div>
 
   <!-- Work -->
   <section class="work-sec" id="work">
-    <div class="eyebrow rv" data-n="01">Projetos</div>
-    <div class="wtr rv"><h2 class="wtitle">Projetos recentes</h2><span class="wcnt">(2 projetos)</span></div>
+    <div class="eyebrow rv" data-n="01">Work</div>
+    <div class="wtr rv"><h2 class="wtitle">Recent work</h2><span class="wcnt">(2 projects)</span></div>
     <div class="wlist">
 
       <div class="wi rv" onclick="sp('ion')">
         <div class="wi-left">
-          <div class="wtags"><span class="wtag">Design de Produto</span><span class="wtag">·</span><span class="wtag">Acessibilidade</span><span class="wtag">·</span><span class="wtag">Fintech</span></div>
+          <div class="wtags"><span class="wtag">Product Design</span><span class="wtag">·</span><span class="wtag">Accessibility</span><span class="wtag">·</span><span class="wtag">Fintech</span></div>
           <div class="wname">íon Itaú · Web Platform</div>
-          <div class="wi-desc">Expansão da plataforma de investimentos do Itaú para o ambiente web · jornada omnichannel com foco em acessibilidade, performance e escalabilidade.</div>
+          <div class="wi-desc">Expansion of Itaú's investment platform to the web · omnichannel experience focused on accessibility, performance and scalability.</div>
         </div>
-        <div class="wi-img"><img src="images/ion-home.png" alt="íon Itaú Web Platform"></div>
+        <div class="wi-img-wrap">
+          <div class="wi-glow" style="background:radial-gradient(circle,#003087,transparent)"></div>
+          <div class="wi-img"><img src="images/ion-home.png" alt="íon Itaú Web Platform"></div>
+        </div>
         <div class="wi-right">
           <div class="wmeta">2022 – 2024</div>
           <div class="wi-access">
             <div class="warr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            <span class="wi-access-label">Acessar</span>
+            <span class="wi-access-label">View</span>
           </div>
         </div>
       </div>
 
       <div class="wi rv" onclick="sp('ids')">
         <div class="wi-left">
-          <div class="wtags"><span class="wtag">Design System</span><span class="wtag">·</span><span class="wtag">Enterprise</span><span class="wtag">·</span><span class="wtag">Escala</span></div>
+          <div class="wtags"><span class="wtag">Design System</span><span class="wtag">·</span><span class="wtag">Enterprise</span><span class="wtag">·</span><span class="wtag">Scale</span></div>
           <div class="wname">Itaú Design System / iDS</div>
-          <div class="wi-desc">Padronização e evolução do design system corporativo do Itaú · alinhando 4 stacks tecnológicas, 70+ componentes e mais de 5.000 desenvolvedores.</div>
+          <div class="wi-desc">Standardization and evolution of Itaú's corporate design system · aligning 4 tech stacks, 70+ components and 5,000+ developers.</div>
         </div>
-        <div class="wi-img"><img src="images/ids-analise1.png" alt="Itaú Design System"></div>
+        <div class="wi-img-wrap">
+          <div class="wi-glow" style="background:radial-gradient(circle,#F97300,transparent)"></div>
+          <div class="wi-img"><img src="images/ids-analise1.png" alt="Itaú Design System"></div>
+        </div>
         <div class="wi-right">
           <div class="wmeta">2024 – 2025</div>
           <div class="wi-access">
             <div class="warr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            <span class="wi-access-label">Acessar</span>
+            <span class="wi-access-label">View</span>
           </div>
         </div>
       </div>
@@ -382,39 +379,39 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   <!-- Services -->
   <section class="services-sec" id="services">
     <div class="svc-header rv">
-      <p class="svc-eyebrow" style="display:flex;align-items:center;gap:14px"><span style="color:var(--accent);font-family:var(--mono)">02</span>Sobre</p>
-      <h2 class="svc-headline">Evoluindo a cada projeto · meu processo une design de produto, pesquisa com usuários e sistemas de design para gerar clareza e impacto real.</h2>
+      <p class="svc-eyebrow" style="display:flex;align-items:center;gap:14px"><span style="color:var(--accent);font-family:var(--mono)">02</span>About</p>
+      <h2 class="svc-headline">Evolving with every project · my process combines product design, user research and design systems to deliver clarity and real impact.</h2>
     </div>
     <div class="svc-list">
       <div class="svc-item rv">
         <span class="svc-num">01</span>
         <div class="svc-title">UX Research &amp; Strategy</div>
-        <div><p class="svc-desc">Entrevistas, testes de usabilidade, análise de dados e síntese de insights para fundamentar decisões de design com evidências reais.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Entrevistas</span><span class="svc-tag">Usability Testing</span><span class="svc-tag">Jobs To Be Done</span><span class="svc-tag">Data Analysis</span></div></div>
+        <div><p class="svc-desc">Interviews, usability tests, data analysis and insight synthesis to ground design decisions in real evidence.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Interviews</span><span class="svc-tag">Usability Testing</span><span class="svc-tag">Jobs To Be Done</span><span class="svc-tag">Data Analysis</span></div></div>
       </div>
       <div class="svc-item rv">
         <span class="svc-num">02</span>
         <div class="svc-title">Product &amp; UI Design</div>
-        <div><p class="svc-desc">Design de interfaces digitais que unem estratégia de produto, criatividade e usabilidade · de wireframes a protótipos de alta fidelidade.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Wireframing</span><span class="svc-tag">UI Design</span><span class="svc-tag">Prototipagem</span><span class="svc-tag">Web &amp; Mobile</span></div></div>
+        <div><p class="svc-desc">Designing digital interfaces that combine product strategy, creativity and usability · from wireframes to high-fidelity prototypes.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Wireframing</span><span class="svc-tag">UI Design</span><span class="svc-tag">Prototyping</span><span class="svc-tag">Web &amp; Mobile</span></div></div>
       </div>
       <div class="svc-item rv">
         <span class="svc-num">03</span>
         <div class="svc-title">Design Systems</div>
-        <div><p class="svc-desc">Criação e evolução de sistemas de design escaláveis · tokens, componentes, documentação e governança para times de qualquer tamanho.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Tokens</span><span class="svc-tag">Figma Variables</span><span class="svc-tag">Componentes</span><span class="svc-tag">Documentação</span></div></div>
+        <div><p class="svc-desc">Building and evolving scalable design systems · tokens, components, documentation and governance for teams of any size.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Tokens</span><span class="svc-tag">Figma Variables</span><span class="svc-tag">Components</span><span class="svc-tag">Documentation</span></div></div>
       </div>
       <div class="svc-item rv">
         <span class="svc-num">04</span>
-        <div class="svc-title">Acessibilidade Digital</div>
-        <div><p class="svc-desc">Especificações robustas e auditorias de acessibilidade seguindo os critérios WCAG 2.1 · garantindo inclusão sem abrir mão da qualidade visual.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">WCAG 2.1</span><span class="svc-tag">Screen Readers</span><span class="svc-tag">Auditoria</span><span class="svc-tag">Especificação</span></div></div>
+        <div class="svc-title">Accessibility Digital</div>
+        <div><p class="svc-desc">Robust accessibility specs and audits following WCAG 2.1 criteria · ensuring inclusion without compromising visual quality.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">WCAG 2.1</span><span class="svc-tag">Screen Readers</span><span class="svc-tag">Audit</span><span class="svc-tag">Specification</span></div></div>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
   <div class="sk-sec">
-    <div class="eyebrow rv" style="margin-bottom:40px">Ferramentas &amp; Skills</div>
+    <div class="eyebrow rv" style="margin-bottom:40px">Tools &amp; Skills</div>
     <div class="sk-grid rv">
       <span class="sk">Figma</span><span class="sk">UX Research</span><span class="sk">Design Systems</span>
-      <span class="sk">Acessibilidade WCAG</span><span class="sk">Prototipagem</span><span class="sk">Usability Testing</span>
+      <span class="sk">Accessibility WCAG</span><span class="sk">Prototyping</span><span class="sk">Usability Testing</span>
       <span class="sk">Data-Informed Design</span><span class="sk">Mobile Design</span>
       <span class="sk">Workshop Facilitation</span><span class="sk">Jobs To Be Done</span><span class="sk">FigJam</span>
     </div>
@@ -422,10 +419,10 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 
   <!-- Contact -->
   <section class="ct-sec" id="contact">
-    <h2 class="ct-big rv">Vamos criar <span class="gr">juntos.</span></h2>
+    <h2 class="ct-big rv">Let's create <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
       <a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false" class="ct-card">
-        <span class="ct-card-label">Projetos</span>
+        <span class="ct-card-label">Work</span>
         <span class="ct-card-arrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </a>
       <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="ct-card">
@@ -433,12 +430,12 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
         <span class="ct-card-arrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </a>
       <a href="mailto:caique.castro89@gmail.com" class="ct-card ct-card-accent">
-        <span class="ct-card-label">Contato</span>
+        <span class="ct-card-label">Contact</span>
         <span class="ct-card-arrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </a>
     </div>
   </section>
-  <footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, BR</span></footer>
+  <footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, Brazil</span></footer>
 </div>
 
 <!-- CASE: íon -->
@@ -446,44 +443,44 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   <div class="ch" style="background:#001F5C">
     <div class="ch-bg"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="opacity:.07"><defs><pattern id="g1" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M 48 0 L 0 0 0 48" fill="none" stroke="white" stroke-width=".5"/></pattern></defs><rect width="100%" height="100%" fill="url(#g1)"/></svg></div>
     <div class="ch-c">
-      <a class="cbk" href="#" onclick="sp('home');return false"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11.5 7H2.5M2.5 7L6 3.5M2.5 7L6 10.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Voltar</a>
-      <div class="ctags"><span class="ctag">Itaú Unibanco</span><span class="ctag">2022 – 2024</span><span class="ctag">Design de Produto</span><span class="ctag">Acessibilidade</span></div>
+      <a class="cbk" href="#" onclick="sp('home');return false"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11.5 7H2.5M2.5 7L6 3.5M2.5 7L6 10.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Back</a>
+      <div class="ctags"><span class="ctag">Itaú Unibanco</span><span class="ctag">2022 – 2024</span><span class="ctag">Product Design</span><span class="ctag">Accessibility</span></div>
       <h1 class="ctitle">íon Itaú<br>Web Platform</h1>
-      <p class="csub">Expansão da plataforma de investimentos do Itaú para o ambiente web · jornada omnichannel com foco em acessibilidade, performance e escalabilidade.</p>
+      <p class="csub">Expansion of Itaú's investment platform to the web · omnichannel experience focused on accessibility, performance and scalability.</p>
     </div>
   </div>
   <div class="cmbar">
-    <div class="cmi"><div class="cmlbl">Período</div><div class="cmval">2022 – 2024</div></div>
-    <div class="cmi"><div class="cmlbl">Empresa</div><div class="cmval">NTT Data × Itaú</div></div>
-    <div class="cmi"><div class="cmlbl">Função</div><div class="cmval">Product Designer Sênior</div></div>
-    <div class="cmi"><div class="cmlbl">Escopo</div><div class="cmval">UX · UI · Acessibilidade</div></div>
+    <div class="cmi"><div class="cmlbl">Period</div><div class="cmval">2022 – 2024</div></div>
+    <div class="cmi"><div class="cmlbl">Company</div><div class="cmval">NTT Data × Itaú</div></div>
+    <div class="cmi"><div class="cmlbl">Role</div><div class="cmval">Product Designer Sênior</div></div>
+    <div class="cmi"><div class="cmlbl">Scope</div><div class="cmval">UX · UI · Accessibility</div></div>
   </div>
   <div class="cbody">
-    <div class="csec rv"><div class="cslbl">O desafio</div><h2 class="csh2">Expandir o íon para a web · mantendo o mesmo nível de excelência</h2><p class="cp">O íon é a plataforma de investimentos do Itaú, já consolidada no mobile como uma solução robusta e sofisticada para investidores. O desafio era expandir essa experiência para o ambiente web, criando uma jornada omnichannel que mantivesse o mesmo nível de excelência · agora adaptada ao contexto do desktop.</p><p class="cp">Mais do que uma simples adaptação de interface, o projeto exigia repensar fluxos, componentes e interações para um novo tipo de uso, com foco em acessibilidade, performance e escalabilidade. A meta era ambiciosa: <strong>alcançar 15 mil usuários mensais até dezembro de 2023</strong>.</p></div>
-    <div class="csec rv"><div class="cslbl">Minha atuação</div><h2 class="csh2">Designer sênior no squad da vitrine</h2><p class="cp">Como designer de produto sênior, atuei no squad responsável pela vitrine do íon web · uma das áreas mais estratégicas da plataforma, responsável por apresentar os produtos de investimento de forma clara, atrativa e eficiente. Minha atuação foi transversal, indo desde decisões de UX e UI até alinhamentos técnicos com desenvolvimento e QA.</p><ul class="cul"><li><strong>Conversão:</strong> Estruturei jornadas que incentivassem o engajamento e a tomada de decisão do usuário, com foco em produtos financeiros complexos.</li><li><strong>Satisfação do usuário:</strong> Trabalhei para criar uma experiência fluida, intuitiva e agradável, refletida em 80% de feedbacks positivos via pesquisa Likert.</li><li><strong>Acessibilidade:</strong> Atuei ativamente para garantir que a plataforma fosse inclusiva · o que levou o site a ser reconhecido como o mais acessível do setor.</li></ul></div>
-    <div class="csec rv"><div class="cslbl">Roadmap e evolução</div><h2 class="csh2">Abordagem iterativa, orientada por dados</h2><p class="cp">Minha atuação no projeto começou em agosto de 2022 e desde o início seguimos uma abordagem iterativa e orientada por dados. A cada nova abertura do canal coletávamos feedbacks qualitativos e quantitativos · fundamentais para identificar pontos de fricção, validar hipóteses e priorizar melhorias.</p></div>
-    <div class="cimg rv"><img src="images/ion-roadmap.png" alt="Roadmap do projeto íon web"><p class="ccap">Linha do tempo do projeto · das fases beta e alpha até o lançamento oficial</p></div>
-    <div class="csec rv"><div class="tl"><div class="tli"><div class="tld">Dez/22</div><div><div class="tln">Lançamento da versão beta</div><p class="cp" style="margin:0">100 usuários selecionados. Validação dos fluxos principais e ajuste da vitrine com base em feedbacks iniciais.</p></div></div><div class="tli"><div class="tld">Jul/23</div><div><div class="tln">Expansão para versão alpha</div><p class="cp" style="margin:0">~10 mil usuários. Refinamento de componentes e interações com base em dados reais de uso.</p></div></div><div class="tli"><div class="tld">Dez/23</div><div><div class="tln">Lançamento oficial</div><p class="cp" style="margin:0">MVP sólido, validado e funcional · com o dobro da meta inicial de usuários atingida.</p></div></div></div></div>
-    <div class="csec rv"><div class="cslbl">Diagnóstico inicial</div><h2 class="csh2">O material da consultoria era um ponto de partida · não um produto</h2><p class="cp">Quando entrei no projeto, fui apresentado a um material extenso desenvolvido pela consultoria Work &amp; Co. Apesar do valor estratégico, o material ainda estava distante de um produto pronto. Os principais problemas identificados:</p><ul class="cul"><li><strong>Desalinhamento com o iDS:</strong> Muitos componentes não seguiam os padrões do design system do banco, comprometendo consistência e dificultando a implementação técnica.</li><li><strong>Falta de acessibilidade:</strong> Diversos elementos não consideravam boas práticas, limitando o uso por pessoas com deficiência.</li><li><strong>Fluxos incompletos:</strong> Vários fluxos estavam apenas parcialmente definidos, sem cenários alternativos ou estados vazios.</li></ul></div>
-    <div class="csec rv"><div class="cslbl">Desafios enfrentados</div><h2 class="csh2">Integração com o iDS e decisões estratégicas de processo</h2><p class="cp">Um dos principais desafios foi a diferença entre as bibliotecas do design system disponíveis para designers e desenvolvedores. Isso exigiu um trabalho constante de alinhamento com o time de tecnologia:</p><ul class="cul"><li>Mapear o que estava disponível na stack de desenvolvimento, entendendo as limitações reais da biblioteca.</li><li>Adaptar os layouts e fluxos com base nesses recursos, sem comprometer a experiência do usuário.</li><li>Negociar soluções intermediárias que mantivessem a consistência com o iDS, mesmo que não 100% fiéis ao design original.</li></ul><p class="cp">A decisão de postergar os testes de usabilidade para o pós-lançamento foi mitigada com acompanhamento de métricas, coleta de feedbacks qualitativos e ajustes contínuos com base em dados.</p></div>
-    <div class="csec rv"><div class="cslbl">Entregas principais</div><h2 class="csh2">Home logada</h2><p class="cp">A home logada foi pensada como o ponto de entrada para a experiência · equilibrando conteúdo informativo, navegação eficiente e personalização: cards interativos com informações sobre a bolsa, blocos regulatórios e notícias com curadoria automatizada.</p></div>
-    <div class="cimg rv"><img src="images/ion-home.png" alt="Home logada do íon web"><p class="ccap">Home logada · cards de carteira, trilhos de produtos e notícias curadas</p></div>
-    <div class="csec rv"><h2 class="csh2">Trilhos de navegação</h2><p class="cp">Conduzi um estudo para expandir a paleta de 8 para 16 cores, garantindo harmonia visual e acessibilidade · em parceria com o designer Ayrton Mugnaini. Também definimos o tamanho ideal dos cards para múltiplas resoluções e breakpoints.</p><ul class="cul"><li>Diversifique seus investimentos em renda variável · Carteira Top 5</li><li>Maiores altas do dia · Maiores baixas do dia</li><li>Invista fora do Brasil · Fundos imobiliários recomendados pelo íon</li></ul></div>
-    <div class="cimg rv"><img src="images/ion-trilhos.png" alt="Trilhos de navegação"><p class="ccap">Trilhos de navegação · paleta expandida de 8 para 16 cores</p></div>
-    <div class="csec rv"><h2 class="csh2">Tabela de produtos</h2><p class="cp">A tabela precisava ser robusta, performática e altamente funcional: cotação em tempo real, ordenação e filtros avançados, paginação adaptável e indicadores de performance. Totalmente acessível via teclado e leitores de tela.</p></div>
-    <div class="cimg rv"><img src="images/ion-tabela.png" alt="Tabela de produtos"><p class="ccap">Tabela de produtos · cotação em tempo real e acessibilidade completa por teclado</p></div>
-    <div class="csec rv"><h2 class="csh2">Detalhe de produto</h2><p class="cp">Esta entrega teve foco especial em acessibilidade: como gráficos não são lidos por leitores de tela, criei uma <strong>tabela complementar que traduzia as informações visuais em dados textuais</strong> · garantindo acesso igual para todos os usuários.</p></div>
-    <div class="cimg rv"><img src="images/ion-detalhe.png" alt="Detalhe de produto"><p class="ccap">Detalhe de produto · gráfico com tabela complementar para acessibilidade</p></div>
-    <div class="csec rv"><h2 class="csh2">Página de notícia</h2><p class="cp">Criada para integrar conteúdo informativo à jornada de investimento · posicionando o íon web não apenas como plataforma transacional, mas como centro de conhecimento para investidores.</p></div>
-    <div class="cimg rv"><img src="images/ion-noticia.png" alt="Página de notícia"><p class="ccap">Página de notícia · leitura fluida de artigos e análises</p></div>
-    <div class="csec rv"><h2 class="csh2">Acessibilidade</h2><p class="cp">Realizada em colaboração direta com a equipe especializada. Especificações robustas foram essenciais para assegurar que as soluções projetadas fossem viáveis e entregues com qualidade.</p></div>
-    <div class="cimg rv"><img src="images/ion-acessibilidade.png" alt="Especificações de acessibilidade"><p class="ccap">Especificações de acessibilidade · desenvolvidas em colaboração com equipe especializada</p></div>
-    <div class="csec rv"><h2 class="csh2">Alterações orientadas a dados</h2><p class="cp">Um caso de destaque: a função de exibição em tabela para o gráfico. Na primeira versão, poucos usuários sabiam que podiam ativá-la. Com um redesenho claro e intuitivo, transformei a fricção em engajamento perceptível.</p></div>
-    <div class="cimg rv"><img src="images/ion-dados.png" alt="Alterações orientadas a dados"><p class="ccap">Antes e depois do redesenho da função de exibição em tabela</p></div>
-    <div class="csec rv"><div class="cslbl">Resultados</div><h2 class="csh2">O dobro da meta. Mais que o quádruplo da conversão esperada.</h2><p class="cp">Ao final do projeto, os resultados superaram as expectativas iniciais tanto em adoção quanto em qualidade da experiência entregue.</p><div class="csg"><div class="csc"><div class="csn" style="color:var(--iblue)">+30k</div><div class="csd">Usuários mensais · dobro da meta de 15k</div></div><div class="csc"><div class="csn" style="color:var(--iblue)">9,2%</div><div class="csd">Conversão · meta era 4%</div></div><div class="csc"><div class="csn" style="color:var(--iblue)">80%</div><div class="csd">Feedbacks positivos via pesquisa Likert</div></div></div><div class="ccall" style="margin-top:8px"><p>+30 funcionalidades entregues. O site foi reconhecido como o <strong>mais acessível do setor financeiro</strong>.</p></div></div>
+    <div class="csec rv"><div class="cslbl">The challenge</div><h2 class="csh2">Expanding íon to the web · mantendo o mesmo nível de excelência</h2><p class="cp">O íon é a plataforma de investimentos do Itaú, já consolidada no mobile como uma solução robusta e sofisticada para investidores. The challenge era expandir essa experiência para o ambiente web, criando uma jornada omnichannel que mantivesse o mesmo nível de excelência · agora adaptada ao contexto do desktop.</p><p class="cp">More than a simple interface adaptation, the project required rethinking flows, components and interactions for a new type of use, focused on accessibility, performance and scalability. The goal was ambitious: <strong>reach 15,000 monthly users by December 2023</strong>.</p></div>
+    <div class="csec rv"><div class="cslbl">My role</div><h2 class="csh2">Senior designer on the storefront squad</h2><p class="cp">Como designer de produto sênior, atuei no squad responsável pela vitrine do íon web · uma das áreas mais estratégicas da plataforma, responsável por apresentar os produtos de investimento de forma clara, atrativa e eficiente. My role foi transversal, indo desde decisões de UX e UI até alinhamentos técnicos com desenvolvimento e QA.</p><ul class="cul"><li><strong>Conversion:</strong> Structured journeys to encourage user engagement and decision-making, focused on complex financial products.</li><li><strong>User satisfaction:</strong> Worked to create a fluid, intuitive and pleasant experience, reflected in 80% positive feedback via Likert surveys.</li><li><strong>Accessibility:</strong> I actively worked to ensure the platform was inclusive · which led the site to be recognized as the most accessible in the financial sector.</li></ul></div>
+    <div class="csec rv"><div class="cslbl">Roadmap and evolution</div><h2 class="csh2">Iterative, data-driven approach</h2><p class="cp">My role no projeto começou em agosto de 2022 e desde o início seguimos uma abordagem iterativa e orientada por dados. A cada nova abertura do canal coletávamos feedbacks qualitativos e quantitativos · fundamentais para identificar pontos de fricção, validar hipóteses e priorizar melhorias.</p></div>
+    <div class="cimg rv"><img src="images/ion-roadmap.png" alt="Roadmap do projeto íon web"><p class="ccap">Project timeline · from beta and alpha phases to official launch</p></div>
+    <div class="csec rv"><div class="tl"><div class="tli"><div class="tld">Dez/22</div><div><div class="tln">Beta version launch</div><p class="cp" style="margin:0">100 selected users. Validation of main flows and storefront adjustments based on initial feedback.</p></div></div><div class="tli"><div class="tld">Jul/23</div><div><div class="tln">Expansion to alpha version</div><p class="cp" style="margin:0">~10,000 users. Refinement of components and interactions based on real usage data.</p></div></div><div class="tli"><div class="tld">Dez/23</div><div><div class="tln">Official launch</div><p class="cp" style="margin:0">Solid, validated and functional MVP — with twice the initial user target achieved.</p></div></div></div></div>
+    <div class="csec rv"><div class="cslbl">Initial diagnosis</div><h2 class="csh2">The consulting material was a starting point — not a product</h2><p class="cp">When I joined the project, I was presented with extensive work developed by the consultancy Work &amp; Co. Despite the strategic value, the material was still far from a ready product. The main issues identified:</p><ul class="cul"><li><strong>iDS misalignment:</strong> Many components didn't follow the bank's design system standards, compromising consistency and hindering technical implementation.</li><li><strong>Lack of accessibility:</strong> Several elements did not consider best practices, limiting use by people with disabilities.</li><li><strong>Incomplete flows:</strong> Several flows were only partially defined, missing alternative scenarios or empty states.</li></ul></div>
+    <div class="csec rv"><div class="cslbl">Challenges faced</div><h2 class="csh2">iDS integration and strategic process decisions</h2><p class="cp">One of the main challenges was the gap between design system libraries available to designers and developers. This required constant alignment work with the tech team:</p><ul class="cul"><li>Mapping what was available in the development stack, understanding the real limitations of the library.</li><li>Adapting layouts and flows based on these resources, without compromising the user experience.</li><li>Negotiating intermediate solutions that maintained iDS consistency, even if not 100% faithful to the original design.</li></ul><p class="cp">The decision to postpone usability testing to post-launch was mitigated by tracking metrics, collecting qualitative feedback and making continuous data-driven adjustments.</p></div>
+    <div class="csec rv"><div class="cslbl">Main deliverables</div><h2 class="csh2">Logged-in home</h2><p class="cp">The logged-in home was designed as the entry point for the experience · balancing informative content, efficient navigation and personalization: interactive cards with stock information, regulatory blocks and curated news.</p></div>
+    <div class="cimg rv"><img src="images/ion-home.png" alt="Logged-in home do íon web"><p class="ccap">Logged-in home · cards de carteira, trilhos de produtos e notícias curadas</p></div>
+    <div class="csec rv"><h2 class="csh2">Navigation rails</h2><p class="cp">Conduzi um estudo para expandir a paleta de 8 para 16 cores, garantindo harmonia visual e acessibilidade · em parceria com o designer Ayrton Mugnaini. Também definimos o tamanho ideal dos cards para múltiplas resoluções e breakpoints.</p><ul class="cul"><li>Diversify your investments in equities · Top 5 Portfolio</li><li>Biggest daily gains · Biggest daily losses</li><li>Invest outside Brazil · Real estate funds recommended by íon</li></ul></div>
+    <div class="cimg rv"><img src="images/ion-trilhos.png" alt="Navigation rails"><p class="ccap">Navigation rails — palette expanded from 8 to 16 colors</p></div>
+    <div class="csec rv"><h2 class="csh2">Product table</h2><p class="cp">The table needed to be robust, high-performing and highly functional: real-time quotes, advanced sorting and filters, adaptive pagination and performance indicators. Fully accessible via keyboard and screen readers.</p></div>
+    <div class="cimg rv"><img src="images/ion-tabela.png" alt="Product table"><p class="ccap">Products table — real-time quotes and full keyboard accessibility</p></div>
+    <div class="csec rv"><h2 class="csh2">Product detail</h2><p class="cp">This deliverable had a special focus on accessibility: since charts are not read by screen readers, I created a <strong>complementary table that translated visual information into textual data</strong> — ensuring equal access for all users.</p></div>
+    <div class="cimg rv"><img src="images/ion-detalhe.png" alt="Product detail"><p class="ccap">Product detail — chart with complementary accessibility table</p></div>
+    <div class="csec rv"><h2 class="csh2">News page</h2><p class="cp">Created to integrate informative content into the investment journey · positioning íon web not just as a transactional platform, but as a knowledge center for investors.</p></div>
+    <div class="cimg rv"><img src="images/ion-noticia.png" alt="News page"><p class="ccap">News page · leitura fluida de artigos e análises</p></div>
+    <div class="csec rv"><h2 class="csh2">Accessibility</h2><p class="cp">Carried out in direct collaboration with the specialized team. Robust specifications were essential to ensure that the designed solutions were viable and delivered with quality.</p></div>
+    <div class="cimg rv"><img src="images/ion-acessibilidade.png" alt="Especificações de acessibilidade"><p class="ccap">Accessibility specs — developed in collaboration with specialized team</p></div>
+    <div class="csec rv"><h2 class="csh2">Data-driven improvements</h2><p class="cp">A standout case: the table view toggle for the chart. In the first version, few users knew they could activate it. With a clear and intuitive redesign, I turned friction into noticeable engagement.</p></div>
+    <div class="cimg rv"><img src="images/ion-dados.png" alt="Data-driven improvements"><p class="ccap">Before and after the table view redesign</p></div>
+    <div class="csec rv"><div class="cslbl">Results</div><h2 class="csh2">Double the target. More than four times the expected conversion.</h2><p class="cp">At the end of the project, results exceeded initial expectations both in adoption and in the quality of the delivered experience.</p><div class="csg"><div class="csc"><div class="csn" style="color:var(--iblue)">+30k</div><div class="csd">Monthly users · twice the 15k target</div></div><div class="csc"><div class="csn" style="color:var(--iblue)">9,2%</div><div class="csd">Conversion · target was 4%</div></div><div class="csc"><div class="csn" style="color:var(--iblue)">80%</div><div class="csd">Positive feedback via Likert survey</div></div></div><div class="ccall" style="margin-top:8px"><p>+30 features delivered. The site was recognized as the <strong>most accessible in the financial sector</strong>.</p></div></div>
     <div class="cdiv"></div>
   </div>
-  <a class="cnxt" href="#" onclick="sp('ids');return false"><div><p class="cnxt-lbl">Próximo case</p><p class="cnxt-t">Itaú Design System / iDS</p></div><div class="cnxt-arr"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div></a>
+  <a class="cnxt" href="#" onclick="sp('ids');return false"><div><p class="cnxt-lbl">Next case</p><p class="cnxt-t">Itaú Design System / iDS</p></div><div class="cnxt-arr"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div></a>
 </div>
 
 <!-- CASE: iDS -->
@@ -491,42 +488,42 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   <div class="ch" style="background:#0D0C0A">
     <div class="ch-bg"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="opacity:.06"><defs><pattern id="g2" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="16" cy="16" r="1.5" fill="white"/></pattern></defs><rect width="100%" height="100%" fill="url(#g2)"/></svg></div>
     <div class="ch-c">
-      <a class="cbk" href="#" onclick="sp('home');return false"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11.5 7H2.5M2.5 7L6 3.5M2.5 7L6 10.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Voltar</a>
+      <a class="cbk" href="#" onclick="sp('home');return false"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11.5 7H2.5M2.5 7L6 3.5M2.5 7L6 10.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Back</a>
       <div class="ctags"><span class="ctag">Itaú Unibanco</span><span class="ctag">2024 – 2025</span><span class="ctag">Design System</span></div>
       <h1 class="ctitle">Itaú Design<br>System / iDS</h1>
-      <p class="csub">Padronização e evolução do design system corporativo do Itaú · alinhando 4 stacks tecnológicas, 70+ componentes, 500 designers e mais de 5.000 desenvolvedores.</p>
+      <p class="csub">Standardization and evolution of Itaú's corporate design system · aligning 4 tech stacks, 70+ components, 500 designers and 5,000+ developers.</p>
     </div>
   </div>
   <div class="cmbar">
-    <div class="cmi"><div class="cmlbl">Período</div><div class="cmval">2024 – 2025</div></div>
-    <div class="cmi"><div class="cmlbl">Empresa</div><div class="cmval">NTT Data × Itaú</div></div>
-    <div class="cmi"><div class="cmlbl">Função</div><div class="cmval">Product Designer Sênior</div></div>
-    <div class="cmi"><div class="cmlbl">Escopo</div><div class="cmval">Análise · Figma · Handoff · Docs</div></div>
+    <div class="cmi"><div class="cmlbl">Period</div><div class="cmval">2024 – 2025</div></div>
+    <div class="cmi"><div class="cmlbl">Company</div><div class="cmval">NTT Data × Itaú</div></div>
+    <div class="cmi"><div class="cmlbl">Role</div><div class="cmval">Product Designer Sênior</div></div>
+    <div class="cmi"><div class="cmlbl">Scope</div><div class="cmval">Analysis · Figma · Handoff · Docs</div></div>
   </div>
   <div class="cbody">
-    <div class="csec rv"><div class="cslbl">Contexto</div><h2 class="csh2">Um design system para um banco inteiro</h2><p class="cp">A NTT DATA reuniu uma equipe multidisciplinar com o objetivo de padronizar e alinhar as quatro principais stacks de tecnologia · <strong>Angular, React, Flutter e Swift</strong> · garantindo que os componentes e modelos do Figma permanecessem atualizados e otimizados para designers e desenvolvedores.</p><p class="cp">Como designer sênior, fui responsável por conduzir análises de componentes, refinar designs na biblioteca central do Figma, atualizar especificações técnicas de handoff e revisar a documentação no site interno do design system.</p><div class="csg"><div class="csc"><div class="csn" style="color:var(--iorange)">70+</div><div class="csd">Componentes no sistema</div></div><div class="csc"><div class="csn" style="color:var(--iorange)">500</div><div class="csd">Designers utilizando o iDS</div></div><div class="csc"><div class="csn" style="color:var(--iorange)">5k+</div><div class="csd">Devs e gerentes de produto</div></div></div></div>
-    <div class="csec rv"><div class="cslbl">Estratégia e planejamento</div><h2 class="csh2">Alinhando 20 profissionais em torno de um fluxo único</h2><p class="cp">Uma das primeiras etapas foi o alinhamento entre os quase 20 profissionais envolvidos. Nossa responsabilidade foi revisar sistematicamente <strong>mais de 60 componentes</strong>, identificando inconsistências e implementando correções. Para garantir o alinhamento, desenvolvemos esboços e diagramas de fluxo no FigJam.</p></div>
-    <div class="cimg rv"><img src="images/ids-estrategia.png" alt="Estratégia e planejamento no FigJam"><p class="ccap">Diagrama de fluxo de trabalho e mapa de responsabilidades desenvolvido no FigJam</p></div>
-    <div class="csec rv"><div class="cslbl">Análise de componentes</div><h2 class="csh2">Da análise caótica ao processo estruturado</h2><p class="cp">Nossa primeira análise foi ao mesmo tempo a mais intrigante e a mais caótica · mas foi bem recebida pelo Itaú como primeira entrega de valor tangível. Essa abordagem se tornou a base para todas as análises subsequentes.</p></div>
-    <div class="cimg rv"><img src="images/ids-analise1.png" alt="Primeira análise de componente"><p class="ccap">Primeira análise de componente · valor tangível reconhecido pelo cliente desde o início</p></div>
-    <div class="csec rv"><p class="cp">Análises subsequentes · com abordagem mais estruturada, elementos modulares e alinhamento total com a identidade visual do cliente. Coluna final consolida avaliação geral, inconsistências e oportunidades de melhoria.</p></div>
-    <div class="cimg rv"><img src="images/ids-analise2.png" alt="Análise refinada"><p class="ccap">Análise refinada · estrutura modular com coluna de consolidação para revisões assíncronas</p></div>
-    <div class="csec rv"><p class="cp">Versão mínima viável de análise desenvolvida para restrições de prazo · foco em Anatomia, Propriedades e Design Tokens.</p></div>
-    <div class="cimg rv"><img src="images/ids-analise3.png" alt="Versão MVA"><p class="ccap">Versão MVA (Minimum Viable Analysis) · velocidade sem perder os aspectos essenciais</p></div>
-    <div class="csec rv"><div class="ccall"><p>Ao final: análise de <strong>60+ componentes e 5 templates</strong>. Mais de <strong>600 pontos problemáticos</strong> identificados e resolvidos pelas equipes de design, tecnologia, QA e acessibilidade.</p></div></div>
-    <div class="csec rv"><div class="cslbl">Atualização de bibliotecas e handoff</div><h2 class="csh2">A ponte entre design e desenvolvimento</h2><p class="cp">Após as análises, atualizamos os componentes na biblioteca oficial do Figma · trabalhando em ramificações isoladas por componente, com ambientes de teste para explorar diferentes estados e variações.</p></div>
-    <div class="cimg rv"><img src="images/ids-bib1.png" alt="Ambiente de teste no Figma"><p class="ccap">Ambiente de teste de componentes no Figma · com changelog integrado para facilitar revisões</p></div>
-    <div class="csec rv"><p class="cp">Minha principal contribuição foi a criação de uma <strong>tabela estruturada de propriedades e variantes</strong>, adotada como padrão por toda a equipe · permitindo que os desenvolvedores compreendessem toda a gama de possibilidades de cada componente.</p></div>
-    <div class="cimg rv"><img src="images/ids-bib2.png" alt="Tabela de propriedades e variantes"><p class="ccap">Tabela de propriedades e variantes · padrão de handoff adotado por toda a equipe</p></div>
-    <div class="cimg rv"><img src="images/ids-bib3.png" alt="Diretrizes de acessibilidade"><p class="ccap">Especificações de acessibilidade integradas ao handoff</p></div>
-    <div class="cimg rv"><img src="images/ids-bib4.png" alt="Handoff do modal"><p class="ccap">Handoff do componente modal · um dos mais complexos, com todas as variações e estados documentados</p></div>
-    <div class="cimg rv"><img src="images/ids-bib5.png" alt="Painel de visão geral"><p class="ccap">Painel de Visão Geral · dashboard de status das aprovações por componente</p></div>
-    <div class="csec rv"><div class="cslbl">Atualizando a documentação</div><h2 class="csh2">A fase inesperada que completou o ciclo</h2><p class="cp">À medida que nos aproximávamos da reta final, fomos incumbidos de revisar e manter a documentação oficial no portal interno. Cada componente passou por validação no Figma e atualização no portal · garantindo que as especificações mais recentes estivessem acessíveis a todas as partes interessadas.</p></div>
-    <div class="cimg rv"><img src="images/ids-doc1.png" alt="Documentação antes e depois"><p class="ccap">Atualização da documentação do modal · versão original (esquerda) vs. revisada (direita)</p></div>
-    <div class="csec rv"><div class="cslbl">Impacto</div><h2 class="csh2">Mais do que componentes · entregamos clareza e confiança</h2><p class="cp">Mais do que apenas entregar componentes, entregamos <strong>clareza, confiança e uma base sólida</strong> para que o design system continue evoluindo com consistência.</p><div class="csg"><div class="csc"><div class="csn" style="color:var(--iorange)">600+</div><div class="csd">Problemas resolvidos em dezenas de componentes</div></div><div class="csc"><div class="csn" style="color:var(--iorange)">60+</div><div class="csd">Componentes e 5 templates analisados</div></div><div class="csc"><div class="csn" style="color:var(--iorange)">4</div><div class="csd">Stacks tecnológicas alinhadas simultaneamente</div></div></div></div>
+    <div class="csec rv"><div class="cslbl">Context</div><h2 class="csh2">A design system for an entire bank</h2><p class="cp">A NTT DATA reuniu uma equipe multidisciplinar com o objetivo de padronizar e alinhar as quatro principais stacks de tecnologia · <strong>Angular, React, Flutter e Swift</strong> — ensuring Figma components and templates stayed updated and optimized for designers and developers.</p><p class="cp">As a senior designer, I was responsible for conducting component analyses, refining designs in the central Figma library, updating technical handoff specifications and reviewing documentation on the internal design system site.</p><div class="csg"><div class="csc"><div class="csn" style="color:var(--iorange)">70+</div><div class="csd">Components in the system</div></div><div class="csc"><div class="csn" style="color:var(--iorange)">500</div><div class="csd">Designers using iDS</div></div><div class="csc"><div class="csn" style="color:var(--iorange)">5k+</div><div class="csd">Devs and product managers</div></div></div></div>
+    <div class="csec rv"><div class="cslbl">Strategy and planning</div><h2 class="csh2">Aligning 20 professionals around a single workflow</h2><p class="cp">One of the first steps was aligning the nearly 20 professionals involved. Our responsibility was to systematically review <strong>over 60 components</strong>, identifying inconsistencies and implementing corrections. To ensure alignment, we developed sketches and flow diagrams in FigJam.</p></div>
+    <div class="cimg rv"><img src="images/ids-estrategia.png" alt="Strategy and planning no FigJam"><p class="ccap">Workflow diagram and responsibility map developed in FigJam</p></div>
+    <div class="csec rv"><div class="cslbl">Component analysis</div><h2 class="csh2">From chaotic analysis to structured process</h2><p class="cp">Our first analysis was both the most intriguing and the most chaotic · but it was well received by Itaú as the first tangible value delivery. This approach became the foundation for all subsequent analyses.</p></div>
+    <div class="cimg rv"><img src="images/ids-analise1.png" alt="Primeira análise de componente"><p class="ccap">First component analysis — tangible value recognized by the client from the start</p></div>
+    <div class="csec rv"><p class="cp">Subsequent analyses — with a more structured approach, modular elements and full alignment with the client's visual identity. The final column consolidates overall assessment, inconsistencies and improvement opportunities.</p></div>
+    <div class="cimg rv"><img src="images/ids-analise2.png" alt="Análise refinada"><p class="ccap">Refined analysis — modular structure with consolidation column for async reviews</p></div>
+    <div class="csec rv"><p class="cp">Minimum viable analysis version developed for deadline constraints — focused on Anatomy, Properties and Design Tokens.</p></div>
+    <div class="cimg rv"><img src="images/ids-analise3.png" alt="Versão MVA"><p class="ccap">MVA (Minimum Viable Analysis) version — speed without losing essential aspects</p></div>
+    <div class="csec rv"><div class="ccall"><p>In total: analysis of <strong>60+ components and 5 templates</strong>. More than <strong>600 problem points</strong> identified and resolved by the design, technology, QA and accessibility teams.</p></div></div>
+    <div class="csec rv"><div class="cslbl">Library updates and handoff</div><h2 class="csh2">The bridge between design and development</h2><p class="cp">After the analyses, we updated components in the official Figma library — working in isolated branches per component, with test environments to explore different states and variations.</p></div>
+    <div class="cimg rv"><img src="images/ids-bib1.png" alt="Ambiente de teste no Figma"><p class="ccap">Component test environment in Figma — with integrated changelog to facilitate reviews</p></div>
+    <div class="csec rv"><p class="cp">My main contribution was creating a <strong>tabela estruturada de propriedades e variantes</strong>, adopted as a standard by the entire team — allowing developers to understand the full range of possibilities for each component.</p></div>
+    <div class="cimg rv"><img src="images/ids-bib2.png" alt="Properties and variants table"><p class="ccap">Properties and variants table — handoff standard adopted by the entire team</p></div>
+    <div class="cimg rv"><img src="images/ids-bib3.png" alt="Diretrizes de acessibilidade"><p class="ccap">Accessibility specifications integrated into the handoff</p></div>
+    <div class="cimg rv"><img src="images/ids-bib4.png" alt="Handoff do modal"><p class="ccap">Modal component handoff — one of the most complex, with all variations and states documented</p></div>
+    <div class="cimg rv"><img src="images/ids-bib5.png" alt="Painel de visão geral"><p class="ccap">Overview Panel — approval status dashboard by component</p></div>
+    <div class="csec rv"><div class="cslbl">Updating documentation</div><h2 class="csh2">The unexpected phase that completed the cycle</h2><p class="cp">À medida que nos aproximávamos da reta final, fomos incumbidos de revisar e manter a documentação oficial no portal interno. Cada componente passou por validação no Figma e atualização no portal · garantindo que as especificações mais recentes estivessem acessíveis a todas as partes interessadas.</p></div>
+    <div class="cimg rv"><img src="images/ids-doc1.png" alt="Documentation antes e depois"><p class="ccap">Modal documentation update — original version (left) vs. revised (right)</p></div>
+    <div class="csec rv"><div class="cslbl">Impact</div><h2 class="csh2">More than components · we delivered clarity and confidence</h2><p class="cp">More than just delivering components, we delivered <strong>clarity, confidence and a solid foundation</strong> for the design system to keep evolving consistently.</p><div class="csg"><div class="csc"><div class="csn" style="color:var(--iorange)">600+</div><div class="csd">Problems solved across dozens of components</div></div><div class="csc"><div class="csn" style="color:var(--iorange)">60+</div><div class="csd">Components and 5 templates analyzed</div></div><div class="csc"><div class="csn" style="color:var(--iorange)">4</div><div class="csd">Tech stacks aligned simultaneously</div></div></div></div>
     <div class="cdiv"></div>
   </div>
-  <a class="cnxt" href="#" onclick="sp('ion');return false"><div><p class="cnxt-lbl">Ver também</p><p class="cnxt-t">íon Itaú · Web Platform</p></div><div class="cnxt-arr"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div></a>
+  <a class="cnxt" href="#" onclick="sp('ion');return false"><div><p class="cnxt-lbl">See also</p><p class="cnxt-t">íon Itaú · Web Platform</p></div><div class="cnxt-arr"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div></a>
 </div>
 
 <script>
@@ -571,7 +568,7 @@ window.addEventListener('popstate', function(e){
       return;
     }
     lastBackPress = now;
-    showToast('Pressione voltar novamente para sair');
+    showToast('Press back again to exit');
     history.pushState({p:'guard'},'');
   }
 });
