@@ -95,8 +95,8 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 .wi-img img{width:100%;display:block;object-fit:cover;object-position:center top;transition:transform .6s cubic-bezier(.16,1,.3,1)}
 .wi:hover .wi-img{height:280px}
 .wi:hover .wi-img img{transform:scale(1.02)}
-.wi-bar{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:28px;padding:36px 0;transition:all .4s cubic-bezier(.16,1,.3,1)}
-.wi:hover .wi-bar{background:var(--ink);color:var(--bg);padding:36px 48px;margin:0 -48px}
+.wi-bar{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:28px;padding:36px 0;transition:all .4s cubic-bezier(.16,1,.3,1);position:relative;z-index:1}
+.wi:hover .wi-bar{background:var(--ink);color:var(--bg);padding:36px 56px;margin:0 -56px}
 .wi:hover .wtag,.wi:hover .wmeta{color:rgba(250,250,248,.35)}
 .wi:hover .warr{transform:rotate(-45deg);color:var(--green)}
 .winfo{}
@@ -112,12 +112,12 @@ nav.sc{border-color:rgba(13,12,10,.08)}
 .svc-eyebrow{font-family:var(--mono);font-size:.6rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,250,248,.3);margin-bottom:20px}
 .svc-headline{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.6rem);font-weight:700;line-height:1.15;letter-spacing:-.02em;color:var(--white);max-width:800px}
 .svc-list{display:flex;flex-direction:column}
-.svc-item{display:grid;grid-template-columns:56px 1fr 1.2fr auto;align-items:center;gap:36px;padding:40px 0;border-top:1px solid rgba(250,250,248,.08)}
+.svc-item{display:grid;grid-template-columns:56px 1fr 1.4fr;align-items:center;gap:36px;padding:40px 0;border-top:1px solid rgba(250,250,248,.08)}
 .svc-item:last-child{border-bottom:1px solid rgba(250,250,248,.08)}
 .svc-num{font-family:var(--mono);font-size:.63rem;font-weight:400;letter-spacing:.1em;color:rgba(250,250,248,.22);padding-top:6px}
 .svc-title{font-family:var(--display);font-size:clamp(1.2rem,2vw,1.7rem);font-weight:700;letter-spacing:-.02em;color:var(--white)}
 .svc-desc{font-size:.88rem;font-weight:400;color:rgba(250,250,248,.42);line-height:1.75}
-.svc-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.svc-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start}
 .svc-tag{font-family:var(--mono);font-size:.56rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(250,250,248,.15);padding:5px 12px;border-radius:100px;color:rgba(250,250,248,.45)}
 
 /* SKILLS */
@@ -229,7 +229,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   <a class="nav-logo" href="#" onclick="sp('home');return false">Caique Castro</a>
   <ul class="nav-links">
     <li><a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false">Projetos</a></li>
-    <li><a href="https://www.linkedin.com/in/caique-castro89/" target="_blank">LinkedIn</a></li>
+    <li><a href="#" onclick="sp('home');setTimeout(function(){gt('services')},80);return false">Sobre</a></li>
   </ul>
   <a class="nav-cta" href="mailto:caique.castro89@gmail.com">Entrar em contato <svg width="12" height="12" viewBox="0 0 14 14" fill="none" style="vertical-align:middle"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
   <a class="nav-cta-mobile" id="navCtaMobile" href="mailto:caique.castro89@gmail.com">Contato <svg width="11" height="11" viewBox="0 0 14 14" fill="none" style="vertical-align:middle"><path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
@@ -305,33 +305,29 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   <!-- Services -->
   <section class="services-sec" id="services">
     <div class="svc-header rv">
-      <p class="svc-eyebrow">Especialidades</p>
+      <p class="svc-eyebrow">Sobre</p>
       <h2 class="svc-headline">Evoluindo a cada projeto · meu processo une design de produto, pesquisa com usuários e sistemas de design para gerar clareza e impacto real.</h2>
     </div>
     <div class="svc-list">
       <div class="svc-item rv">
         <span class="svc-num">01</span>
         <div class="svc-title">UX Research &amp; Strategy</div>
-        <p class="svc-desc">Entrevistas, testes de usabilidade, análise de dados e síntese de insights para fundamentar decisões de design com evidências reais.</p>
-        <div class="svc-tags"><span class="svc-tag">Entrevistas</span><span class="svc-tag">Usability Testing</span><span class="svc-tag">Jobs To Be Done</span><span class="svc-tag">Data Analysis</span></div>
+        <div><p class="svc-desc">Entrevistas, testes de usabilidade, análise de dados e síntese de insights para fundamentar decisões de design com evidências reais.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Entrevistas</span><span class="svc-tag">Usability Testing</span><span class="svc-tag">Jobs To Be Done</span><span class="svc-tag">Data Analysis</span></div></div>
       </div>
       <div class="svc-item rv">
         <span class="svc-num">02</span>
         <div class="svc-title">Product &amp; UI Design</div>
-        <p class="svc-desc">Design de interfaces digitais que unem estratégia de produto, criatividade e usabilidade · de wireframes a protótipos de alta fidelidade.</p>
-        <div class="svc-tags"><span class="svc-tag">Wireframing</span><span class="svc-tag">UI Design</span><span class="svc-tag">Prototipagem</span><span class="svc-tag">Web &amp; Mobile</span></div>
+        <div><p class="svc-desc">Design de interfaces digitais que unem estratégia de produto, criatividade e usabilidade · de wireframes a protótipos de alta fidelidade.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Wireframing</span><span class="svc-tag">UI Design</span><span class="svc-tag">Prototipagem</span><span class="svc-tag">Web &amp; Mobile</span></div></div>
       </div>
       <div class="svc-item rv">
         <span class="svc-num">03</span>
         <div class="svc-title">Design Systems</div>
-        <p class="svc-desc">Criação e evolução de sistemas de design escaláveis · tokens, componentes, documentação e governança para times de qualquer tamanho.</p>
-        <div class="svc-tags"><span class="svc-tag">Tokens</span><span class="svc-tag">Figma Variables</span><span class="svc-tag">Componentes</span><span class="svc-tag">Documentação</span></div>
+        <div><p class="svc-desc">Criação e evolução de sistemas de design escaláveis · tokens, componentes, documentação e governança para times de qualquer tamanho.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">Tokens</span><span class="svc-tag">Figma Variables</span><span class="svc-tag">Componentes</span><span class="svc-tag">Documentação</span></div></div>
       </div>
       <div class="svc-item rv">
         <span class="svc-num">04</span>
         <div class="svc-title">Acessibilidade Digital</div>
-        <p class="svc-desc">Especificações robustas e auditorias de acessibilidade seguindo os critérios WCAG 2.1 · garantindo inclusão sem abrir mão da qualidade visual.</p>
-        <div class="svc-tags"><span class="svc-tag">WCAG 2.1</span><span class="svc-tag">Screen Readers</span><span class="svc-tag">Auditoria</span><span class="svc-tag">Especificação</span></div>
+        <div><p class="svc-desc">Especificações robustas e auditorias de acessibilidade seguindo os critérios WCAG 2.1 · garantindo inclusão sem abrir mão da qualidade visual.</p><div class="svc-tags" style="margin-top:16px"><span class="svc-tag">WCAG 2.1</span><span class="svc-tag">Screen Readers</span><span class="svc-tag">Auditoria</span><span class="svc-tag">Especificação</span></div></div>
       </div>
     </div>
   </section>
@@ -352,7 +348,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     <h2 class="ct-big rv">Vamos criar <span class="gr">juntos.</span></h2>
     <div class="ct-cards rv">
       <a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false" class="ct-card">
-        <span class="ct-card-label">Work</span>
+        <span class="ct-card-label">Projetos</span>
         <span class="ct-card-arrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15L15 3M15 3H5M15 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </a>
       <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="ct-card">
