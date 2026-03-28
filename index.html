@@ -200,9 +200,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .ccall p{font-family:var(--display);font-size:1.05rem;font-weight:600;line-height:1.4;color:var(--ink)}
 
 /* Case images - full bleed with caption outside */
-.cimg{margin:40px -48px 96px}
+.cimg{margin:40px -96px 96px}
 .cimg img{width:100%;display:block}
-.ccap{font-family:var(--mono);font-size:.875rem;font-weight:700;letter-spacing:.02em;text-transform:none;color:var(--mid);margin-top:14px;padding:0 48px;text-align:center}
+.ccap{font-family:var(--mono);font-size:.875rem;font-weight:700;letter-spacing:.02em;text-transform:none;color:var(--mid);margin-top:14px;padding:0 96px;text-align:center}
 
 .csg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:32px 0}
 .csc{background:var(--pale);border-radius:10px;padding:26px;text-align:center}
@@ -303,7 +303,14 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   transition:height .5s cubic-bezier(.16,1,.3,1);
 }
 .wi:hover .wi-img{height:582px}
-.wi-img img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.wi-img{position:relative}
+.wi-img img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;transition:opacity .3s,transform .5s cubic-bezier(.16,1,.3,1)}
+.wi-img video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;opacity:0;transition:opacity .3s}
+.wi-img.playing img{opacity:0}
+.wi-img.playing video{opacity:1}
+.wi-img video{width:100%;height:100%;display:none;object-fit:cover;object-position:center top;position:absolute;top:0;left:0}
+.wi-img.playing img{opacity:0}
+.wi-img.playing video{display:block}
 .wi:hover .wi-img img{transform:scale(1.02)}
 
 /* Glow behind hero photo */
@@ -386,7 +393,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     <div class="wtr rv"><h2 class="wtitle">Recent work</h2><span class="wcnt">(2 projects)</span></div>
     <div class="wlist">
 
-      <div class="wi rv" onclick="sp('ion')">
+      <div class="wi rv" id="wi-ion" onclick="sp('ion')">
         <div class="wi-left">
           <div class="wtags"><span class="wtag">Product Design</span><span class="wtag">·</span><span class="wtag">Accessibility</span><span class="wtag">·</span><span class="wtag">Data Driven</span></div>
           <div class="wname">Designing íon web: accessibility, scale, data-driven decisions, and 9.2% conversion</div>
@@ -394,7 +401,10 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
         </div>
         <div class="wi-img-wrap">
           <div class="wi-glow" style="background:radial-gradient(circle,#41A641,transparent)"></div>
-          <div class="wi-img"><img src="images/ion-home.png" alt="íon Itaú Web Platform"></div>
+          <div class="wi-img" id="wi-img-ion">
+            <img src="images/ion-cover.jpg" onerror="this.src='images/ion-home.png'" alt="íon Itaú Web Platform">
+            <video src="images/ion-hover.mp4" muted loop playsinline preload="none"></video>
+          </div>
         </div>
         <div class="wi-right">
           <div class="wmeta">2022 – 2024</div>
@@ -405,7 +415,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
         </div>
       </div>
 
-      <div class="wi rv" onclick="sp('ids')">
+      <div class="wi rv" id="wi-ids" onclick="sp('ids')">
         <div class="wi-left">
           <div class="wtags"><span class="wtag">Design System</span><span class="wtag">·</span><span class="wtag">Enterprise</span><span class="wtag">·</span><span class="wtag">Scale</span></div>
           <div class="wname">60+ components analyzed and standardized across 4 tech stacks. One system to rule them all.</div>
@@ -876,6 +886,8 @@ function rev(){
   els.forEach(function(el){el.classList.remove('on');io.observe(el)});
 }
 rev();
+  initCardVideo('wi-ion','wi-img-ion');
+  initCardVideo('wi-ids','wi-img-ids');
 </script>
 </body>
 </html>
