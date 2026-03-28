@@ -886,6 +886,24 @@ function rev(){
   els.forEach(function(el){el.classList.remove('on');io.observe(el)});
 }
 rev();
+
+  function initCardVideo(cardId, imgId){
+    var card = document.getElementById(cardId);
+    var imgWrap = document.getElementById(imgId);
+    if(!card || !imgWrap) return;
+    var video = imgWrap.querySelector('video');
+    if(!video) return;
+    card.addEventListener('mouseenter', function(){
+      imgWrap.classList.add('playing');
+      video.play();
+    });
+    card.addEventListener('mouseleave', function(){
+      imgWrap.classList.remove('playing');
+      video.pause();
+      video.currentTime = 0;
+    });
+  }
+
   initCardVideo('wi-ion','wi-img-ion');
   initCardVideo('wi-ids','wi-img-ids');
 </script>
