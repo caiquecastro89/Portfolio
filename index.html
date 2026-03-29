@@ -24,7 +24,7 @@
   --accent:#FF4D2E;--green:#BFED47;--iblue:#003087;--iorange:#F97300;
   --display:'Saans',sans-serif;--mono:'Saans',sans-serif;--body:'Saans',sans-serif;
 }
-html{scroll-behavior:smooth;overflow-x:hidden}
+html{scroll-behavior:auto;overflow-x:hidden}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:300;cursor:none;overflow-x:hidden}
 #cur{position:fixed;width:10px;height:10px;background:var(--white);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
 #cur-ring{position:fixed;width:38px;height:38px;border:1.5px solid var(--white);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.5;transition:width .3s,height .3s;mix-blend-mode:difference}
@@ -904,12 +904,20 @@ var lastBackPress = 0;
 var handlingBack = false;
 
 function sp(name){
+  // Instant scroll to top before page swap
+  document.documentElement.style.scrollBehavior = 'auto';
+  document.body.style.scrollBehavior = 'auto';
+  window.scrollTo({top:0,left:0,behavior:'instant'});
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
   document.getElementById('page-'+name).classList.add('active');
-  window.scrollTo(0,0);
   setTimeout(rev,80);
   currentPage = name;
   showMobileCTA(name);
+  // Restore smooth scroll after
+  setTimeout(function(){
+    document.documentElement.style.scrollBehavior = '';
+    document.body.style.scrollBehavior = '';
+  }, 100);
 }
 
 window.addEventListener('popstate', function(e){
