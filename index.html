@@ -40,6 +40,8 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .nav-links a:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .nav-cta{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:#fff;padding:0 24px;height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:100px;transition:background .2s,transform .15s;cursor:none;box-sizing:border-box}
 .nav-cta:hover{background:#d93e22;transform:scale(1.03)}
+.nav-cta-secondary{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);padding:0 16px;height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:100px;border:1.5px solid rgba(13,12,10,.2);transition:border-color .2s;cursor:none}
+.nav-cta-secondary:hover{border-color:var(--ink)}
 .nav-cta-mobile{display:none;font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:#fff;padding:13px 20px;min-height:44px;border-radius:100px;transition:background .2s,opacity .2s;cursor:none;opacity:0;pointer-events:none}
 .nav-cta-mobile.visible{opacity:1;pointer-events:auto}
 .nav-cta-mobile:hover{background:#d93e22}
@@ -374,6 +376,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     <li><a href="#" onclick="sp('home');setTimeout(function(){gt('services')},80);return false">About</a></li>
     <li><a href="https://www.linkedin.com/in/caique-castro89/" target="_blank">LinkedIn</a></li>
   </ul>
+  <a class="nav-cta-secondary" href="https://calendly.com/caique-castro89/30min" target="_blank">Book a meeting <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   <a class="nav-cta" href="mailto:caique.castro89@gmail.com">Get in touch <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   <a class="nav-cta-mobile" id="navCtaMobile" href="mailto:caique.castro89@gmail.com">Contact <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </nav>
