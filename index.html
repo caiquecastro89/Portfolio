@@ -32,8 +32,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:3
 .page{display:none;min-height:100vh}.page.active{display:block}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;z-index:500;background:rgba(242,240,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
-nav.sc{border-color:rgba(13,12,10,.08)}
+nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;z-index:500;background:transparent;backdrop-filter:none;transition:background .3s,backdrop-filter .3s;border-bottom:1px solid transparent;transition:border-color .3s}
+nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92)!important;backdrop-filter:blur(12px)!important}
 .nav-logo{font-family:var(--display);font-size:.82rem;font-weight:700;letter-spacing:.04em;text-decoration:none;color:var(--ink);text-transform:uppercase;cursor:none}
 .nav-links{display:flex;gap:8px;list-style:none;align-items:center}
 .nav-links a{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:all .2s;cursor:none;padding:13px 20px;height:44px;display:flex;align-items:center;border:1.5px solid rgba(13,12,10,.2);border-radius:100px;box-sizing:border-box}
