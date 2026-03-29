@@ -442,7 +442,10 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
         </div>
         <div class="wi-img-wrap">
           <div class="wi-glow" style="background:radial-gradient(circle,#F97300,transparent)"></div>
-          <div class="wi-img"><img src="images/ids-analise1.png" alt="Itaú Design System"></div>
+          <div class="wi-img" id="wi-img-cnxt-ids">
+            <img src="images/ids-cover.jpg" onerror="this.src='images/ids-analise1.png'" alt="Itaú Design System">
+            <video src="images/ids-hover.mp4" muted loop playsinline preload="none"></video>
+          </div>
         </div>
         <div class="wi-right">
           <div class="wmeta">2024 – 2025</div>
@@ -679,7 +682,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   
   <div class="cnxt-new">
     <p class="cnxt-lbl">Next case</p>
-    <div class="wi rv" id="cnxt-ids" onclick="sp('ids')">
+    <div class="wi rv" id="cnxt-ids-card" onclick="sp('ids')">
         <div class="wi-left">
           <div class="wtags"><span class="wtag">Design System</span><span class="wtag">·</span><span class="wtag">Enterprise</span><span class="wtag">·</span><span class="wtag">Scale</span></div>
           <div class="wname">60+ components analyzed and standardized across 4 tech stacks. One system to rule them all.</div>
@@ -847,7 +850,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   
   <div class="cnxt-new">
     <p class="cnxt-lbl">Next case</p>
-    <div class="wi rv" id="cnxt-ion" onclick="sp('ion')">
+    <div class="wi rv" id="cnxt-ion-card" onclick="sp('ion')">
         <div class="wi-left">
           <div class="wtags"><span class="wtag">Product Design</span><span class="wtag">·</span><span class="wtag">Accessibility</span><span class="wtag">·</span><span class="wtag">Data Driven</span></div>
           <div class="wname">Designing íon web: accessibility, scale, data-driven decisions, and 9.2% conversion</div>
@@ -855,7 +858,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
         </div>
         <div class="wi-img-wrap">
           <div class="wi-glow" style="background:radial-gradient(circle,#41A641,transparent)"></div>
-          <div class="wi-img" id="wi-img-ion">
+          <div class="wi-img" id="wi-img-cnxt-ion">
             <img src="images/ion-cover.png" onerror="this.src='images/ion-home.png'" alt="íon Itaú Web Platform">
             <video src="images/ion-hover.mp4" muted loop playsinline preload="none"></video>
           </div>
@@ -1000,8 +1003,8 @@ rev();
 
   initCardVideo('wi-ion','wi-img-ion');
   initCardVideo('wi-ids','wi-img-ids');
-  initCardVideo('cnxt-ids','wi-img-ids');
-  initCardVideo('cnxt-ion','wi-img-ion');
+  initCardVideo('cnxt-ids-card','wi-img-cnxt-ids');
+  initCardVideo('cnxt-ion-card','wi-img-cnxt-ion');
 </script>
 </body>
 </html>
