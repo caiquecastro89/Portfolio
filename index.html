@@ -32,7 +32,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:3
 .page{display:none;min-height:100vh}.page.active{display:block}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;z-index:500;background:transparent;backdrop-filter:none;transition:background .3s,backdrop-filter .3s;border-bottom:1px solid transparent;transition:border-color .3s}
+nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;z-index:500;background:transparent;backdrop-filter:none;transition:background .6s ease,backdrop-filter .6s ease,box-shadow .6s ease;border-bottom:1px solid transparent;transition:border-color .3s}
 nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92)!important;backdrop-filter:blur(12px)!important}
 .nav-logo{font-family:var(--display);font-size:.82rem;font-weight:700;letter-spacing:.04em;text-decoration:none;color:var(--ink);text-transform:uppercase;cursor:none}
 .nav-links{display:flex;gap:8px;list-style:none;align-items:center}
@@ -242,7 +242,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 @keyframes fi{from{opacity:0}to{opacity:1}}
 
 @media(max-width:900px){
-  nav{padding:16px 24px}.nav-links,.nav-cta{display:none}
+  nav{padding:16px 24px;background:rgba(242,240,236,.92)!important;backdrop-filter:blur(12px)!important}.nav-links,.nav-cta{display:none}
   #cur,#cur-ring{display:none!important}
   .nav-cta-mobile{display:flex!important;align-items:center;gap:6px}
   .hero-about{display:flex;flex-direction:column}
