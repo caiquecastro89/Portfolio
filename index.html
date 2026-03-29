@@ -391,8 +391,8 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 <nav id="nav">
   <a class="nav-logo" href="#" onclick="sp('home');return false">Caique Castro</a>
   <ul class="nav-links">
-    <li><a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false">Work</a></li>
-    <li><a href="#" onclick="sp('home');setTimeout(function(){gt('services')},80);return false">About</a></li>
+    <li><a href="#" onclick="if(currentPage==='home'){gt('work')}else{sp('home');setTimeout(function(){gt('work')},400)}return false">Work</a></li>
+    <li><a href="#" onclick="if(currentPage==='home'){gt('services')}else{sp('home');setTimeout(function(){gt('services')},400)}return false">About</a></li>
     <li><a href="https://www.linkedin.com/in/caique-castro89/" target="_blank">LinkedIn</a></li>
   </ul>
   <div class="nav-cta-group" id="navDesktopGroup"><a class="nav-cta-secondary" href="https://calendly.com/caique-castro89/30min" target="_blank">Book a meeting <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="nav-cta" href="mailto:caique.castro89@gmail.com">Get in touch <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
