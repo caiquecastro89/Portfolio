@@ -998,7 +998,7 @@ window.addEventListener('scroll',function(){
   var mobileGrp=document.getElementById('navMobileGroup');
   if(mobileGrp && currentPage==='home'){mobileGrp.classList.toggle('visible',y>threshold)}
   var desktopGrp=document.getElementById('navDesktopGroup');
-  if(desktopGrp){desktopGrp.classList.toggle('visible',y>threshold)}
+  if(desktopGrp && currentPage==='home'){desktopGrp.classList.toggle('visible',y>threshold)}
 });
 function showMobileCTA(name){
   var group = document.getElementById('navMobileGroup');
