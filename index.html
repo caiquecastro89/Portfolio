@@ -727,6 +727,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
       </a>
     </div>
   </section>
+<footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, Brazil</span></footer>
 </div>
 
 <div class="page" id="page-ids">
@@ -899,6 +900,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
       </a>
     </div>
   </section>
+<footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, Brazil</span></footer>
 </div>
 
 <script>
@@ -1028,10 +1030,18 @@ rev();
     });
   }
 
-  initCardVideo('wi-ion','wi-img-ion');
-  initCardVideo('wi-ids','wi-img-ids');
-  initCardVideo('cnxt-ids-card','wi-img-cnxt-ids');
-  initCardVideo('cnxt-ion-card','wi-img-cnxt-ion');
+  // Init video hovers after full page load
+  function initAllVideos(){
+    initCardVideo('wi-ion','wi-img-ion');
+    initCardVideo('wi-ids','wi-img-ids');
+    initCardVideo('cnxt-ids-card','wi-img-cnxt-ids');
+    initCardVideo('cnxt-ion-card','wi-img-cnxt-ion');
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initAllVideos);
+  } else {
+    initAllVideos();
+  }
 </script>
 </body>
 </html>
