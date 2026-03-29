@@ -321,7 +321,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi-img video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;opacity:0;transition:opacity .3s}
 .wi-img.playing img{opacity:0}
 .wi-img.playing video{opacity:1}
-.wi-img video{width:100%;height:100%;display:none;object-fit:cover;object-position:center top;position:absolute;top:0;left:0}
+
 .wi-img.playing img{opacity:0}
 .wi-img.playing video{display:block}
 .wi:hover .wi-img img{transform:scale(1.02)}
@@ -1005,9 +1005,18 @@ rev();
     if(!card || !imgWrap) return;
     var video = imgWrap.querySelector('video');
     if(!video) return;
+    // Preload on first hover
+    var loaded = false;
     card.addEventListener('mouseenter', function(){
+      if(!loaded){
+        video.load();
+        loaded = true;
+      }
       imgWrap.classList.add('playing');
-      video.play();
+      var playPromise = video.play();
+      if(playPromise !== undefined){
+        playPromise.catch(function(){ });
+      }
     });
     card.addEventListener('mouseleave', function(){
       imgWrap.classList.remove('playing');
