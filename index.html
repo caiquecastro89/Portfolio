@@ -349,6 +349,11 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi:hover .wi-desc{max-height:200px;opacity:1;margin-top:10px}
 .wi:hover .wi-access-label{max-height:24px;opacity:1}
 
+
+/* Next case card section */
+.cnxt-new{padding:0 48px 64px;background:var(--bg)}
+.cnxt-new .cnxt-lbl{font-family:var(--mono);font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:24px}
+.cnxt-new .wi{cursor:pointer}
 </style>
 
 
@@ -671,10 +676,27 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     <div class="cdiv"></div>
   </div>
   
-  <a class="cnxt" href="#" onclick="sp('ids');return false">
-    <div><p class="cnxt-lbl">Next case</p><p class="cnxt-t">60+ components analyzed and standardized across 4 tech stacks. One system to rule them all.</p></div>
-    <div class="cnxt-arr"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-  </a>
+  <div class="cnxt-new">
+    <p class="cnxt-lbl">Next case</p>
+    <div class="wi rv" id="cnxt-ids" onclick="sp('ids')">
+        <div class="wi-left">
+          <div class="wtags"><span class="wtag">Design System</span><span class="wtag">·</span><span class="wtag">Enterprise</span><span class="wtag">·</span><span class="wtag">Scale</span></div>
+          <div class="wname">60+ components analyzed and standardized across 4 tech stacks. One system to rule them all.</div>
+          <div class="wi-desc">In 2024, I helped NTT Data and Itaú standardize a design system used by thousands. We analyzed and fixed 60+ components across Angular, React, Flutter, and Swift, improving consistency, accessibility, and delivery speed.</div>
+        </div>
+        <div class="wi-img-wrap">
+          <div class="wi-glow" style="background:radial-gradient(circle,#F97300,transparent)"></div>
+          <div class="wi-img"><img src="images/ids-analise1.png" alt="Itaú Design System"></div>
+        </div>
+        <div class="wi-right">
+          <div class="wmeta">2024 – 2025</div>
+          <div class="wi-access">
+            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <span class="wi-access-label">View</span>
+          </div>
+        </div>
+      </div>
+  </div>
   <section class="ct-sec" id="contact">
     <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
@@ -822,10 +844,30 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     <div class="cdiv"></div>
   </div>
   
-  <a class="cnxt" href="#" onclick="sp('ion');return false">
-    <div><p class="cnxt-lbl">See also</p><p class="cnxt-t">Designing íon web: accessibility, scale, data-driven decisions, and 9.2% conversion</p></div>
-    <div class="cnxt-arr"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-  </a>
+  <div class="cnxt-new">
+    <p class="cnxt-lbl">Next case</p>
+    <div class="wi rv" id="cnxt-ion" onclick="sp('ion')">
+        <div class="wi-left">
+          <div class="wtags"><span class="wtag">Product Design</span><span class="wtag">·</span><span class="wtag">Accessibility</span><span class="wtag">·</span><span class="wtag">Data Driven</span></div>
+          <div class="wname">Designing íon web: accessibility, scale, data-driven decisions, and 9.2% conversion</div>
+          <div class="wi-desc">In 2022, I helped Itaú expand their investment platform to the web. Through iterative design, accessibility work, and data-driven decisions, we reached 30,000 monthly users and hit 9.2% conversion, more than double the goal.</div>
+        </div>
+        <div class="wi-img-wrap">
+          <div class="wi-glow" style="background:radial-gradient(circle,#41A641,transparent)"></div>
+          <div class="wi-img" id="wi-img-ion">
+            <img src="images/ion-cover.png" onerror="this.src='images/ion-home.png'" alt="íon Itaú Web Platform">
+            <video src="images/ion-hover.mp4" muted loop playsinline preload="none"></video>
+          </div>
+        </div>
+        <div class="wi-right">
+          <div class="wmeta">2022 – 2024</div>
+          <div class="wi-access">
+            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <span class="wi-access-label">View</span>
+          </div>
+        </div>
+      </div>
+  </div>
   <section class="ct-sec" id="contact">
     <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
@@ -957,6 +999,8 @@ rev();
 
   initCardVideo('wi-ion','wi-img-ion');
   initCardVideo('wi-ids','wi-img-ids');
+  initCardVideo('cnxt-ids','wi-img-ids');
+  initCardVideo('cnxt-ion','wi-img-ion');
 </script>
 </body>
 </html>
