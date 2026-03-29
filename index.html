@@ -29,7 +29,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:3
 #cur{position:fixed;width:10px;height:10px;background:var(--white);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
 #cur-ring{position:fixed;width:38px;height:38px;border:1.5px solid var(--white);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.5;transition:width .3s,height .3s;mix-blend-mode:difference}
 .cg #cur-ring{width:64px;height:64px;opacity:.15}
-.page{display:none;min-height:100vh}.page.active{display:block}
+.page{display:none;min-height:100vh}.page.active{display:block;animation:pgIn .35s ease}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;z-index:500;background:transparent;backdrop-filter:blur(0px);border-bottom:1px solid transparent;transition:background .8s ease,backdrop-filter .8s ease,border-color .8s ease}
@@ -355,7 +355,8 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .cnxt-new .cnxt-lbl{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:24px;display:block;text-transform:none}
 .cnxt-new .wi{cursor:pointer}
 .cnxt-new + .ct-sec{padding-top:72px!important}
-</style>
+
+@keyframes pgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}</style>
 
 
 </head>
@@ -505,10 +506,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   <section class="ct-sec" id="contact">
     <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
-      <a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false" class="ct-card">
-        <span class="ct-card-label">Work</span>
-        <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+      
       <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="ct-card">
         <span class="ct-card-label">LinkedIn</span>
         <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -704,10 +702,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   <section class="ct-sec" id="contact">
     <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
-      <a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false" class="ct-card">
-        <span class="ct-card-label">Work</span>
-        <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+      
       <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="ct-card">
         <span class="ct-card-label">LinkedIn</span>
         <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -875,10 +870,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   <section class="ct-sec" id="contact">
     <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
-      <a href="#" onclick="sp('home');setTimeout(function(){gt('work')},80);return false" class="ct-card">
-        <span class="ct-card-label">Work</span>
-        <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+      
       <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="ct-card">
         <span class="ct-card-label">LinkedIn</span>
         <span class="ct-card-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
