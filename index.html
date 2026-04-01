@@ -1062,7 +1062,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
       </ul>
     </div>
 
-    <div class="cimg rv"><img src="images/rite-case-1.png" alt="Test script and research planning"><p class="ccap">Test script and hypothesis structure developed before the first session</p></div>
 
     <div class="csec rv">
       <div class="cslbl">In practice</div>
@@ -1246,7 +1245,7 @@ window.addEventListener('scroll',function(){
 function showMobileCTA(name){
   var group = document.getElementById('navMobileGroup');
   var desktopGrp = document.getElementById('navDesktopGroup');
-  var isCasePage = (name === 'ion' || name === 'ids');
+  var isCasePage = (name === 'ion' || name === 'ids' || name === 'rite');
   if(group) group.classList.toggle('visible', isCasePage);
   if(desktopGrp) desktopGrp.classList.toggle('visible', isCasePage);
 }
