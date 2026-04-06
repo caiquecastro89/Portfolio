@@ -266,9 +266,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 @keyframes fi{from{opacity:0}to{opacity:1}}
 
 @media(max-width:1400px) and (min-width:1281px){
-  .wi-img-wrap{width:480px}
-  .wi:hover .wi-img{height:calc(700px * 9/16)}
+  .wi-img-wrap{width:480px;padding-top:16px}
   .wi:hover .wi-img-wrap{width:700px!important}
+  .wi:hover .wi-img{height:393px;width:700px}
   .wi:hover .wi-glow{width:700px;height:650px}
   .wi:hover{min-height:500px}
   .wi-left{flex:0 0 260px;width:260px}
@@ -277,16 +277,15 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 
 @media(max-width:1280px) and (min-width:901px){
   .wi{column-gap:40px}
-  .wi-img-wrap{width:380px}
-  .wi:hover .wi-img{height:calc(580px * 9/16)}
+  .wi-img-wrap{width:380px;padding-top:16px}
   .wi:hover .wi-img-wrap{width:580px!important}
+  .wi:hover .wi-img{height:326px;width:580px}
   .wi:hover .wi-glow{width:580px;height:520px}
   .wi:hover{min-height:420px;padding:0 40px}
   .wi-left{flex:0 0 220px;width:220px}
   .wi:hover .wi-left{flex:0 0 280px;width:280px;padding:40px 0}
   .wi:hover .wi-right{padding:40px 0}
   .wi:hover .wname{font-size:clamp(1.2rem,1.8vw,1.6rem)}
-  .wi-img-wrap{padding-top:24px}
 }
 
 @media(max-width:900px){
@@ -350,7 +349,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   flex-grow:0;
   transition:width .5s cubic-bezier(.16,1,.3,1);
   overflow:visible;
-  padding-top:32px;
+  padding-top:16px;
 }
 .wi:hover .wi-img-wrap{width:966px}
 .wi-glow{
@@ -415,6 +414,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 
 /* Next case card section */
 .cnxt-new{padding:0 48px;background:var(--bg)}
+.cnxt-new .wi-img-wrap{padding-top:16px}
 .cnxt-new .cnxt-lbl{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:24px;display:block;text-transform:none}
 .cnxt-new .wi{cursor:pointer}
 .cnxt-new + .ct-sec{padding-top:72px!important}
