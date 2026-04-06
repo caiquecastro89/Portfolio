@@ -347,6 +347,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   flex-grow:0;
   transition:width .5s cubic-bezier(.16,1,.3,1);
   overflow:visible;
+  padding-top:32px;
 }
 .wi:hover .wi-img-wrap{width:966px}
 .wi-glow{
@@ -375,11 +376,13 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi:hover .wi-img{height:582px}
 .wi-img{position:relative}
 .wi-img img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;transition:opacity .3s,transform .5s cubic-bezier(.16,1,.3,1)}
-.wi-img video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;opacity:0;transition:opacity .3s}
+.wi-img video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;object-position:center center;display:block;opacity:0;transition:opacity .3s;background:#000}
 .wi-img.playing img{opacity:0}
+.wi-img.playing{height:auto!important;aspect-ratio:16/9}
 .wi-img.playing video{opacity:1}
 
 .wi-img.playing img{opacity:0}
+.wi-img.playing{height:auto!important;aspect-ratio:16/9}
 .wi-img.playing video{display:block}
 .wi:hover .wi-img img{transform:scale(1.02)}
 
