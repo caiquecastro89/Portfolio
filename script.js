@@ -47,11 +47,11 @@ function gt(id){
 
 // Reveal animations
 function rev(){
-  var els=document.querySelectorAll('.rv:not(.rv-done)');
+  var els=document.querySelectorAll('.rv:not(.on)');
   var wh=window.innerHeight;
   els.forEach(function(el){
     var r=el.getBoundingClientRect();
-    if(r.top<wh*0.92){el.classList.add('rv-done')}
+    if(r.top<wh*0.92){el.classList.add('on')}
   });
 }
 window.addEventListener('scroll',rev,{passive:true});
