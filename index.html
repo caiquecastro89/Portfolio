@@ -267,13 +267,13 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 
 @media(min-width:1401px){
   .wi:hover .wi-img-wrap{width:966px}
-  .wi:hover .wi-img{height:582px}
+  .wi:hover .wi-img{width:966px}
 }
 
 @media(max-width:1400px) and (min-width:1281px){
   .wi-img-wrap{width:480px;padding-top:16px}
   .wi:hover .wi-img-wrap{width:700px!important}
-  .wi:hover .wi-img{height:393px;width:700px}
+  .wi:hover .wi-img{width:700px}
   .wi:hover .wi-glow{width:700px;height:650px}
   .wi:hover{min-height:500px}
   .wi-left{flex:0 0 260px;width:260px}
@@ -284,7 +284,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi{column-gap:40px}
   .wi-img-wrap{width:380px;padding-top:16px}
   .wi:hover .wi-img-wrap{width:580px!important}
-  .wi:hover .wi-img{height:326px;width:580px}
+  .wi:hover .wi-img{width:580px}
   .wi:hover .wi-glow{width:580px;height:520px}
   .wi:hover{min-height:420px;padding:0 40px}
   .wi-left{flex:0 0 220px;width:220px}
@@ -383,9 +383,11 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi-img img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;transition:opacity .3s,transform .5s cubic-bezier(.16,1,.3,1)}
 .wi-img video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;opacity:0;transition:opacity .3s}
 .wi-img.playing img{opacity:0}
+.wi-img.playing{aspect-ratio:16/9;height:auto!important}
 .wi-img.playing video{opacity:1}
 
 .wi-img.playing img{opacity:0}
+.wi-img.playing{aspect-ratio:16/9;height:auto!important}
 .wi-img.playing video{display:block}
 .wi:hover .wi-img img{transform:scale(1.02)}
 
@@ -655,16 +657,16 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     </div>
   </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="challenge">
       <div class="cslbl">The challenge</div>
-      <h2 class="csh2">A platform built for mobile, ready to conquer the web</h2>
+      <h2 class="csh2" data-track="ion-challenge">A platform built for mobile, ready to conquer the web</h2>
       <p class="cp">Íon is Itaú's investment platform, already well-established in the mobile environment as a robust and sophisticated solution for investors.</p>
       <p class="cp">The challenge was to expand this experience to the web, creating an omnichannel journey that maintained the same level of excellence, now adapted to the desktop context, and more than a simple interface adaptation, the project required rethinking flows, components, and interactions for a new usage scenario, with a strong focus on accessibility, performance, and scalability. The goal was ambitious: to reach <strong>15,000 monthly users by December 2023</strong>.</p>
     </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="role">
       <div class="cslbl">My role</div>
-      <h2 class="csh2">Cross-functional design at the heart of the platform</h2>
+      <h2 class="csh2" data-track="ion-my-role">Cross-functional design at the heart of the platform</h2>
       <p class="cp">As a senior product designer, I was part of the squad responsible for the product showcase on íon web, one of the platform's most strategic areas, focused on presenting investment products in a clear, engaging, and efficient way. My role was cross-functional, ranging from UX and UI decisions to technical alignment with development and QA teams.</p>
       <ul class="cul">
         <li><strong>Conversion:</strong> I structured journeys that encouraged user engagement and decision-making, especially for complex financial products.</li>
@@ -724,9 +726,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
       <p class="cp">This approach allowed us to launch a solid, functional, and well-received MVP, even without formal usability testing prior to go-live.</p>
     </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="deliverables">
       <div class="cslbl">Key deliverables</div>
-      <h2 class="csh2">Logged-in Homepage</h2>
+      <h2 class="csh2" data-track="ion-deliverables">Logged-in Homepage</h2>
       <p class="cp">The logged-in homepage was designed to be the user's entry point into the íon web experience. I worked on structuring a page that balanced informative content, efficient navigation, and personalization. Key elements included:</p>
       <ul class="cul">
         <li>Interactive cards with information about the stock market, the user's investments, and product suggestions.</li>
@@ -779,9 +781,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     </div>
     <div class="cimg rv"><img src="images/ion-dados.png" alt="Data-driven changes"><p class="ccap">Before and after: table display function redesign driven by user behavior data</p></div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="results">
       <div class="cslbl">Results</div>
-      <h2 class="csh2">Double the users, more than twice the conversion</h2>
+      <h2 class="csh2" data-track="ion-results">Double the users, more than twice the conversion</h2>
       <p class="cp">By the end of the project, the results exceeded initial expectations, both in terms of adoption and the quality of the experience delivered. The collaborative work, combined with an iterative and user-centered approach, enabled íon web to be launched as a solid, functional, and well-received product.</p>
       <div class="csg">
         <div class="csc"><div class="csn" style="color:var(--iblue)">+30k</div><div class="csd">Monthly active users, doubling the initial goal of 15,000</div></div>
@@ -875,9 +877,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     </div>
   </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="context">
       <div class="cslbl">Context</div>
-      <h2 class="csh2">One design system. Four tech stacks. Thousands of people.</h2>
+      <h2 class="csh2" data-track="ids-context">One design system. Four tech stacks. Thousands of people.</h2>
       <p class="cp">NTT DATA assembled a multidisciplinary squad of specialists focused on different aspects of the design system: design, mobile and desktop technology, quality assurance, accessibility, and strategy. Our primary objective was to standardize and align the four core technology stacks, Angular, React, Flutter, and Swift, while ensuring Figma components and templates remained up to date and fully optimized for designers and developers.</p>
       <p class="cp">As a senior designer on this project, alongside one to three other designers depending on the project phase, I was responsible for conducting initial component analyses, refining designs within the core Figma library, updating technical handoff specifications, and ultimately revising the design documentation on the internal design system website. To provide a sense of scale, iDS consists of over 70 components, is utilized by approximately 500 designers, more than 5,000 developers, and over 6,000 product managers. This was a large-scale, high-impact initiative spanning nearly a year, an experience that significantly deepened my expertise in design systems and their strategic implementation.</p>
       <div class="csg">
@@ -897,7 +899,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 
     <div class="csec rv">
       <div class="cslbl">Component analysis</div>
-      <h2 class="csh2">From chaos to clarity: how we built our process</h2>
+      <h2 class="csh2" data-track="ids-analysis">From chaos to clarity: how we built our process</h2>
       <p class="cp">Our first analysis was both the most intriguing and the most chaotic. The team focused on a single component, gathering every possible piece of information and insight. It was during this process that the design team's role in consolidating findings and creating a structured report became clear, something that had not been explicitly defined before. This approach became the foundation for all subsequent component analyses, with the design team centralizing evaluations and reporting any critical issues.</p>
       <p class="cp">Although our initial presentation wasn't the most polished, the analysis was well received by the Itaú team, who recognized it as the first tangible value delivery. We identified key areas for improvement, including taxonomy inconsistencies, documentation gaps, and accessibility issues. It also became evident that efficient communication was essential to ensure components were developed simultaneously across multiple technology stacks. Without it, discrepancies and misalignments were inevitable.</p>
       <p class="cp">Following the delivery of our first report and the subsequent approval of the proposed corrections, we immediately shifted our focus to implementing the necessary adjustments, refining our workflow, and preparing for the analysis of the next batch of components.</p>
@@ -926,7 +928,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 
     <div class="csec rv">
       <div class="cslbl">Updating Figma libraries and technical handoffs</div>
-      <h2 class="csh2">Where design meets development</h2>
+      <h2 class="csh2" data-track="ids-handoff">Where design meets development</h2>
       <p class="cp">After refining our workflow and completing our initial analyses, the next steps were to update the components in the bank's official Figma library and, subsequently, revise the technical handoffs. As a team, we consistently adhered to best practices at every stage, working in isolated branches for each component to ensure a structured and controlled update process.</p>
       <p class="cp">Additionally, to facilitate the approval process and optimize time for all stakeholders, we placed component playgrounds within Figma. These interactive spaces allowed reviewers to explore components in different states and variations, often accompanied by a concise changelog summarizing the updates made.</p>
     </div>
@@ -1065,14 +1067,14 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     </div>
   </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="context">
       <div class="cslbl">Context</div>
       <h2 class="csh2">A new project, an untested journey and an uncertain budget</h2>
       <p class="cp">Itaú was expanding into the free energy market, aiming to become a reference in the sector following new regulations that allow consumers to migrate from the traditional regulated market to the open market. The initiative offered individual customers spending over R$200/month on electricity the chance to save 10% on their bills, without needing to invest in their own infrastructure like solar panels.</p>
       <p class="cp">When I joined the project, a Visioning had already been designed. I was brought in to turn it into an MVP and, at the project coordinator's request, conduct usability testing with real users, something that had not yet been done.</p>
     </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="challenge">
       <div class="cslbl">The challenge</div>
       <h2 class="csh2">We didn't know if the budget would come. So I started testing.</h2>
       <p class="cp">The project sat within IBBA, the bank's B2B structure, but the end client was Retail, a B2C structure. That difference created a bureaucratic barrier that made direct access to clients impossible. On top of that, we couldn't use Itaú's own research credits, making a traditional test with a research institute extremely expensive: around R$40,000.</p>
@@ -1080,9 +1082,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
       <p class="cp">Midway through the tests, the budget was approved. What started as a plan B became an essential part of the process: RITE refined the journey and the prototype to the point where the institute's test became far more efficient.</p>
     </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="method">
       <div class="cslbl">The method</div>
-      <h2 class="csh2">The tool that solved the problem</h2>
+      <h2 class="csh2" data-track="rite-method">The tool that solved the problem</h2>
       <p class="cp">RITE (Rapid Iterative Testing and Evaluation) is a usability testing approach designed to identify and fix problems quickly and continuously, during the testing process itself. Unlike traditional testing, RITE allows prototype adjustments between sessions, or even during a session, without waiting for all tests to finish before acting.</p>
       <p class="cp">The method originated in 2002 at Microsoft Games Studios during the development of Age of Empires II. Engineers realized the development pace was too slow and needed an approach that allowed immediate iteration and implementation of improvements.</p>
       <p class="cp">During testing, problems are classified into three categories:</p>
@@ -1094,16 +1096,16 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
     </div>
 
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="practice">
       <div class="cslbl">In practice</div>
-      <h2 class="csh2">Six tests, five prototypes, many discoveries</h2>
+      <h2 class="csh2" data-track="rite-practice">Six tests, five prototypes, many discoveries</h2>
       <p class="cp">For the tests, two journeys were considered: the end-to-end purchase journey and the post-purchase journey. Based on these, I developed a test script with targeted questions aimed at validating hypotheses built by me and the business team. For recruitment, we looked for people spending over R$200/month on electricity.</p>
       <p class="cp">We ran <strong>6 tests across 5 different prototype versions</strong>.</p>
     </div>
 
     <div class="csec rv">
       <div class="cslbl">What users taught us</div>
-      <h2 class="csh2">Home screen</h2>
+      <h2 class="csh2" data-track="rite-findings">Home screen</h2>
       <p class="cp">In the first version, users didn't notice there was more content below the fixed button — it was blocking the visual flow. We also identified redundancy: two buttons with the same function placed close together created confusion.</p>
       <p class="cp">The decision was to keep the first button to gather more data on whether it was truly necessary, and move the discount simulation button to the bottom of the screen.</p>
     </div>
@@ -1130,16 +1132,16 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
       <p class="cp">The feedback here was sharp: having to contact the partner to cancel a service purchased through the app was considered a terrible experience. As it was a more complex issue to resolve, we decided to gather more data before building the cancellation journey.</p>
     </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="after_tests">
       <div class="cslbl">After the tests</div>
       <h2 class="csh2">RITE opened the door for the definitive test</h2>
       <p class="cp">With the prototype refined through RITE, we ran a full usability testing round conducted by a research institute.</p>
       <p class="cp">The RITE method was essential not just for validating hypotheses, but for refining the journey, the prototype, and the test script itself. This allowed the team to get the most out of the institute's testing sessions, extracting new insights with greater depth and precision.</p>
     </div>
 
-    <div class="csec rv">
+    <div class="csec rv" data-section="learnings">
       <div class="cslbl">Learnings</div>
-      <h2 class="csh2">What I would bring to the next project</h2>
+      <h2 class="csh2" data-track="rite-learnings">What I would bring to the next project</h2>
       <p class="cp"><strong>Think about context before applying RITE.</strong> Do you have time to update the prototype between sessions? Can you run multiple tests in the same day? The method only works well when there are real conditions for iteration.</p>
       <p class="cp"><strong>Have a solid foundation.</strong> Define clear hypotheses and specific objectives before you start. Knowing what you want to discover is what makes RITE efficient, not just fast.</p>
       <p class="cp"><strong>RITE is not chaos.</strong> Not every user error or hesitation requires an immediate change. Avoid rushed decisions: observe, analyze, and then validate.</p>
@@ -1215,6 +1217,30 @@ function sp(name){
     document.documentElement.style.scrollBehavior = '';
     document.body.style.scrollBehavior = '';
   }, 100);
+  // Vercel Analytics — track page navigation
+  try {
+    var pageNames = {
+      'home': 'Home',
+      'ion': 'Case: íon Itaú Web Platform',
+      'ids': 'Case: Fixing Itaú's Design System',
+      'rite': 'Case: RITE Method'
+    };
+    // Track time spent on previous page before leaving
+    if(_lastCasePage) trackTimeOnCase(_lastCasePage);
+    if(name === 'home' && _lastCasePage) { _homeEnterTime = Date.now(); }
+    if(name !== 'home' && _homeEnterTime) { trackTimeOnHome(); }
+
+    if(window.va && name !== 'home'){
+      window.va('event', { name: 'case_view', page: pageNames[name] || name });
+    }
+    // Start timer when entering a case
+    if(name !== 'home'){
+      _caseEnterTime = Date.now();
+      _lastCasePage = pageNames[name] || name;
+    }
+  } catch(e) {}
+  // Re-init section observers for new page
+  setTimeout(initSectionTracking, 200);
 }
 
 window.addEventListener('popstate', function(e){
@@ -1265,6 +1291,23 @@ function gt(id){var el=document.getElementById(id);if(el)el.scrollIntoView({beha
 window.addEventListener('scroll',function(){
   var y=window.scrollY;
   document.getElementById('nav').classList.toggle('sc',y>20);
+  // Track scroll depth milestones
+  try {
+    if(window.va){
+      var scrollPct = Math.round((y / (document.body.scrollHeight - window.innerHeight)) * 100);
+      var pageKey = currentPage;
+      if(!window._scrollTracked) window._scrollTracked = {};
+      if(!window._scrollTracked[pageKey]) window._scrollTracked[pageKey] = {};
+      if(scrollPct >= 50 && !window._scrollTracked[pageKey]['50']){
+        window._scrollTracked[pageKey]['50'] = true;
+        window.va('event', {name:'scroll_depth', page: pageKey, milestone:'50%'});
+      }
+      if(scrollPct >= 90 && !window._scrollTracked[pageKey]['90']){
+        window._scrollTracked[pageKey]['90'] = true;
+        window.va('event', {name:'scroll_depth', page: pageKey, milestone:'90%'});
+      }
+    }
+  } catch(e) {}
   // Show mobile contact CTA after scrolling past hero (approx 80% of viewport height)
   var threshold=window.innerHeight*0.75;
   // mobile CTAs controlled via group
@@ -1325,6 +1368,99 @@ rev();
     });
   });
 
+  // Track clicks on all important buttons/links
+  function trackClick(eventName, label){
+    try { if(window.va) window.va('event', {name: eventName, label: label}); } catch(e){}
+  }
+
+  function initTracking(){
+    // CTA buttons
+    document.querySelectorAll('.btn-primary, .nav-cta').forEach(function(el){
+      el.addEventListener('click', function(){ trackClick('cta_click', 'Get in touch'); });
+    });
+    document.querySelectorAll('.btn-secondary, .nav-cta-secondary').forEach(function(el){
+      el.addEventListener('click', function(){ trackClick('cta_click', 'Book a meeting'); });
+    });
+    document.querySelectorAll('.nav-cta-mobile').forEach(function(el){
+      var label = el.href && el.href.includes('calendly') ? 'Book a call (mobile)' : 'Contact (mobile)';
+      el.addEventListener('click', function(){ trackClick('cta_click', label); });
+    });
+
+    // LinkedIn
+    document.querySelectorAll('a[href*="linkedin"]').forEach(function(el){
+      el.addEventListener('click', function(){ trackClick('social_click', 'LinkedIn'); });
+    });
+
+    // Case cards on home
+    document.querySelectorAll('.wi').forEach(function(el){
+      el.addEventListener('click', function(){
+        var id = el.id || 'unknown';
+        trackClick('case_card_click', id);
+      });
+    });
+
+    // Next case buttons
+    document.querySelectorAll('.cnxt-new .wi').forEach(function(el){
+      el.addEventListener('click', function(){
+        var id = el.id || 'unknown';
+        trackClick('next_case_click', id);
+      });
+    });
+
+    // Footer cards
+    document.querySelectorAll('.ct-card').forEach(function(el){
+      var label = el.querySelector('.ct-card-label');
+      el.addEventListener('click', function(){
+        trackClick('footer_card_click', label ? label.textContent : 'unknown');
+      });
+    });
+
+    // Back button on cases
+    document.querySelectorAll('.cbk').forEach(function(el){
+      el.addEventListener('click', function(){ trackClick('nav_click', 'Back'); });
+    });
+
+    // Nav links
+    document.querySelectorAll('.nav-links a').forEach(function(el){
+      el.addEventListener('click', function(){
+        trackClick('nav_click', el.textContent.trim());
+      });
+    });
+
+    // Summary card expand
+    document.querySelectorAll('.csummary-toggle').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var card = btn.closest('.csummary');
+        var isOpening = !card.classList.contains('open');
+        if(isOpening){
+          trackClick('summary_expand', currentPage);
+        }
+      });
+    });
+  }
+
+  // Time spent on case pages
+  var _caseEnterTime = null;
+  var _lastCasePage = null;
+
+  function trackTimeOnCase(leavingPage){
+    if(!_caseEnterTime || !_lastCasePage) return;
+    var seconds = Math.round((Date.now() - _caseEnterTime) / 1000);
+    if(seconds < 2) return; // ignore accidental clicks
+    try {
+      if(window.va){
+        var label = seconds < 30 ? 'under_30s'
+          : seconds < 60 ? '30s_to_1min'
+          : seconds < 180 ? '1_to_3min'
+          : seconds < 300 ? '3_to_5min'
+          : 'over_5min';
+        window.va('event', {name:'time_on_case', page: _lastCasePage, duration: label, seconds: seconds});
+      }
+    } catch(e){}
+    _caseEnterTime = null;
+    _lastCasePage = null;
+  }
+
   function initAllVideos(){
     initCardVideo('wi-ion','wi-img-ion');
     initCardVideo('wi-ids','wi-img-ids');
@@ -1335,10 +1471,120 @@ rev();
     initCardVideo('cnxt-rite-ion','wi-img-cnxt-rite-ion');
   }
   if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', initAllVideos);
+    document.addEventListener('DOMContentLoaded', function(){ initAllVideos(); initTracking(); });
   } else {
     initAllVideos();
+    initTracking();
+    initSectionTracking();
   }
+
+  // Track time when user closes or leaves the tab
+  window.addEventListener('beforeunload', function(){
+    if(_lastCasePage) trackTimeOnCase(_lastCasePage);
+    if(_homeEnterTime) trackTimeOnHome();
+  });
+  document.addEventListener('visibilitychange', function(){
+    if(document.hidden){
+      if(_lastCasePage) trackTimeOnCase(_lastCasePage);
+      if(_homeEnterTime) trackTimeOnHome();
+    }
+  });
+
+  // --- Time on home ---
+  var _homeEnterTime = Date.now(); // starts on load (home is first page)
+
+  function trackTimeOnHome(){
+    if(!_homeEnterTime) return;
+    var seconds = Math.round((Date.now() - _homeEnterTime) / 1000);
+    if(seconds < 2) return;
+    try {
+      if(window.va){
+        var label = seconds < 10 ? 'under_10s'
+          : seconds < 30 ? '10s_to_30s'
+          : seconds < 60 ? '30s_to_1min'
+          : seconds < 180 ? '1_to_3min'
+          : 'over_3min';
+        window.va('event', {name:'time_on_home', duration: label, seconds: seconds});
+      }
+    } catch(e){}
+    _homeEnterTime = null;
+  }
+
+  // --- Section visibility tracking inside cases ---
+  var _sectionObserver = null;
+  var _trackedSections = {};
+
+  function initSectionTracking(){
+    if(!window.IntersectionObserver) return;
+    _trackedSections = {};
+    _sectionObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var label = entry.target.getAttribute('data-track');
+          if(label && !_trackedSections[label]){
+            _trackedSections[label] = true;
+            try {
+              if(window.va) window.va('event', {name:'section_view', page: currentPage, section: label});
+            } catch(e){}
+          }
+        }
+      });
+    }, {threshold: 0.4});
+    document.querySelectorAll('[data-track]').forEach(function(el){
+      _sectionObserver.observe(el);
+    });
+  }
+
+  // #1 — Section reach tracking inside cases
+  function initSectionTracking(){
+    var tracked = {};
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var section = entry.target.dataset.section;
+          var key = currentPage + '_' + section;
+          if(!tracked[key]){
+            tracked[key] = true;
+            try { if(window.va) window.va('event', {name:'section_reached', page: currentPage, section: section}); } catch(e){}
+          }
+        }
+      });
+    }, {threshold:0.3});
+    document.querySelectorAll('[data-section]').forEach(function(el){ obs.observe(el); });
+  }
+  initSectionTracking();
+
+  // #2 — Hover on cards 1.5s without clicking
+  var _hoverTimers = {};
+  document.querySelectorAll('.wi').forEach(function(el){
+    var id = el.id || 'unknown';
+    el.addEventListener('mouseenter', function(){
+      _hoverTimers[id] = setTimeout(function(){
+        try { if(window.va) window.va('event', {name:'card_hover_no_click', card: id}); } catch(e){}
+        _hoverTimers[id] = null;
+      }, 1500);
+    });
+    el.addEventListener('mouseleave', function(){
+      if(_hoverTimers[id]){ clearTimeout(_hoverTimers[id]); _hoverTimers[id] = null; }
+    });
+    el.addEventListener('click', function(){
+      if(_hoverTimers[id]){ clearTimeout(_hoverTimers[id]); _hoverTimers[id] = null; }
+    });
+  });
+
+  // #3 — Time on home before entering a case
+  var _homeEnterTime = Date.now();
+  var _homeTimeTracked = false;
+  document.querySelectorAll('.wi').forEach(function(el){
+    el.addEventListener('click', function(){
+      if(currentPage === 'home' && !_homeTimeTracked){
+        _homeTimeTracked = true;
+        var secs = Math.round((Date.now() - _homeEnterTime) / 1000);
+        var label = secs < 10 ? 'under_10s' : secs < 30 ? '10s_to_30s' : secs < 60 ? '30s_to_1min' : 'over_1min';
+        try { if(window.va) window.va('event', {name:'home_time_before_case', duration: label, seconds: secs}); } catch(e){}
+      }
+    });
+  });
 </script>
 </body>
 </html>
