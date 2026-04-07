@@ -92,8 +92,10 @@ function initAllVideos(){
 }
 
 if(document.readyState==='loading'){
-  document.addEventListener('DOMContentLoaded',function(){ initAllVideos(); rev(); });
+  document.addEventListener('DOMContentLoaded',function(){ initAllVideos(); rev(); setTimeout(rev,100); });
 } else {
   initAllVideos();
   rev();
+  setTimeout(rev,100);
 }
+window.addEventListener('load',rev);
