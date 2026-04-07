@@ -1,10 +1,8 @@
-@import './fonts.css';
-
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#F2F0EC;--ink:#0D0C0A;--mid:#7A7672;--pale:#E8E5DF;--white:#FAFAF8;
   --accent:#FF4D2E;--green:#BFED47;--iblue:#003087;--iorange:#F97300;
-  --display:'Saans',sans-serif;--mono:'Saans',sans-serif;--body:'Saans',sans-serif;
+  --display:'Saans','Helvetica Neue',Helvetica,Arial,sans-serif;--mono:'Saans','Helvetica Neue',Helvetica,Arial,sans-serif;--body:'Saans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 html{scroll-behavior:auto;overflow-x:hidden}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:300;cursor:none;overflow-x:hidden}
