@@ -386,9 +386,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi-img.playing{aspect-ratio:16/9;height:auto!important}
 .wi-img.playing video{opacity:1}
 
-.wi-img.playing img{opacity:0}
-.wi-img.playing{aspect-ratio:16/9;height:auto!important}
-.wi-img.playing video{display:block}
+
 .wi:hover .wi-img img{transform:scale(1.02)}
 
 /* Glow behind hero photo */
@@ -1235,8 +1233,6 @@ function sp(name){
     // Track time spent on previous page before leaving
     if(_lastCasePage) trackTimeOnCase(_lastCasePage);
     if(name === 'home' && _lastCasePage) { _homeEnterTime = Date.now(); }
-    if(name !== 'home' && _homeEnterTime) { trackTimeOnHome(); }
-
     if(window.va && name !== 'home'){
       window.va('event', { name: 'case_view', page: pageNames[name] || name });
     }
@@ -1580,7 +1576,6 @@ rev();
   });
 
   // #3 — Time on home before entering a case
-  var _homeEnterTime = Date.now();
   var _homeTimeTracked = false;
   document.querySelectorAll('.wi').forEach(function(el){
     el.addEventListener('click', function(){
