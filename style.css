@@ -286,22 +286,48 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .hero-right{order:2;width:100%!important;max-width:100%!important;padding:0 24px 24px}
   body{cursor:auto}
   .hero-photo{object-position:center 10%;border-radius:32px;aspect-ratio:800/1066;width:100%;height:auto;max-height:70vh}
+
+  /* 1. Espaçamento hero→work: 48px topo, sem bottom (last case encosta no about) */
+  .work-sec{padding-top:48px!important;padding-bottom:0!important}
   .work-sec,.services-sec,.sk-sec,.ct-sec{padding-left:24px;padding-right:24px}
+
+  /* 2. Diminuir espaço entre "Recent work" e primeiro case */
+  .wtr{margin-bottom:16px!important}
+
+  /* Cards */
   .wi{display:block!important;min-height:auto!important}
   .wi-left{padding:24px 0 12px!important;max-width:100%!important}
   .wi-img-wrap{width:100%!important;height:auto!important}
-  .wi-glow{display:none!important}
+
+  /* 3. Glows aparecem no mobile */
+  .wi-glow{display:block!important;opacity:.6}
   .wi-img{height:200px!important;width:100%!important;border-radius:12px 12px 0 0!important;margin-top:0!important}
   .wi-img img{height:200px!important;width:100%!important;object-fit:cover!important}
   .wi-right{display:flex!important;flex-direction:row!important;justify-content:space-between!important;align-items:center!important;padding:14px 0 24px!important}
-  .wi:hover{background:none!important;min-height:auto!important;color:var(--ink)!important}
   .wi-desc{display:none!important}
   .wi-access-label{display:none!important}
   .warr{background:var(--accent)!important;color:var(--white)!important}
   .wmeta{color:var(--mid)!important}
   .wtag{color:var(--mid)!important}
   .wname{font-size:clamp(1.3rem,5vw,1.8rem)!important}
-  .svc-item{grid-template-columns:1fr;gap:14px}.svc-tags{justify-content:flex-start}
+
+  /* 4. Disable hover/touch video on mobile — sem video, sem samba */
+  .wi-img.playing video{opacity:0!important;display:none!important;pointer-events:none!important}
+  .wi-img.playing img{opacity:1!important;display:block!important}
+  .wi:active{background:transparent!important;min-height:auto!important}
+  .wi:active .wi-left{padding:24px 0 12px!important;flex:none!important;width:100%!important}
+  .wi:active .wi-img{height:200px!important}
+  .wi:active .wi-img-wrap{width:100%!important}
+  .wi:active .wname{font-size:clamp(1.3rem,5vw,1.8rem)!important;white-space:normal!important}
+
+  /* 5. About: menos espaçamento e sem linhas divisórias */
+  .services-sec{padding-top:40px!important;padding-bottom:40px!important}
+  .svc-header{margin-bottom:24px!important}
+  .svc-item{grid-template-columns:1fr;gap:10px;padding:16px 0!important;border-top:none!important;border-bottom:none!important}
+  .svc-item:last-child{border-bottom:none!important}
+  .svc-list{gap:0!important}
+  .svc-tags{justify-content:flex-start}
+
   .ct-cards{grid-template-columns:1fr}.ct-row{flex-direction:column;gap:32px;align-items:flex-start}
   .ch{padding:96px 24px 44px}.cmbar{flex-wrap:wrap}.cmi{padding:16px 20px}
   .cbody{padding:44px 24px}.csg{grid-template-columns:1fr 1fr}
@@ -310,33 +336,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .cnxt-new .cnxt-lbl{font-size:clamp(1.6rem,6vw,2.4rem)}
   .tli{grid-template-columns:80px 1fr}
   .cimg{margin:32px -24px 72px}.ccap{padding:0 24px}
-
-  /* Disable all hover effects on mobile */
-  .wi:hover{background:transparent!important;min-height:auto!important;color:var(--ink)!important}
-  .wi:hover .wi-left{padding:24px 0 12px!important;flex:none!important;width:100%!important}
-  .wi:hover .wi-img{height:200px!important}
-  .wi:hover .wi-img-wrap{width:100%!important}
-  .wi:hover .wname{font-size:clamp(1.3rem,5vw,1.8rem)!important;white-space:normal!important}
-  .wi:hover .wi-glow{display:none!important}
-  .wi-img.playing img{opacity:1!important}
-  .wi-img.playing video{opacity:0!important;display:none!important}
-  .wi-desc{display:none!important}}
-
-/* SVG noise filter */
-
-/* Glow circle behind case image */
-.wi-img-wrap{
-  position:relative;
-  align-self:stretch;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  width:580px;
-  flex-shrink:1;
-  flex-grow:0;
-  transition:width .5s cubic-bezier(.16,1,.3,1);
-  overflow:visible;
-  padding-top:16px;
 }
 .wi-glow{
   position:absolute;
