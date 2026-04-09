@@ -300,7 +300,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi-img-wrap{width:100%!important;height:auto!important}
 
   /* 3. Glows aparecem no mobile */
-  .wi-glow{display:block!important;opacity:.6}
+  .wi-glow{display:none!important}
   .wi-img{height:200px!important;width:100%!important;border-radius:12px 12px 0 0!important;margin-top:0!important}
   .wi-img img{height:200px!important;width:100%!important;object-fit:cover!important}
   .wi-right{display:flex!important;flex-direction:row!important;justify-content:space-between!important;align-items:center!important;padding:14px 0 24px!important}
@@ -321,9 +321,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi:active .wname{font-size:clamp(1.3rem,5vw,1.8rem)!important;white-space:normal!important}
 
   /* 5. About: menos espaçamento e sem linhas divisórias */
-  .services-sec{padding-top:40px!important;padding-bottom:40px!important}
-  .svc-header{margin-bottom:24px!important}
-  .svc-item{grid-template-columns:1fr;gap:10px;padding:16px 0!important;border-top:none!important;border-bottom:none!important}
+  .svc-item{grid-template-columns:1fr;gap:14px;border-top:none!important;border-bottom:none!important}
   .svc-item:last-child{border-bottom:none!important}
   .svc-list{gap:0!important}
   .svc-tags{justify-content:flex-start}
