@@ -1,3 +1,37 @@
+// Loader
+(function(){
+  var loader = document.getElementById('loader');
+  var count = document.getElementById('loader-count');
+  if(!loader) return;
+
+  var start = null;
+  var duration = 1200;
+  var current = 0;
+
+  function easeOut(t){ return 1 - Math.pow(1-t, 3); }
+
+  function tick(ts){
+    if(!start) start = ts;
+    var progress = Math.min((ts - start) / duration, 1);
+    var eased = easeOut(progress);
+    var num = Math.floor(eased * 100);
+    if(num !== current){
+      current = num;
+      count.textContent = current;
+    }
+    if(progress < 1){
+      requestAnimationFrame(tick);
+    } else {
+      count.textContent = '100';
+      setTimeout(function(){
+        loader.classList.add('done');
+        setTimeout(function(){ loader.style.display='none'; }, 700);
+      }, 150);
+    }
+  }
+  requestAnimationFrame(tick);
+})();
+
 // Cursor
 var c=document.getElementById('cur'),r=document.getElementById('cur-ring'),mx=0,my=0,tx=0,ty=0;
 document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;if(c){c.style.left=mx+'px';c.style.top=my+'px'}});
