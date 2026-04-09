@@ -83,19 +83,25 @@ document.querySelectorAll('.csummary-toggle').forEach(function(btn){
 });
 
 function initAllVideos(){
+  if(window.innerWidth<=900) return;
   initCardVideo('wi-ion','wi-img-ion');
   initCardVideo('wi-ids','wi-img-ids');
   initCardVideo('wi-rite','wi-img-rite');
   initCardVideo('cnxt-ids-rite','wi-img-cnxt-ids-rite');
   initCardVideo('cnxt-rite-ion','wi-img-cnxt-rite-ion');
-  initCardVideo('cnxt-ion-card','wi-img-cnxt-ion');
+  initCardVideo('cnxt-ids-card','wi-img-cnxt-ids');
 }
 
 if(document.readyState==='loading'){
-  document.addEventListener('DOMContentLoaded',function(){ initAllVideos(); rev(); setTimeout(rev,100); });
+  document.addEventListener('DOMContentLoaded',function(){
+    initAllVideos();
+    setTimeout(rev,50);
+    setTimeout(rev,2400);
+    setTimeout(rev,3200);
+  });
 } else {
   initAllVideos();
-  rev();
-  setTimeout(rev,100);
+  setTimeout(rev,50);
+  setTimeout(rev,2400);
+  setTimeout(rev,3200);
 }
-window.addEventListener('load',rev);
