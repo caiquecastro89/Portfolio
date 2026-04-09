@@ -193,7 +193,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .cmi:last-child{border-right:none}
 .cmlbl{font-family:var(--mono);font-size:.56rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:5px}
 .cmval{font-family:var(--display);font-size:.95rem;font-weight:700;letter-spacing:-.01em}
-.cbody{max-width:780px;margin:0 auto;padding:48px 48px 80px}
+.cbody{opacity:0;animation:fi .8s 1.4s forwards;max-width:780px;margin:0 auto;padding:48px 48px 80px}
 .csec{margin-bottom:88px}
 .cslbl{font-family:var(--mono);font-size:.58rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
 .csh2{font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:22px}
