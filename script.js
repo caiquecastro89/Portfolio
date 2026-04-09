@@ -83,7 +83,7 @@ document.querySelectorAll('.csummary-toggle').forEach(function(btn){
 });
 
 function initAllVideos(){
-  if(window.innerWidth<=900) return;
+  if(window.innerWidth<=960) return;
   initCardVideo('wi-ion','wi-img-ion');
   initCardVideo('wi-ids','wi-img-ids');
   initCardVideo('wi-rite','wi-img-rite');
