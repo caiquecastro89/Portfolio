@@ -1,8 +1,16 @@
-// Loader
+// Loader - only on first visit per session
 (function(){
   var loader = document.getElementById('loader');
   var count = document.getElementById('loader-count');
   if(!loader) return;
+
+  if(sessionStorage.getItem('visited')){
+    // Not first visit - hide loader and remove delays
+    loader.style.display='none';
+    document.body.classList.add('no-loader');
+    return;
+  }
+  sessionStorage.setItem('visited','1');
 
   var start = null;
   var duration = 1200;

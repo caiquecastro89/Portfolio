@@ -469,3 +469,11 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .svc-item{border-top:none!important;border-bottom:none!important}
   .svc-item:last-child{border-bottom:none!important}
 }
+/* No loader: second visit - restore natural delays */
+body.no-loader nav{animation-delay:.2s!important}
+body.no-loader .hero-badge{animation-delay:.3s!important}
+body.no-loader .hero-impact{animation-delay:.5s!important}
+body.no-loader .hero-desc{animation-delay:.7s!important}
+body.no-loader .hero-cta-row{animation-delay:.8s!important}
+body.no-loader .hero-stats{animation-delay:.9s!important}
+body.no-loader .hero-right{animation-delay:.9s!important}
