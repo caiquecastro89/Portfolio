@@ -65,6 +65,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .hero-cta-row.rv{transition-delay:.35s}
 .hero-stats.rv{transition-delay:.45s}
 .hero-right.rv{transition-delay:.3s}
+.hero-badge.rv.on,.hero-impact.rv.on,.hero-desc.rv.on,.hero-cta-row.rv.on,.hero-stats.rv.on,.hero-right.rv.on{transition-delay:0s}
 /* hero-photo defined in glow section */
 .hero-overlay{display:none}
 
