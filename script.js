@@ -88,7 +88,7 @@ function initAllVideos(){
   initCardVideo('wi-rite','wi-img-rite');
   initCardVideo('cnxt-ids-rite','wi-img-cnxt-ids-rite');
   initCardVideo('cnxt-rite-ion','wi-img-cnxt-rite-ion');
-  initCardVideo('cnxt-ion-card','wi-img-cnxt-ion');
+  initCardVideo('cnxt-ids-card','wi-img-cnxt-ids');
 }
 
 if(document.readyState==='loading'){
