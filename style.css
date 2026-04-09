@@ -397,6 +397,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 /* Next case card section */
 .cnxt-new{padding:0 48px;background:var(--bg)}
 .cnxt-new .wi-img-wrap{padding-top:16px}
+.cnxt-new .wi-img.playing video{opacity:1!important;display:block!important}
 .cnxt-new .cnxt-lbl{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:24px;display:block;text-transform:none}
 .cnxt-new .wi{cursor:pointer}
 .cnxt-new + .ct-sec{padding-top:72px!important}
