@@ -73,7 +73,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* WORK */
-.work-sec{padding:48px 48px;overflow:hidden}
+.work-sec{padding:0 48px 48px;overflow:hidden}
 .eyebrow{font-family:var(--mono);font-size:.6rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:14px;margin-bottom:14px}
 .eyebrow::before{content:attr(data-n);color:var(--accent)}
 .wtr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:64px}
