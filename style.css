@@ -3,7 +3,7 @@
 #loader{
   position:fixed;
   inset:0;
-  background:var(--ink);
+  background:var(--bg);
   z-index:9999;
   display:flex;
   align-items:flex-end;
@@ -20,9 +20,26 @@
   font-family:var(--display);
   font-size:clamp(5rem,14vw,12rem);
   font-weight:800;
-  color:var(--white);
+  color:var(--ink);
   line-height:1;
   letter-spacing:-.04em;
+  position:relative;
+  z-index:1;
+}
+#loader-count::before{
+  content:'';
+  position:absolute;
+  width:600px;
+  height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,var(--accent),transparent 70%);
+  filter:blur(60px);
+  opacity:.35;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:-1;
+  pointer-events:none;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
