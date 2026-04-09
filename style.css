@@ -379,7 +379,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .ch{padding:96px 24px 44px}.cmbar{flex-wrap:wrap}.cmi{padding:16px 20px}
   .cbody{padding:44px 24px}.csg{grid-template-columns:1fr 1fr}
   .cnxt{padding:44px 24px}footer{padding:16px 24px}
-  .cnxt-new{padding:0}
+  .cnxt-new{padding:0 24px}
   .cnxt-new .cnxt-lbl{font-size:clamp(1.6rem,6vw,2.4rem)}
   .tli{grid-template-columns:80px 1fr}
   .cimg{margin:32px -24px 72px}.ccap{padding:0 24px}
