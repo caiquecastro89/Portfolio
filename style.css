@@ -193,8 +193,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .cmi:last-child{border-right:none}
 .cmlbl{font-family:var(--mono);font-size:.56rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:5px}
 .cmval{font-family:var(--display);font-size:.95rem;font-weight:700;letter-spacing:-.01em}
-.cbody{opacity:0;animation:fi .8s 1.4s forwards;max-width:780px;margin:0 auto;padding:48px 48px 80px}
+.cbody{max-width:780px;margin:0 auto;padding:48px 48px 80px}
 .csec{margin-bottom:88px}
+.cbody .csec:first-child,.cbody .csec:first-child.rv,.cbody .csec:first-child.rv.on{opacity:0;transform:none;animation:fi .8s 1.4s forwards}
 .cslbl{font-family:var(--mono);font-size:.58rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
 .csh2{font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:22px}
 .cp{font-size:1.125rem;font-weight:300;color:var(--mid);line-height:1.9;margin-bottom:28px}
@@ -207,7 +208,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .csummary-toggle-icon svg{transition:transform .3s}
 .csummary.open .csummary-toggle-icon svg{transform:rotate(45deg)}
 .csummary-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1)}
-.csummary.open .csummary-body{max-height:800px}
+.csummary.open .csummary-body{max-height:2000px}
 .csummary-inner{padding:0 0 24px}
 .csummary-inner ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
 .csummary-inner li{font-size:1.125rem;font-weight:300;color:var(--mid);line-height:1.7;padding-left:20px;position:relative}
