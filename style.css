@@ -231,9 +231,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 }
 .ch-c{position:relative;z-index:1}
 .cbk{opacity:0;animation:fi .8s .3s forwards;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--mid);margin-bottom:40px;transition:color .2s;cursor:none;min-height:44px}
-.cbk:hover{color:rgba(250,250,248,.9)}
+.cbk:hover{opacity:.7}
 .ctags{opacity:0;animation:fi .8s .5s forwards;display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.ctag{font-family:var(--mono);font-size:.75rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(13,12,10,.2);padding:6px 14px;border-radius:100px;color:var(--mid)}
+.ctag{font-family:var(--mono);font-size:.75rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(13,12,10,.2);padding:6px 14px;border-radius:100px;color:rgba(13,12,10,.7)}
 .ctitle{opacity:0;animation:fi .8s .5s forwards;font-family:var(--display);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;letter-spacing:-.03em;line-height:.92;color:var(--ink);margin-bottom:24px}
 .csub{opacity:0;animation:fi .8s .7s forwards;font-size:1.125rem;font-weight:300;color:var(--mid);max-width:700px;line-height:1.72}
 .cmbar{opacity:0;animation:fi .8s .9s forwards;display:flex;background:transparent;border-top:1px solid rgba(13,12,10,.08);border-bottom:1px solid rgba(13,12,10,.08)}
