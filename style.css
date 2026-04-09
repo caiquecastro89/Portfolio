@@ -13,6 +13,10 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:3
 
 /* NAV */
 nav{opacity:0;animation:fi .8s .2s forwards;position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;z-index:500;background:transparent;backdrop-filter:blur(0px);border-bottom:1px solid transparent;transition:background .8s ease,backdrop-filter .8s ease,border-color .8s ease}
+body[data-page="ion"] nav,
+body[data-page="ids"] nav,
+body[data-page="rite"] nav{opacity:1;animation:none}
+
 nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop-filter:blur(12px)}
 .nav-logo{font-family:var(--display);font-size:.82rem;font-weight:700;letter-spacing:.04em;text-decoration:none;color:var(--ink);text-transform:uppercase;cursor:none}
 .nav-links{display:flex;gap:8px;list-style:none;align-items:center}
