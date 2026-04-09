@@ -96,12 +96,10 @@ if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',function(){
     initAllVideos();
     setTimeout(rev,50);
-    setTimeout(rev,2400);
-    setTimeout(rev,3200);
+    setTimeout(rev,2300);
   });
 } else {
   initAllVideos();
   setTimeout(rev,50);
-  setTimeout(rev,2400);
-  setTimeout(rev,3200);
+  setTimeout(rev,2300);
 }
