@@ -275,7 +275,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi:hover .wname{font-size:clamp(1.2rem,1.8vw,1.6rem)}
 }
 
-@media(max-width:960px){
+@media(max-width:900px){
   nav{padding:16px 24px;background:rgba(242,240,236,.92)!important;backdrop-filter:blur(12px)!important}.nav-links,.nav-cta,.nav-cta-secondary,.nav-cta-group{display:none}
   #cur,#cur-ring{display:none!important}
   .nav-cta-mobile{display:flex!important;align-items:center;gap:6px}
@@ -403,3 +403,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .cnxt-new + .ct-sec{padding-top:72px!important}
 
 @keyframes pgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(pointer:coarse){
+  .svc-item{border-top:none!important;border-bottom:none!important}
+  .svc-item:last-child{border-bottom:none!important}
+}
