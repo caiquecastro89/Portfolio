@@ -350,7 +350,8 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 
   /* 3. Glows aparecem no mobile */
   .wi-glow{display:none!important}
-  .wi-img{height:200px!important;width:100%!important;border-radius:12px 12px 0 0!important;margin-top:0!important}
+  .wi-img{height:200px!important;width:100%!important;border-radius:12px!important;margin-top:0!important}
+  .cnxt-new .wi{border-top:none!important}
   .wi-img img{height:200px!important;width:100%!important;object-fit:cover!important}
   .wi-right{display:flex!important;flex-direction:row!important;justify-content:space-between!important;align-items:center!important;padding:14px 0 24px!important}
   .wi-desc{display:none!important}
