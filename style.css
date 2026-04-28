@@ -121,7 +121,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .work-sec{padding:0 48px 64px}
 .eyebrow{font-family:var(--mono);font-size:.6rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:14px;margin-bottom:14px}
 .eyebrow::before{content:attr(data-n);color:var(--accent)}
-.wtr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:64px}
+.wtr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px}
 .wtitle{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;letter-spacing:-.02em}
 .wcnt{font-family:var(--mono);font-size:.62rem;font-weight:400;letter-spacing:.08em;color:var(--mid)}
 .wlist{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
