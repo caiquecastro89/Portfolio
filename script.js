@@ -141,7 +141,7 @@ function scheduleRev(){
   var isMobile = window.innerWidth <= 900;
   // Mobile has no loader, hero finishes ~1.2s
   // Desktop no-loader: ~1.2s, with loader: ~3.2s
-  var delay = isMobile ? 2600 : (noLoader ? 1300 : 3300);
+  var delay = isMobile ? 2100 : (noLoader ? 2100 : 3400);
   setTimeout(rev, delay);
   setTimeout(rev, delay + 500);
 }
