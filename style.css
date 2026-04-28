@@ -329,6 +329,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi-img-wrap{width:100%!important;height:auto!important}
   .wi-glow{display:none!important}
   .wi-img{height:200px!important;width:100%!important;border-radius:12px!important;margin-top:0!important}
+  .wi-img-wrap{border-radius:12px!important;overflow:hidden!important}
   .cnxt-new .wi{border-top:none!important}
   .wi-img img{height:200px!important;width:100%!important;object-fit:cover!important}
   .wi-right{display:none!important}
@@ -395,7 +396,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   position:relative;
   z-index:1;
   flex-shrink:0;
-  contain:strict;
 }
 
 .wi-img{position:relative}
