@@ -328,10 +328,10 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi-left{padding:0 0 16px!important;max-width:100%!important}
   .wi-img-wrap{width:100%!important;height:auto!important}
   .wi-glow{display:none!important}
-  .wi-img{height:200px!important;width:100%!important;border-radius:12px!important;margin-top:0!important}
+  .wi-img{height:200px!important;width:100%!important;border-radius:12px!important;margin-top:0!important;padding-bottom:0!important;overflow:hidden!important}
   .wi-img-wrap{border-radius:12px!important;overflow:hidden!important}
   .cnxt-new .wi{border-top:none!important}
-  .wi-img img{height:200px!important;width:100%!important;object-fit:cover!important}
+  .wi-img img{height:200px!important;width:100%!important;object-fit:cover!important;border-radius:12px!important}
   .wi-right{display:none!important}
   .wi-desc{display:none!important}
   .wi-access-label{display:none!important}
