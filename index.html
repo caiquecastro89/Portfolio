@@ -33,118 +33,229 @@
 </div>
 <div id="cur"></div>
 <div id="cur-ring"></div>
+
 <nav id="nav">
-  <a class="nav-logo" href="/">Caique Castro</a>
+  <a class="nav-logo" href="/">caique.castro <span style="opacity:.3;font-weight:300">/ portfolio</span></a>
   <ul class="nav-links">
-    <li><a href="#" onclick="gt('work');return false">Work</a></li>
-    <li><a href="#" onclick="gt('services');return false">About</a></li>
-    <li><a href="https://www.linkedin.com/in/caique-castro89/" target="_blank">LinkedIn</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">About</a></li>
+    <li><a href="https://www.linkedin.com/in/caique-castro89/" target="_blank">Writing</a></li>
+    <li><a href="mailto:caique.castro89@gmail.com">Contact</a></li>
   </ul>
-  <div class="nav-cta-group" id="navDesktopGroup"><a class="nav-cta-secondary" href="https://calendly.com/caique-castro89/30min" target="_blank">Book a meeting <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="nav-cta" href="mailto:caique.castro89@gmail.com">Get in touch <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  <div style="display:flex;align-items:center;gap:8px;opacity:0;animation:fi .8s 1.5s forwards">
+    <span style="width:8px;height:8px;border-radius:50%;background:#2D8A2D;display:inline-block;animation:pu 2s infinite"></span>
+    <span style="font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(242,240,236,.4)">available · Q3 2026</span>
+  </div>
+  <div class="nav-cta-group" id="navDesktopGroup">
+    <a class="nav-cta-secondary" href="https://calendly.com/caique-castro89/30min" target="_blank">Book a meeting <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="nav-cta" href="mailto:caique.castro89@gmail.com">Get in touch <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
   <div class="nav-mobile-group" id="navMobileGroup">
     <a class="nav-cta-mobile nav-cta-mobile-secondary" id="navCtaBookCall" href="https://calendly.com/caique-castro89/30min" target="_blank">Book a call <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a class="nav-cta-mobile" id="navCtaMobile" href="mailto:caique.castro89@gmail.com">Contact <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </nav>
+
 <div class="page active" id="page-home">
 
-  <section class="hero-about">
-    <div class="hero-left">
-      <div class="hero-badge"><span class="dot"></span>Open to new opportunities</div>
-      <p class="hero-impact">Turning complexity into clarity, one product at a time</p>
-      <p class="hero-desc">I'm Caique, a data-driven Product Designer with expertise in accessibility and scalable design systems, ready to bring my enterprise experience to your next challenge.</p>
-      <div class="hero-stats">
-        <div class="hero-stat"><span class="hero-stat-label">Current company</span><span class="hero-stat-val">NTT Data × Itaú</span></div>
-        <div class="hero-stat"><span class="hero-stat-label">Experience</span><span class="hero-stat-val">12+ anos</span></div>
-        <div class="hero-stat"><span class="hero-stat-label">Focus</span><span class="hero-stat-val">UX · a11y · DS</span></div>
-      </div>
-      <div class="hero-cta-row">
-        <a href="mailto:caique.castro89@gmail.com" class="btn-primary">
-          Get in touch
-          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="https://calendly.com/caique-castro89/30min" target="_blank" class="btn-secondary">Book a meeting <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero-about" id="hero">
+    <div class="hero-eyebrow">
+      <span>Caique Castro</span>
+      <span class="sep">·</span>
+      <span>Senior Product Designer</span>
+      <span class="sep">·</span>
+      <span>São Paulo</span>
+    </div>
+    <div class="hero-main-row">
+      <p class="hero-impact">Senior product designer at NTT Data × Itaú —&nbsp;<em>shipping investment platforms, design systems and research processes for one of Latin America's largest banks.</em></p>
+      <div class="hero-status-bar">
+        <div class="hero-status-item">
+          <span class="hero-status-label">Status</span>
+          <span class="hero-status-val">Open Q3 26</span>
+        </div>
+        <div class="hero-status-item">
+          <span class="hero-status-label">Based</span>
+          <span class="hero-status-val">SP · BR</span>
+        </div>
+        <div class="hero-status-item">
+          <span class="hero-status-label">Role</span>
+          <span class="hero-status-val">Senior</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Work -->
-  <section class="work-sec" id="work">
-    <div class="eyebrow rv" data-n="01">Work</div>
-    <div class="wtr rv"><h2 class="wtitle">Recent work</h2><span class="wcnt">(3 projects)</span></div>
-    <div class="wlist">
+  <!-- ===================== FEATURED CASE ===================== -->
+  <section class="featured-wrap" id="work">
 
-      <div class="wi rv" id="wi-ion" onclick="window.location.href='/ion'">
-        <div class="wi-left">
-          <div class="wtags"><span class="wtag">Product Design</span><span class="wtag">·</span><span class="wtag">Accessibility</span><span class="wtag">·</span><span class="wtag">Data Driven</span></div>
-          <div class="wname">Designing íon web: accessibility, scale, data-driven decisions, and 9.2% conversion</div>
-          <div class="wi-desc">In 2022, I helped Itaú expand their investment platform to the web. Through iterative design, accessibility work, and data-driven decisions, we reached 30,000 monthly users and hit 9.2% conversion, more than double the goal.</div>
+    <div class="featured-eyebrow rv">
+      <div class="featured-eyebrow-left">
+        <span class="fe-label">Featured</span>
+        <span>·</span>
+        <span>Itaú Unibanco</span>
+        <span>·</span>
+        <span>2022 – 2024</span>
+      </div>
+      <div class="featured-eyebrow-right">01 / 03</div>
+    </div>
+
+    <div class="featured-card rv" id="featured-ion" onclick="window.location.href='/ion'">
+      <img
+        class="featured-card-img"
+        src="images/ion-cover.png"
+        onerror="this.src='images/ion-home.png'"
+        alt="íon Itaú Web Platform"
+      />
+      <video
+        class="featured-card-video"
+        src="images/ion-hover.mp4"
+        muted loop playsinline preload="metadata"
+      ></video>
+      <div class="featured-card-overlay">
+        <h2 class="featured-card-title">Designing íon web:<br>accessibility, scale, and 9.2%<br>conversion at Itaú.</h2>
+        <span class="featured-hover-hint">
+          <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><polygon points="5,3 13,8 5,13" fill="currentColor"/></svg>
+          hover plays
+        </span>
+      </div>
+    </div>
+
+    <!-- Metrics bar -->
+    <div class="featured-metrics rv">
+      <div class="featured-metric">
+        <div class="fm-val">9.2%</div>
+        <div class="fm-lbl">Conversion (target 4%)</div>
+      </div>
+      <div class="featured-metric">
+        <div class="fm-val">30k+</div>
+        <div class="fm-lbl">Monthly active users</div>
+      </div>
+      <div class="featured-metric">
+        <div class="fm-val">80%</div>
+        <div class="fm-lbl">Positive Likert feedback</div>
+      </div>
+      <div class="featured-metric">
+        <div class="fm-val">WCAG AA</div>
+        <div class="fm-lbl">Most accessible BR finance site</div>
+      </div>
+      <a href="/ion" class="featured-cta-metric">
+        <span class="featured-cta-text">Read the case →</span>
+        <span class="featured-cta-arrow">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <!-- Timeline -->
+    <div class="featured-timeline rv">
+      <div class="featured-tl-item">
+        <div class="ftl-date">Aug/22</div>
+        <div class="ftl-label">Joined</div>
+        <div class="ftl-desc">Squad responsible for the product showcase area</div>
+      </div>
+      <div class="featured-tl-item">
+        <div class="ftl-date">Dec/22</div>
+        <div class="ftl-label">Beta</div>
+        <div class="ftl-desc">100 selected users · core flows validated</div>
+      </div>
+      <div class="featured-tl-item">
+        <div class="ftl-date">Jul/23</div>
+        <div class="ftl-label">Alpha</div>
+        <div class="ftl-desc">~10,000 users · components refined on real data</div>
+      </div>
+      <div class="featured-tl-item">
+        <div class="ftl-date">Dec/23</div>
+        <div class="ftl-label">Launch</div>
+        <div class="ftl-desc">Solid, validated MVP · ready to scale</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== MORE WORK ===================== -->
+  <section class="more-work-sec rv">
+    <div class="more-work-header">
+      <h2 class="more-work-title">More work</h2>
+      <span class="more-work-archive">View archive →</span>
+    </div>
+
+    <div class="more-work-grid">
+
+      <!-- iDS card -->
+      <div class="mw-card" id="mw-ids" onclick="window.location.href='/ids'">
+        <div class="mw-card-img-wrap">
+          <span class="mw-card-badge">02 · Itaú Unibanco</span>
+          <img
+            class="mw-card-img"
+            src="images/ids-cover.png"
+            onerror="this.src='images/ids-analise1.png'"
+            alt="Itaú Design System"
+          />
+          <video
+            class="mw-card-video"
+            src="images/ids-hover.mp4"
+            muted loop playsinline preload="metadata"
+          ></video>
         </div>
-        <div class="wi-img-wrap">
-          <div class="wi-glow" style="background:radial-gradient(circle,#41A641,transparent)"></div>
-          <div class="wi-img" id="wi-img-ion">
-            <img src="images/ion-cover.png" onerror="this.src='images/ion-home.png'" alt="íon Itaú Web Platform">
-            <video src="images/ion-hover.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="mw-card-body">
+          <div class="mw-card-title">Fixing Itaú's Design System: how I analysed and standardized 60+ components from design to code</div>
+          <div class="mw-card-desc">600+ issues resolved · 5k+ devs, 500 designers using iDS</div>
+          <div class="mw-card-meta">
+            <span class="mw-meta-label">metric</span>
+            <span class="mw-meta-val mw-meta-accent">60+</span>
+            <span class="mw-meta-label">duration</span>
+            <span class="mw-meta-val">2024 – 2025</span>
+            <span class="mw-meta-label">role</span>
+            <span class="mw-meta-val">Sr. Product Designer</span>
+            <span class="mw-meta-label">company</span>
+            <span class="mw-meta-val">NTT Data × Itaú</span>
           </div>
-        </div>
-        <div class="wi-right">
-          <div class="wi-access">
-            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            
-          </div>
+          <span class="mw-card-link">Open the case →</span>
         </div>
       </div>
 
-      <div class="wi rv" id="wi-ids" onclick="window.location.href='/ids'">
-        <div class="wi-left">
-          <div class="wtags"><span class="wtag">Design System</span><span class="wtag">·</span><span class="wtag">Enterprise</span><span class="wtag">·</span><span class="wtag">Scale</span></div>
-          <div class="wname">Fixing Itaú's Design System: how I analysed and standardized 60+ components from design to code</div>
-          <div class="wi-desc">In 2024, I helped NTT Data and Itaú standardize a design system used by thousands. We analyzed and fixed 60+ components across Angular, React, Flutter, and Swift, improving consistency, accessibility, and delivery speed.</div>
+      <!-- RITE card -->
+      <div class="mw-card" id="mw-rite" onclick="window.location.href='/rite'">
+        <div class="mw-card-img-wrap">
+          <span class="mw-card-badge">03 · Itaú Unibanco</span>
+          <img
+            class="mw-card-img"
+            src="images/rite-cover.png"
+            onerror="this.src='images/rite-case-1.png'"
+            alt="RITE Method"
+          />
+          <video
+            class="mw-card-video"
+            src="images/rite-hover.mp4"
+            muted loop playsinline preload="metadata"
+          ></video>
         </div>
-        <div class="wi-img-wrap">
-          <div class="wi-glow" style="background:radial-gradient(circle,#F97300,transparent)"></div>
-          <div class="wi-img" id="wi-img-ids">
-            <img src="images/ids-cover.png" onerror="this.src='images/ids-analise1.png'" alt="Itaú Design System">
-            <video src="images/ids-hover.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="mw-card-body">
+          <div class="mw-card-title">No budget, plenty of bureaucracy: how I built a testing process from scratch</div>
+          <div class="mw-card-desc">Refined the journey before the institute test even started</div>
+          <div class="mw-card-meta">
+            <span class="mw-meta-label">metric</span>
+            <span class="mw-meta-val mw-meta-accent">6 / 5</span>
+            <span class="mw-meta-label">duration</span>
+            <span class="mw-meta-val">2025</span>
+            <span class="mw-meta-label">role</span>
+            <span class="mw-meta-val">Sr. Product Designer</span>
+            <span class="mw-meta-label">company</span>
+            <span class="mw-meta-val">NTT Data × Itaú</span>
           </div>
-        </div>
-        <div class="wi-right">
-          <div class="wi-access">
-            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            
-          </div>
-        </div>
-      </div>
-
-      <div class="wi rv" id="wi-rite" onclick="window.location.href='/rite'">
-        <div class="wi-left">
-          <div class="wtags"><span class="wtag">UX Research</span><span class="wtag">·</span><span class="wtag">Usability Testing</span><span class="wtag">·</span><span class="wtag">Prototyping</span></div>
-          <div class="wname">No budget, plenty of bureaucracy: how I built a testing process from scratch</div>
-          <div class="wi-desc">In 2025, I needed to run usability tests for Itaú's new free energy market product with zero guaranteed budget and no direct access to clients. I found another way.</div>
-        </div>
-        <div class="wi-img-wrap">
-          <div class="wi-glow" style="background:radial-gradient(circle,#C6D167,transparent)"></div>
-          <div class="wi-img" id="wi-img-rite">
-            <img src="images/rite-cover.png" onerror="this.src='images/rite-case-1.png'" alt="RITE Method">
-            <video src="images/rite-hover.mp4" muted loop playsinline preload="metadata"></video>
-          </div>
-        </div>
-        <div class="wi-right">
-          <div class="wi-access">
-            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            
-          </div>
+          <span class="mw-card-link">Open the case →</span>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- ===================== SERVICES / ABOUT ===================== -->
   <section class="services-sec" id="services">
     <div class="svc-header rv">
-      <p class="svc-eyebrow" style="display:flex;align-items:center;gap:14px"><span style="color:var(--accent);font-family:var(--mono)">02</span>About</p>
-      <h2 class="svc-headline">I've spent the last years designing large-scale experiences for Itaú Unibanco, the largest bank in Latin America, across a diverse range of segments: automotive, investments, design systems, artificial intelligence, free energy market, and insurance. My work has impacted millions of users, focusing on UX, digital accessibility, and design systems that are consistent, inclusive, and high-performance. Evolving with every project, my process combines product design, user research, and human centered design to deliver clarity and business impact.<br><span class="gr">I design for people.</span></h2>
+      <p class="svc-eyebrow"><span class="svc-eyebrow-num">02</span>About</p>
+      <h2 class="svc-headline">I've spent the last years designing large-scale experiences for Itaú Unibanco, the largest bank in Latin America, across a diverse range of segments: automotive, investments, design systems, artificial intelligence, free energy market, and insurance. My work has impacted millions of users, focusing on UX, digital accessibility, and design systems that are consistent, inclusive, and high-performance.<br><span class="gr">I design for people.</span></h2>
     </div>
     <div class="svc-list">
       <div class="svc-item rv">
@@ -195,8 +306,60 @@
       </a>
     </div>
   </section>
-  <footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, Brazil</span></footer>
-</div>
+
+  <footer>
+    <span>© 2026 · Caique Castro, Product Designer</span>
+    <span>São Paulo, Brazil</span>
+  </footer>
+
+</div><!-- /page-home -->
+
 <script src="./script.js"></script>
+<script>
+// Featured case video hover
+(function(){
+  var card = document.getElementById('featured-ion');
+  if(!card) return;
+  var video = card.querySelector('.featured-card-video');
+  if(!video) return;
+  var loaded = false;
+  card.addEventListener('mouseenter', function(){
+    if(!loaded){ video.load(); loaded = true; }
+    card.classList.add('playing');
+    video.play().catch(function(){});
+  });
+  card.addEventListener('mouseleave', function(){
+    card.classList.remove('playing');
+    video.pause();
+    video.currentTime = 0;
+  });
+})();
+
+// More work cards video hover
+(function(){
+  [['mw-ids','ids-hover.mp4'],['mw-rite','rite-hover.mp4']].forEach(function(pair){
+    var card = document.getElementById(pair[0]);
+    if(!card) return;
+    var video = card.querySelector('.mw-card-video');
+    if(!video) return;
+    var loaded = false;
+    card.addEventListener('mouseenter', function(){
+      if(!loaded){ video.load(); loaded = true; }
+      card.classList.add('playing');
+      video.play().catch(function(){});
+    });
+    card.addEventListener('mouseleave', function(){
+      card.classList.remove('playing');
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+})();
+</script>
+
+<style>
+/* pulse keyframe needed inline since fonts.css may load before style.css */
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.2}}
+</style>
 </body>
 </html>
