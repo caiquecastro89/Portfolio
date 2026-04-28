@@ -440,4 +440,4 @@ body.no-loader .hero-right{display:none!important}
 
 .wi:last-child .wi-img-wrap{width:50%;flex-shrink:0}
 .wi:last-child .wi-left{flex:1}
-.wi:last-child .wi-img{height:300px}
+.wi:last-child .wi-img{aspect-ratio:16/9;height:auto}
