@@ -307,10 +307,10 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   
 }
 @media(max-width:1024px) and (min-width:901px){
-  .wlist{grid-template-columns:1fr!important}
+  .wlist{grid-template-columns:1fr!important;gap:16px!important}
 }
 @media(max-width:900px){
-  .wlist{grid-template-columns:1fr!important}
+  .wlist{grid-template-columns:1fr!important;gap:16px!important}
   nav{padding:16px 24px;background:rgba(242,240,236,.92)!important;backdrop-filter:blur(12px)!important}.nav-links,.nav-cta,.nav-cta-secondary,.nav-cta-group{display:none}
   #cur,#cur-ring{display:none!important}
   .nav-cta-mobile{display:flex!important;align-items:center;gap:6px}
