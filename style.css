@@ -100,7 +100,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .btn-primary:hover{background:#d93e22;transform:scale(1.03)}
 .btn-secondary{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);padding:0 16px;height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:100px;border:1.5px solid rgba(13,12,10,.2);transition:all .2s;cursor:none;box-sizing:border-box}
 .btn-secondary:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.hero-stats{display:flex;gap:32px;margin-top:40px;margin-bottom:32px;opacity:0;animation:fi .8s 2.4s forwards}
+.hero-stats{display:flex;gap:32px;margin-top:32px;margin-bottom:32px;opacity:0;animation:fi .8s 2.4s forwards}
 .hero-stat{display:flex;flex-direction:column;gap:4px}
 .hero-stat-label{font-family:var(--mono);font-size:.55rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mid)}
 .hero-stat-val{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:-.01em}
