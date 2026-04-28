@@ -89,9 +89,10 @@ function gt(id){
 function rev(){
   var els=document.querySelectorAll('.rv:not(.on)');
   var wh=window.innerHeight;
+  var threshold = window.innerWidth <= 900 ? 1.05 : 0.92;
   els.forEach(function(el){
     var r=el.getBoundingClientRect();
-    if(r.top<wh*1.05){el.classList.add('on')}
+    if(r.top<wh*threshold){el.classList.add('on')}
   });
 }
 window.addEventListener('scroll',rev,{passive:true});
@@ -140,10 +141,9 @@ function scheduleRev(){
   var isMobile = window.innerWidth <= 900;
   // Mobile has no loader, hero finishes ~1.2s
   // Desktop no-loader: ~1.2s, with loader: ~3.2s
-  var delay = isMobile ? 500 : (noLoader ? 1300 : 3300);
+  var delay = isMobile ? 2600 : (noLoader ? 1300 : 3300);
   setTimeout(rev, delay);
-  setTimeout(rev, delay + 300);
-  setTimeout(rev, delay + 800);
+  setTimeout(rev, delay + 500);
 }
 
 if(document.readyState==='loading'){
