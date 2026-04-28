@@ -326,9 +326,10 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi-img{height:200px!important;width:100%!important;border-radius:12px!important;margin-top:0!important}
   .cnxt-new .wi{border-top:none!important}
   .wi-img img{height:200px!important;width:100%!important;object-fit:cover!important}
-  .wi-right{display:flex!important;flex-direction:row!important;justify-content:flex-end!important;align-items:center!important;padding:12px 0 0!important}
+  .wi-right{display:none!important}
   .wi-desc{display:none!important}
   .wi-access-label{display:none!important}
+  .wi-access{display:none!important}
   .warr{background:var(--accent)!important;color:var(--white)!important}
   .wmeta{color:var(--mid)!important}
   .wtag{color:var(--mid)!important}

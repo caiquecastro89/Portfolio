@@ -136,11 +136,13 @@ function initAllVideos(){
 // With loader: hero finishes ~3.2s, so start rev at 3300ms
 // Without loader (no-loader class): hero finishes ~1.2s, so start rev at 1300ms
 function scheduleRev(){
-  var hasLoader = !sessionStorage.getItem('visited') || !document.body.classList.contains('no-loader');
-  // sessionStorage was already set by loader code above, so check no-loader class
-  var delay = document.body.classList.contains('no-loader') ? 1300 : 3300;
+  var noLoader = document.body.classList.contains('no-loader');
+  var isMobile = window.innerWidth <= 900;
+  // Mobile has no loader, hero finishes ~1.2s
+  // Desktop no-loader: ~1.2s, with loader: ~3.2s
+  var delay = isMobile ? 800 : (noLoader ? 1300 : 3300);
   setTimeout(rev, delay);
-  setTimeout(rev, delay + 1000); // second pass for case pages
+  setTimeout(rev, delay + 1000);
 }
 
 if(document.readyState==='loading'){
