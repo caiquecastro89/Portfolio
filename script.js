@@ -5,7 +5,6 @@
   if(!loader) return;
 
   if(sessionStorage.getItem('visited')){
-    // Not first visit - hide loader and remove delays
     loader.style.display='none';
     document.body.classList.add('no-loader');
     return;
@@ -57,7 +56,6 @@ var lastY=0;
 window.addEventListener('scroll',function(){
   var y=window.scrollY;
   document.getElementById('nav').classList.toggle('sc',y>20);
-  // Mobile group
   var mobileGrp=document.getElementById('navMobileGroup');
   var desktopGrp=document.getElementById('navDesktopGroup');
   if(isCase){
@@ -81,7 +79,7 @@ if(isCase){
   });
 }
 
-// Scroll to section (for Work/About nav links on home)
+// Scroll to section
 function gt(id){
   var el=document.getElementById(id);
   if(el) el.scrollIntoView({behavior:'smooth'});
@@ -134,14 +132,23 @@ function initAllVideos(){
   initCardVideo('cnxt-ids-card','wi-img-cnxt-ids');
 }
 
+// Delay rev() based on whether loader is showing
+// With loader: hero finishes ~3.2s, so start rev at 3300ms
+// Without loader (no-loader class): hero finishes ~1.2s, so start rev at 1300ms
+function scheduleRev(){
+  var hasLoader = !sessionStorage.getItem('visited') || !document.body.classList.contains('no-loader');
+  // sessionStorage was already set by loader code above, so check no-loader class
+  var delay = document.body.classList.contains('no-loader') ? 1300 : 3300;
+  setTimeout(rev, delay);
+  setTimeout(rev, delay + 1000); // second pass for case pages
+}
+
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',function(){
     initAllVideos();
-    setTimeout(rev,50);
-    setTimeout(rev,2300);
+    scheduleRev();
   });
 } else {
   initAllVideos();
-  setTimeout(rev,50);
-  setTimeout(rev,2300);
+  scheduleRev();
 }
