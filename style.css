@@ -356,7 +356,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   align-self:stretch;
   display:flex;
   flex-direction:column;
-  justify-content:flex-end;
+  justify-content:center;
   width:580px;
   flex-shrink:1;
   flex-grow:0;
@@ -379,7 +379,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi:hover .wi-glow{opacity:.65;width:850px;height:850px;bottom:-100px}
 .wi-img{
   overflow:hidden;
-  border-radius:16px 16px 0 0;
+  border-radius:16px;
   height:274px;
   width:100%;
   position:relative;
