@@ -367,18 +367,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   overflow:visible;
   padding-top:0;
 }
-.wi-glow{
-  position:absolute;
-  width:380px;height:380px;
-  border-radius:50%;
-  bottom:-40px;left:50%;
-  transform:translateX(-50%);
-  filter:blur(80px);
-  opacity:.55;
-  z-index:0;
-  pointer-events:none;
-  transition:opacity .5s,width .5s,height .5s;
-}
+.wi-glow{display:none}
 .wi:hover .wi-glow{opacity:.65;width:850px;height:850px;bottom:-100px}
 .wi-img{
   overflow:hidden;
