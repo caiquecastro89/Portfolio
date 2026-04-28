@@ -5,7 +5,6 @@
   if(!loader) return;
 
   if(sessionStorage.getItem('visited')){
-    // Not first visit - hide loader and remove delays
     loader.style.display='none';
     document.body.classList.add('no-loader');
     return;
@@ -57,7 +56,6 @@ var lastY=0;
 window.addEventListener('scroll',function(){
   var y=window.scrollY;
   document.getElementById('nav').classList.toggle('sc',y>20);
-  // Mobile group
   var mobileGrp=document.getElementById('navMobileGroup');
   var desktopGrp=document.getElementById('navDesktopGroup');
   if(isCase){
@@ -81,7 +79,7 @@ if(isCase){
   });
 }
 
-// Scroll to section (for Work/About nav links on home)
+// Scroll to section
 function gt(id){
   var el=document.getElementById(id);
   if(el) el.scrollIntoView({behavior:'smooth'});
@@ -91,9 +89,10 @@ function gt(id){
 function rev(){
   var els=document.querySelectorAll('.rv:not(.on)');
   var wh=window.innerHeight;
+  var threshold = window.innerWidth <= 900 ? 1.05 : 0.92;
   els.forEach(function(el){
     var r=el.getBoundingClientRect();
-    if(r.top<wh*0.92){el.classList.add('on')}
+    if(r.top<wh*threshold){el.classList.add('on')}
   });
 }
 window.addEventListener('scroll',rev,{passive:true});
@@ -134,14 +133,26 @@ function initAllVideos(){
   initCardVideo('cnxt-ids-card','wi-img-cnxt-ids');
 }
 
+// Delay rev() based on whether loader is showing
+// With loader: hero finishes ~3.2s, so start rev at 3300ms
+// Without loader (no-loader class): hero finishes ~1.2s, so start rev at 1300ms
+function scheduleRev(){
+  var noLoader = document.body.classList.contains('no-loader');
+  var isMobile = window.innerWidth <= 900;
+  // Mobile has no loader, hero finishes ~1.2s
+  // Desktop no-loader: ~1.2s, with loader: ~3.2s
+  var isFirstVisit = !noLoader;
+var delay = (isMobile && isFirstVisit) ? 2600 : (noLoader ? 1300 : 2600);
+  setTimeout(rev, delay);
+  setTimeout(rev, delay + 500);
+}
+
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',function(){
     initAllVideos();
-    setTimeout(rev,50);
-    setTimeout(rev,2300);
+    scheduleRev();
   });
 } else {
   initAllVideos();
-  setTimeout(rev,50);
-  setTimeout(rev,2300);
+  scheduleRev();
 }
