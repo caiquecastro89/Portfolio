@@ -95,12 +95,12 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .red{color:var(--accent)}.gr{color:var(--green)}
 .hero-impact{font-family:var(--display);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;color:var(--ink);line-height:.92;letter-spacing:-.03em;margin-bottom:20px;max-width:900px;opacity:0;animation:fi .8s 2s forwards}
 .hero-desc{font-size:1.125rem;font-weight:400;color:var(--mid);max-width:680px;line-height:1.75;margin-top:0;opacity:0;animation:fi .8s 2.2s forwards}
-.hero-cta-row{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;opacity:0;animation:fi .8s 2.3s forwards}
+.hero-cta-row{display:flex;gap:12px;margin-top:0;flex-wrap:wrap;opacity:0;animation:fi .8s 2.3s forwards}
 .btn-primary{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:#fff;padding:0 24px;height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:100px;transition:background .2s;cursor:none;box-sizing:border-box}
 .btn-primary:hover{background:#d93e22;transform:scale(1.03)}
 .btn-secondary{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);padding:0 16px;height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:100px;border:1.5px solid rgba(13,12,10,.2);transition:all .2s;cursor:none;box-sizing:border-box}
 .btn-secondary:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.hero-stats{display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(13,12,10,.1);opacity:0;animation:fi .8s 2.4s forwards}
+.hero-stats{display:flex;gap:32px;margin-top:0;margin-bottom:32px;opacity:0;animation:fi .8s 2.4s forwards}
 .hero-stat{display:flex;flex-direction:column;gap:4px}
 .hero-stat-label{font-family:var(--mono);font-size:.55rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mid)}
 .hero-stat-val{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:-.01em}
