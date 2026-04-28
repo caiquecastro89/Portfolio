@@ -81,7 +81,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .nav-cta-mobile:hover{background:#d93e22}
 
 /* HERO + ABOUT merged */
-.hero-about{min-height:100vh;display:grid;grid-template-columns:1fr auto}
+.hero-about{min-height:100vh;display:grid;grid-template-columns:1fr}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:96px 48px 64px}
 .hero-badge{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);display:inline-flex;align-items:center;gap:10px;margin-bottom:40px;opacity:0;animation:fi .8s 1.7s forwards;background:var(--pale);padding:8px 16px;border-radius:100px;align-self:flex-start;width:fit-content}
 .dot{width:6px;height:6px;border-radius:50%;background:#2D8A2D;animation:pu 2s infinite;display:inline-block;flex-shrink:0}
@@ -93,8 +93,8 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .hero-title .ln:nth-child(2) span{animation-delay:.22s}
 .olw{color:transparent;-webkit-text-stroke:1.5px rgba(250,250,248,.25)}
 .red{color:var(--accent)}.gr{color:var(--green)}
-.hero-impact{font-family:var(--display);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;color:var(--ink);line-height:.92;letter-spacing:-.03em;margin-bottom:20px;max-width:720px;opacity:0;animation:fi .8s 2s forwards}
-.hero-desc{font-size:1.125rem;font-weight:400;color:var(--mid);max-width:520px;line-height:1.75;margin-top:0;opacity:0;animation:fi .8s 2.2s forwards}
+.hero-impact{font-family:var(--display);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;color:var(--ink);line-height:.92;letter-spacing:-.03em;margin-bottom:20px;max-width:900px;opacity:0;animation:fi .8s 2s forwards}
+.hero-desc{font-size:1.125rem;font-weight:400;color:var(--mid);max-width:680px;line-height:1.75;margin-top:0;opacity:0;animation:fi .8s 2.2s forwards}
 .hero-cta-row{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;opacity:0;animation:fi .8s 2.3s forwards}
 .btn-primary{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:#fff;padding:0 24px;height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:100px;transition:background .2s;cursor:none;box-sizing:border-box}
 .btn-primary:hover{background:#d93e22;transform:scale(1.03)}
@@ -105,10 +105,8 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .hero-stat-label{font-family:var(--mono);font-size:.55rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mid)}
 .hero-stat-val{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:-.01em}
 
-.hero-right{position:relative;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:16px 48px 16px 24px;width:46vw;max-width:560px;overflow:visible}
-.hero-right.rv{transition-delay:0s}
-.hero-right.rv.on{transition-delay:0s}
-.hero-right{opacity:0;animation:fi .8s 2.4s forwards}
+.hero-right{display:none!important}
+
 /* hero-photo defined in glow section */
 .hero-overlay{display:none}
 
@@ -128,7 +126,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .wcnt{font-family:var(--mono);font-size:.62rem;font-weight:400;letter-spacing:.08em;color:var(--mid)}
 .wlist{display:flex;flex-direction:column}
 
-/* Work items — 3 column: left info | center image | right meta+arrow */
+/* Work items */
 .wi{
   position:relative;
   border-top:1px solid rgba(13,12,10,.1);
@@ -143,8 +141,6 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 }
 .wi:last-child{border-bottom:1px solid rgba(13,12,10,.1)}
 .wi:hover{background:transparent;min-height:653px;color:var(--ink)}
-
-/* LEFT: tags + title + desc */
 .wi-left{
   display:flex;flex-direction:column;justify-content:center;
   padding:36px 0;
@@ -152,11 +148,6 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
   width:320px;
   transition:width .45s cubic-bezier(.16,1,.3,1), flex-basis .45s cubic-bezier(.16,1,.3,1);
 }
-
-/* CENTER: image — fills full height */
-/* wi-img now handled by wi-img-wrap */
-
-/* RIGHT: date + arrow */
 .wi-right{
   display:flex;flex-direction:column;
   align-items:flex-end;justify-content:center;
@@ -165,15 +156,11 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
   gap:16px;
   transition:padding .45s cubic-bezier(.16,1,.3,1);
 }
-
-/* Text elements */
 .wtags{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
 .wtag{font-family:var(--mono);font-size:.57rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);transition:color .3s}
 .wname{font-family:var(--display);font-size:clamp(1.1rem,1.6vw,1.5rem);font-weight:700;letter-spacing:-.015em;transition:font-size .45s cubic-bezier(.16,1,.3,1);line-height:1.25}
 .wi-desc{font-size:1.125rem;font-weight:300;line-height:1.7;max-width:400px;color:var(--mid)!important;margin-top:0;max-height:0;overflow:hidden;opacity:0;transition:max-height .45s cubic-bezier(.16,1,.3,1),opacity .35s .1s,margin-top .4s}
 .wmeta{font-family:var(--mono);font-size:.62rem;font-weight:400;letter-spacing:.08em;color:var(--mid);white-space:nowrap;transition:color .3s}
-
-/* Arrow + View label */
 .wi-access{display:flex;flex-direction:column;align-items:center;gap:6px}
 .warr{width:48px;height:48px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .15s,width .35s,height .35s;flex-shrink:0;color:var(--white)}
 .wi-access-label{font-family:var(--mono);font-size:.58rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);max-height:0;overflow:hidden;opacity:0;transition:max-height .4s,opacity .3s .1s}
@@ -248,7 +235,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .csh2{font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:22px}
 .cp{font-size:1.125rem;font-weight:300;color:var(--mid);line-height:1.9;margin-bottom:28px}
 .cp strong{color:var(--ink);font-weight:500}
-/* Summary card */
 .csummary{opacity:0;animation:fi .8s .9s forwards;background:rgba(13,12,10,.04);border-radius:16px;overflow:hidden;margin:0 0 48px;padding:0 20px}
 .csummary-toggle{width:100%;background:none;border:none;padding:20px 0;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);text-align:left;transition:color .2s}
 .csummary-toggle:hover{color:var(--ink)}
@@ -261,15 +247,11 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .csummary-inner ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
 .csummary-inner li{font-size:1.125rem;font-weight:300;color:var(--mid);line-height:1.7;padding-left:20px;position:relative}
 .csummary-inner li::before{content:"→";position:absolute;left:0;color:var(--accent);font-size:1rem}
-
 .ccall{background:var(--pale);border-left:3px solid var(--accent);padding:22px 26px;border-radius:0 8px 8px 0;margin:28px 0}
 .ccall p{font-family:var(--display);font-size:1.05rem;font-weight:600;line-height:1.4;color:var(--ink)}
-
-/* Case images - full bleed with caption outside */
 .cimg{margin:40px -96px 96px}
 .cimg img{width:100%;display:block}
 .ccap{font-family:var(--mono);font-size:.875rem;font-weight:700;letter-spacing:.02em;text-transform:none;color:var(--mid);margin-top:14px;padding:0 96px;text-align:center}
-
 .csg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:32px 0}
 .csc{background:var(--pale);border-radius:10px;padding:26px;text-align:center}
 .csn{font-family:var(--display);font-size:2.2rem;font-weight:800;letter-spacing:-.02em;line-height:1}
@@ -290,7 +272,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .cnxt-t{font-family:var(--display);font-size:clamp(1.4rem,2.8vw,2.4rem);font-weight:800;letter-spacing:-.02em;color:var(--white)}
 .cnxt-arr{width:54px;height:54px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--ink);transition:background .2s,color .2s;flex-shrink:0}
 .cnxt:hover .cnxt-arr{border-color:var(--white);color:var(--white);background:var(--accent)}
-
 .rv{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
 .rv.on{opacity:1;transform:translateY(0)}
 @keyframes su{from{transform:translateY(110%)}to{transform:translateY(0)}}
@@ -300,7 +281,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi:hover .wi-img-wrap{width:966px}
   .wi:hover .wi-img{width:966px}
 }
-
 @media(max-width:1400px) and (min-width:1281px){
   .wi-img-wrap{width:480px;padding-top:16px}
   .wi:hover .wi-img-wrap{width:700px!important}
@@ -310,7 +290,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi-left{flex:0 0 260px;width:260px}
   .wi:hover .wi-left{flex:0 0 340px;width:340px;padding:48px 0}
 }
-
 @media(max-width:1280px) and (min-width:901px){
   .wi{column-gap:40px}
   .wi-img-wrap{width:380px;padding-top:16px}
@@ -323,7 +302,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi:hover .wi-right{padding:40px 0}
   .wi:hover .wname{font-size:clamp(1.2rem,1.8vw,1.6rem)}
 }
-
 @media(max-width:900px){
   nav{padding:16px 24px;background:rgba(242,240,236,.92)!important;backdrop-filter:blur(12px)!important}.nav-links,.nav-cta,.nav-cta-secondary,.nav-cta-group{display:none}
   #cur,#cur-ring{display:none!important}
@@ -335,20 +313,12 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .hero-right{order:2;width:100%!important;max-width:100%!important;padding:0 24px 24px}
   body{cursor:auto}
   .hero-photo{object-position:center 10%;border-radius:32px;aspect-ratio:800/1066;width:100%;height:auto;max-height:70vh}
-
-  /* 1. Espaçamento hero→work: 48px topo, sem bottom (last case encosta no about) */
   .work-sec{padding-top:48px!important;padding-bottom:0!important}
   .work-sec,.services-sec,.sk-sec,.ct-sec{padding-left:24px;padding-right:24px}
-
-  /* 2. Diminuir espaço entre "Recent work" e primeiro case */
   .wtr{margin-bottom:40px!important}
-
-  /* Cards */
   .wi{display:block!important;min-height:auto!important}
   .wi-left{padding:24px 0 12px!important;max-width:100%!important}
   .wi-img-wrap{width:100%!important;height:auto!important}
-
-  /* 3. Glows aparecem no mobile */
   .wi-glow{display:none!important}
   .wi-img{height:200px!important;width:100%!important;border-radius:12px!important;margin-top:0!important}
   .cnxt-new .wi{border-top:none!important}
@@ -360,8 +330,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wmeta{color:var(--mid)!important}
   .wtag{color:var(--mid)!important}
   .wname{font-size:clamp(1.3rem,5vw,1.8rem)!important}
-
-  /* 4. Disable hover/touch video on mobile — sem video, sem samba */
   .wi-img.playing video{opacity:0!important;display:none!important;pointer-events:none!important}
   .wi-img.playing img{opacity:1!important;display:block!important}
   .wi:active{background:transparent!important;min-height:auto!important}
@@ -369,13 +337,10 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .wi:active .wi-img{height:200px!important}
   .wi:active .wi-img-wrap{width:100%!important}
   .wi:active .wname{font-size:clamp(1.3rem,5vw,1.8rem)!important;white-space:normal!important}
-
-  /* 5. About: menos espaçamento e sem linhas divisórias */
   .svc-item{grid-template-columns:1fr;gap:14px;border-top:none!important;border-bottom:none!important}
   .svc-item:last-child{border-bottom:none!important}
   .svc-list{gap:0!important}
   .svc-tags{justify-content:flex-start}
-
   .ct-cards{grid-template-columns:1fr}.ct-row{flex-direction:column;gap:32px;align-items:flex-start}
   .ch{padding:96px 24px 44px}.cmbar{flex-wrap:wrap}.cmi{padding:16px 20px}
   .cbody{padding:44px 24px}.csg{grid-template-columns:1fr 1fr}
@@ -427,11 +392,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi-img.playing img{opacity:0}
 .wi-img.playing{aspect-ratio:16/9;height:auto!important}
 .wi-img.playing video{opacity:1}
-
-
 .wi:hover .wi-img img{transform:scale(1.02)}
-
-/* Glow behind hero photo */
 .hero-glow{
   position:absolute;
   width:900px;height:900px;
@@ -445,8 +406,6 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   pointer-events:none;
 }
 .hero-photo{position:relative;z-index:1;width:100%;aspect-ratio:800/1066;object-fit:cover;object-position:center 15%;display:block;border-radius:56px}
-
-/* Work item hover */
 .wi:hover .wi-left{padding:36px 0;flex:0 0 400px;width:400px;color:var(--ink)}
 .wi:hover .wi-right{padding:36px 0;color:var(--ink)}
 .wi:hover .wname{font-size:clamp(1.6rem,2.5vw,2.4rem);white-space:normal}
@@ -455,16 +414,12 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .wi:hover .warr{width:56px;height:56px;background:var(--accent);color:var(--white);transform:none}
 .wi:hover .wi-desc{max-height:200px;opacity:1;margin-top:10px}
 .wi:hover .wi-access-label{max-height:24px;opacity:1}
-
-
-/* Next case card section */
 .cnxt-new{padding:0 48px;background:var(--bg)}
 .cnxt-new .wi-img-wrap{padding-top:16px}
 .cnxt-new .wi-img.playing video{opacity:1!important;display:block!important}
 .cnxt-new .cnxt-lbl{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:24px;display:block;text-transform:none}
 .cnxt-new .wi{cursor:pointer}
 .cnxt-new + .ct-sec{padding-top:72px!important}
-
 @keyframes pgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(pointer:coarse){
   .svc-item{border-top:none!important;border-bottom:none!important}
@@ -477,4 +432,4 @@ body.no-loader .hero-impact{animation-delay:.5s!important}
 body.no-loader .hero-desc{animation-delay:.7s!important}
 body.no-loader .hero-cta-row{animation-delay:.8s!important}
 body.no-loader .hero-stats{animation-delay:.9s!important}
-body.no-loader .hero-right{animation-delay:.9s!important}
+body.no-loader .hero-right{display:none!important}
