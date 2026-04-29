@@ -163,7 +163,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .services-sec{padding:72px 48px 56px;background:var(--ink);margin-top:0}
 .svc-header{margin-bottom:72px}
 .svc-eyebrow{font-family:var(--mono);font-size:.6rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,250,248,.3);margin-bottom:20px}
-.svc-headline{font-family:var(--display);font-size:clamp(1.1rem,1.8vw,1.6rem);font-weight:700;line-height:1.5;letter-spacing:-.01em;color:var(--white);max-width:960px}
+.svc-headline{font-family:var(--display);font-size:clamp(1.1rem,1.8vw,1.6rem);font-weight:700;line-height:1.5;letter-spacing:-.01em;color:var(--white);max-width:none}
 .svc-list{display:flex;flex-direction:column}
 .svc-item{display:grid;grid-template-columns:56px 1fr 1.4fr;align-items:center;gap:36px;padding:28px 0;border-top:1px solid rgba(250,250,248,.08)}
 .svc-item:last-child{border-bottom:1px solid rgba(250,250,248,.08)}
