@@ -78,7 +78,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .nav-cta-mobile-secondary:hover{border-color:var(--ink)}
 .nav-cta-mobile:hover{background:#d93e22}
 /* HERO + ABOUT merged */
-.hero-about{min-height:auto;display:grid;grid-template-columns:1fr}
+.hero-about{min-height:auto;display:grid;grid-template-columns:1fr;position:relative;overflow:hidden}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:96px calc(48px + max(0px, (100vw - 1366px) / 2)) 64px}
 .hero-badge{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);display:inline-flex;align-items:center;gap:10px;margin-bottom:40px;opacity:0;animation:fi .8s 1.8s forwards;background:var(--pale);padding:8px 16px;border-radius:100px;align-self:flex-start;width:fit-content}
 .dot{width:6px;height:6px;border-radius:50%;background:#2D8A2D;animation:pu 2s infinite;display:inline-block;flex-shrink:0}
@@ -379,8 +379,9 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   top:50%;left:50%;
   transform:translate(-50%,-50%);
   background:radial-gradient(circle,var(--accent) 0%,rgba(255,77,46,.5) 30%,transparent 70%);
-  filter:blur(60px);
-  opacity:.5;
+  filter:blur(80px);
+  opacity:0;
+  animation:fi .8s .2s forwards;
   z-index:0;
   pointer-events:none;
 }
