@@ -410,3 +410,5 @@ body.no-loader .hero-right{display:none!important}
 .cnxt-new .wmeta{display:none}
 
 .work-sec .eyebrow{padding-left:calc(48px + max(0px, (100vw - 1366px) / 2));padding-right:calc(48px + max(0px, (100vw - 1366px) / 2))}
+
+.wi:hover .wi-desc{max-height:200px;opacity:1;margin-top:10px}
