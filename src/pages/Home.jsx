@@ -39,41 +39,27 @@ export default function Home() {
 
         {/* ══ HERO STRIP ══ */}
         <section style={{
-          padding: '32px 56px',
-          display: 'grid', gridTemplateColumns: '1fr auto',
-          gap: 32, alignItems: 'center',
+          padding: '40px 56px 48px',
           borderBottom: `1px solid ${BRAND.border}`,
           animation: 'fi .8s 1.8s both',
         }}>
-          <div>
-            <div style={{
-              fontFamily: "'JetBrains Mono', monospace", fontSize: 11,
-              color: BRAND.accent, letterSpacing: '.12em', textTransform: 'uppercase',
-              marginBottom: 8,
-            }}>
-              ● Caique Castro · Senior Product Designer · São Paulo
-            </div>
-            <p style={{
-              margin: 0, fontSize: 'clamp(1.1rem,2vw,1.4rem)', lineHeight: 1.4,
-              color: BRAND.text, fontWeight: 400, letterSpacing: '-.01em',
-            }}>
-              Senior product designer at NTT Data × Itaú —{' '}
-              <span style={{ color: BRAND.textMuted }}>
-                shipping investment platforms, design systems and research processes for one of Latin America's largest banks.
-              </span>
-            </p>
-          </div>
           <div style={{
-            display: 'flex', gap: 32,
-            fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: BRAND.textMuted,
+            fontFamily: "'JetBrains Mono', monospace", fontSize: 11,
+            color: BRAND.accent, letterSpacing: '.12em', textTransform: 'uppercase',
+            marginBottom: 20,
           }}>
-            {[['status','open Q3 26'],['based','SP · BR'],['role','senior']].map(([k,v]) => (
-              <div key={k}>
-                <div style={{ fontSize: 9, color: BRAND.textFaint, letterSpacing: '.1em', textTransform: 'uppercase' }}>{k}</div>
-                <div style={{ fontSize: 12, color: BRAND.text, marginTop: 2 }}>{v}</div>
-              </div>
-            ))}
+            ● Caique Castro · Senior Product Designer · São Paulo
           </div>
+          <p style={{
+            margin: 0,
+            fontSize: 'clamp(1rem,1.4vw,1.15rem)',
+            lineHeight: 1.8,
+            color: BRAND.textMuted,
+            fontWeight: 400,
+            maxWidth: 860,
+          }}>
+            I'm a Senior Product Designer based in São Paulo, with 13 years of experience in design field and, between that, 7 years as a Product Designer. Currently at NTT Data, collaborating with Itaú, Latin America's largest bank. My work spans UX, UI Design, digital accessibility, design systems, AI, storytelling and much more. Here you'll find some of the projects I'm most proud of.
+          </p>
         </section>
 
         {/* ══ FEATURED CASE ══ */}
