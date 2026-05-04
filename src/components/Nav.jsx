@@ -24,7 +24,7 @@ export default function Nav() {
       <nav ref={navRef} style={{
         position: 'fixed', top: 0, left: 0, right: 0,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '0 48px', height: 64, zIndex: 500,
+        padding: '0 clamp(20px, 4vw, 48px)', height: 'clamp(56px, 6vw, 64px)', zIndex: 500,
         background: 'transparent',
         borderBottom: '1px solid transparent',
         transition: 'background .4s, border-color .4s, backdrop-filter .4s',
