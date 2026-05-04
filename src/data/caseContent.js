@@ -100,7 +100,7 @@ export const CASE_CONTENT = {
     ],
   },
 
-  ids: {
+ids: {
     slug: 'ids',
     glow: '#F97300',
     statColor: '#F97300',
@@ -117,8 +117,8 @@ export const CASE_CONTENT = {
     ],
     blocks: [
       { kind:'section', label:'Context', title:'One design system. Four tech stacks. Thousands of people.', body:[
-        P("NTT DATA assembled a multidisciplinary squad of specialists: design, mobile and desktop technology, quality assurance, accessibility, and strategy. Our primary objective was to standardize and align the four core technology stacks — Angular, React, Flutter, and Swift — while ensuring Figma components and templates remained up to date."),
-        P("As a senior designer, I was responsible for conducting initial component analyses, refining designs within the core Figma library, updating technical handoff specifications, and ultimately revising the design documentation on the internal design system website."),
+        P("NTT DATA assembled a multidisciplinary squad of specialists focused on different aspects of the design system: design, mobile and desktop technology, quality assurance, accessibility, and strategy. Our primary objective was to standardize and align the four core technology stacks, Angular, React, Flutter, and Swift, while ensuring Figma components and templates remained up to date and fully optimized for designers and developers."),
+        P("As a senior designer on this project, alongside one to three other designers depending on the project phase, I was responsible for conducting initial component analyses, refining designs within the core Figma library, updating technical handoff specifications, and ultimately revising the design documentation on the internal design system website. To provide a sense of scale, iDS consists of over 70 components, is utilized by approximately 500 designers, more than 5,000 developers, and over 6,000 product managers. This was a large-scale, high-impact initiative spanning nearly a year, an experience that significantly deepened my expertise in design systems and their strategic implementation."),
       ]},
       { kind:'stats', color:'#F97300', items:[
         ['70+', 'Components in the system'],
@@ -126,51 +126,65 @@ export const CASE_CONTENT = {
         ['5k+', 'Developers and product managers'],
       ]},
       { kind:'section', label:'Strategy and planning', title:'Getting 20 people aligned before touching a single component', body:[
-        P("One of the first steps was a general alignment among the nearly 20 professionals involved. After initial introductions, we conducted a detailed assessment based on the client's briefings, establishing a clear understanding of the project scope and execution timeline."),
-        P("To ensure alignment on what aspects of each component we would evaluate and how far our revisions would extend, we developed initial sketches and diagrams in FigJam. These artifacts helped define our workflow and delineate the responsibility structure within the team."),
+        P("One of the first steps in the project was a general alignment among the nearly 20 professionals involved. After initial introductions, we conducted a detailed assessment based on the client's briefings, establishing a clear understanding of the project scope and execution timeline for each area. Our primary responsibility was to systematically review over 60 designated components, analyzing them in detail, identifying inconsistencies, and implementing the necessary corrections."),
+        P("To ensure alignment on what aspects of each component we would evaluate and how far our revisions would extend, we developed initial sketches and diagrams in FigJam. These artifacts helped define our workflow and delineate the responsibility structure within the team. The workstream framework and accountability map became foundational elements guiding our approach throughout the project."),
       ]},
-      { kind:'figure', src:'/images/ids-estrategia.png', caption:'Workflow diagram and accountability map developed in FigJam' },
+      { kind:'figure', src:'/images/ids-estrategia.png', caption:'Workflow diagram and accountability map developed in FigJam, the foundational elements guiding our approach throughout the project' },
       { kind:'section', label:'Component analysis', title:'From chaos to clarity: how we built our process', body:[
-        P("Our first analysis was both the most intriguing and the most chaotic. The team focused on a single component, gathering every possible piece of information and insight. This approach became the foundation for all subsequent analyses."),
-        P("Although our initial presentation wasn't the most polished, the analysis was well received by the Itaú team, who recognized it as the first tangible value delivery."),
+        P("Our first analysis was both the most intriguing and the most chaotic. The team focused on a single component, gathering every possible piece of information and insight. It was during this process that the design team's role in consolidating findings and creating a structured report became clear, something that had not been explicitly defined before. This approach became the foundation for all subsequent component analyses, with the design team centralizing evaluations and reporting any critical issues."),
+        P("Although our initial presentation wasn't the most polished, the analysis was well received by the Itaú team, who recognized it as the first tangible value delivery. We identified key areas for improvement, including taxonomy inconsistencies, documentation gaps, and accessibility issues. It also became evident that efficient communication was essential to ensure components were developed simultaneously across multiple technology stacks. Without it, discrepancies and misalignments were inevitable."),
         P("Following the delivery of our first report and the subsequent approval of the proposed corrections, we immediately shifted our focus to implementing the necessary adjustments, refining our workflow, and preparing for the analysis of the next batch of components."),
       ]},
       { kind:'figure', src:'/images/ids-analise1.png', caption:'First component analysis, recognized by the Itaú team as the first tangible value delivery' },
       { kind:'section', body:[
-        P("Here is an example of one of the subsequent analyses — this time with a more structured approach, componentized elements, and full alignment with the client's visual identity."),
-        P("To facilitate asynchronous reviews, we also included a final column consolidating key insights, providing an overall assessment of the component, highlighting inconsistencies and outlining opportunities for improvement."),
+        P("Here is an example of one of the subsequent analyses we conducted, this time with a more structured approach, componentized elements, and full alignment with the client's visual identity. We consistently aimed to create deliverables that could evolve into internal tools or reference materials, ensuring we spoke the client's language and adhered to their brand guidelines, including colors, typography, and design principles."),
+        P("To facilitate asynchronous reviews and ensure comprehensive documentation, we also included a final column consolidating key insights. This section provided an overall assessment of the component, highlighted inconsistencies and issues, and outlined opportunities for improvement. In case of any doubts regarding points discussed during our analysis presentation, stakeholders could simply refer to the final column for clarification."),
       ]},
-      { kind:'figure', src:'/images/ids-analise2.png', caption:'Subsequent analysis: more structured approach, componentized elements, full alignment with the client identity' },
+      { kind:'figure', src:'/images/ids-analise2.png', caption:'Subsequent analysis: more structured approach, componentized elements, full alignment with the client\'s visual identity' },
       { kind:'section', body:[
-        P("Later, we had to adapt our deliverables due to timeline constraints. To streamline the process, we developed a minimum viable version of our analysis, focusing on three core aspects:"),
+        P("Later, we had to adapt our deliverables due to timeline constraints and changes in the team structure. To streamline the process while maintaining essential quality, we developed a minimum viable version of our analysis, focusing on three core aspects for each component:"),
         UL('Anatomy', 'Properties', 'Design Tokens'),
       ]},
       { kind:'figure', src:'/images/ids-analise3.png', caption:'MVA (Minimum Viable Analysis): streamlined to three core aspects while maintaining essential quality' },
       { kind:'callout', text:['By the end of the project, we had conducted an in-depth analysis of ', B('over 60 components and 5 templates'), '. Throughout this process, we identified more than ', B('600 points of concern'), ', which were thoroughly discussed and addressed by the design, technology, QA, and accessibility teams.'] },
       { kind:'section', label:'Updating Figma libraries and technical handoffs', title:'Where design meets development', body:[
-        P("After refining our workflow and completing our initial analyses, the next steps were to update the components in the bank's official Figma library and, subsequently, revise the technical handoffs. We consistently worked in isolated branches for each component."),
-        P("To facilitate the approval process, we placed component playgrounds within Figma. These interactive spaces allowed reviewers to explore components in different states and variations, accompanied by a concise changelog."),
+        P("After refining our workflow and completing our initial analyses, the next steps were to update the components in the bank's official Figma library and, subsequently, revise the technical handoffs. As a team, we consistently adhered to best practices at every stage, working in isolated branches for each component to ensure a structured and controlled update process."),
+        P("Additionally, to facilitate the approval process and optimize time for all stakeholders, we placed component playgrounds within Figma. These interactive spaces allowed reviewers to explore components in different states and variations, often accompanied by a concise changelog summarizing the updates made."),
       ]},
-      { kind:'figure', src:'/images/ids-bib1.png', caption:'Component playground in Figma, with integrated changelog' },
+      { kind:'figure', src:'/images/ids-bib1.png', caption:'Component playground in Figma, allowing reviewers to explore different states and variations, with integrated changelog' },
       { kind:'section', body:[
-        P("My main contribution for the handoff process was creating a structured properties and variants table that was quickly adopted as the standard for all materials we produced. This table became a foundational element, allowing developers to clearly understand each component's full range of possibilities."),
+        P("Once the Figma updates were finalized, we moved on to the handoff phase, one of the most critical aspects of our work as a design team. This step served as the final bridge between our improvements and the development team, ensuring seamless implementation. From the outset, the Itaú team shared with us an initial handoff model they had been using, and we quickly began refining and adapting it to fit our needs."),
+        P("Ayrton Camossa, the Lead Designer of the project, transformed each section of the provided handoff model into reusable Figma components, ensuring consistency across all deliverables. This mini-library of handoff elements was carried throughout the project and significantly accelerated our workflow, maximizing the reuse of standardized elements while maintaining clarity and efficiency."),
+        P("My mainly contribution for the handoff process was creating structured properties and variants table that was quickly adopted as the standard for all materials we produced. This table became a foundational element, allowing developers to clearly understand each component's full range of possibilities. While Figma's Dev Mode provides a solid foundation for developer handoffs, a well-structured example table remains an invaluable reference, eliminating ambiguities and further streamlining our process."),
       ]},
-      { kind:'figure', src:'/images/ids-bib2.png', caption:'Properties and variants table: adopted as the standard for all handoff materials' },
-      { kind:'figure', src:'/images/ids-bib3.png', caption:'Accessibility guidelines: built and refined in close collaboration with accessibility teams' },
+      { kind:'figure', src:'/images/ids-bib2.png', caption:'Properties and variants table: adopted as the standard for all handoff materials, eliminating ambiguities for developers' },
+      { kind:'section', body:[
+        P("Additionally, we collaborated closely with the accessibility teams from both Itaú and NTT DATA to build and refine accessibility guidelines for each component. Given that accessibility is a fundamental principle of the design system, we dedicated significant effort to maintaining and even raising the system's high standards of inclusivity and usability."),
+      ]},
+      { kind:'figure', src:'/images/ids-bib3.png', caption:'Accessibility guidelines: built and refined in close collaboration with accessibility teams from both Itaú and NTT DATA' },
+      { kind:'section', body:[
+        P("We handled both relatively simple handoffs, such as the image component example above, and highly complex ones, like the modal component example below. Regardless of complexity, we always put ourselves in the shoes of developers and QA professionals who would rely on this documentation, ensuring clarity in every aspect of a component development."),
+      ]},
       { kind:'figure', src:'/images/ids-bib4.png', caption:'Modal component handoff: one of the most complex, with every state, variation and behavior fully documented' },
+      { kind:'section', body:[
+        P("To finalize this phase, and in alignment with the internal guidelines set by the iDS team, we conducted all approvals and reviews using Figma's branch review tools. Since updates were automatically notified through Figma's interface and email, we maintained a clear and structured approval record at all times. Once a handoff was approved, we simply updated our Overview Panel to reflect the latest status of each step."),
+      ]},
       { kind:'figure', src:'/images/ids-bib5.png', caption:'Overview Panel: clear and structured approval record updated after each handoff was approved' },
       { kind:'section', label:'Updating Documentation', title:'The phase no one planned for, and why it mattered', body:[
-        P("As we approached the final stretch of the project, we were unexpectedly assigned a new phase: revising and maintaining the official documentation on the design system's internal portal."),
+        P("As we approached the final stretch of the project, we were unexpectedly assigned a new phase in our workflow. Beyond updating components and technical handoffs, we were now responsible for revising and maintaining the official documentation on the design system's internal portal."),
+        P("This task built upon the work of another consultancy that had previously handled documentation but was now shifting to a different initiative. Since the components had been updated after their involvement, we needed to revisit these materials to ensure full alignment and consistency."),
         P("Each component went through a two-step process:"),
         UL(
-          [B('Initial validation in Figma: '), 'Updated usage examples, property tables, and instructional content. Introduced a simplified changelog format.'],
-          [B('Portal updates: '), 'Uploaded revised images and text to the documentation platform, ensuring the latest specifications were accessible to all stakeholders.'],
+          [B('Initial validation in Figma: '), 'We updated usage examples, property tables, and instructional content. To streamline approvals, we also introduced a simplified changelog format, clearly documenting and illustrating every change, an approach we had successfully applied in other stages of our workflow.'],
+          [B('Portal updates: '), 'We then uploaded revised images and text to the designated documentation platform, ensuring that the latest specifications were accessible to all stakeholders.'],
         ),
+        P("Below is an example of our modal component update (original version on the left, revised version on the right), where we meticulously reviewed every instance and application of the component. These documents are referenced daily by thousands of designers, developers, and product managers, making precision and clarity essential."),
       ]},
-      { kind:'figure', src:'/images/ids-doc1.png', caption:'Modal component documentation update: original (left) vs. revised (right), referenced daily by thousands of stakeholders' },
-      { kind:'section', label:'Impact', title:'600+ issues resolved. 60+ components reviewed. One system to rule them all.', body:[
-        P("Working in a multidisciplinary team required close collaboration and shared responsibility across design, development, QA, and accessibility. We take pride in the impact achieved."),
-        P("More than just delivering components, we delivered ", B('clarity, trust, and a solid foundation'), " for the design system to continue evolving with consistency."),
+      { kind:'figure', src:'/images/ids-doc1.png', caption:'Modal component documentation update: original version (left) vs. revised version (right), referenced daily by thousands of stakeholders' },
+      { kind:'section', label:'Impact', title:'600+ issues resolved. 60+ components reviewed and standardized. One system to rule them all.', body:[
+        P("Working in a multidisciplinary team required close collaboration and shared responsibility across design, development, QA, and accessibility. Strong partnerships between disciplines allowed us to analyze, refine, and update components effectively while keeping our workflow seamless."),
+        P("We take pride in the impact we achieved: over 600 issues resolved across dozens of components, improving consistency, accessibility, and overall quality. Through teamwork and continuous iteration, we optimized the design system while establishing a scalable, efficient delivery process for future iterations."),
+        P("More than just delivering components, we delivered ", B("clarity, trust, and a solid foundation"), " for the design system to continue evolving with consistency."),
       ]},
       { kind:'stats', color:'#F97300', items:[
         ['600+', 'Issues resolved across dozens of components'],
@@ -178,9 +192,9 @@ export const CASE_CONTENT = {
         ['4', 'Tech stacks aligned simultaneously'],
       ]},
     ],
-  },
+  },,
 
-  rite: {
+    rite: {
     slug: 'rite',
     glow: '#C6D167',
     statColor: '#C6D167',
