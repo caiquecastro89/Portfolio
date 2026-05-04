@@ -103,7 +103,7 @@ ion: {
       { kind:'section', title:'News Page', body:[
         P("The news page was created to integrate informative content into the investment journey. I worked on structuring an internal page that allowed for smooth reading of articles, analyses, and announcements. This delivery helped position Ion Web not only as a transactional platform but also as a knowledge hub for investors."),
       ]},
-      { kind:'figure', src:'/images/ion-news.png', caption:'News page: smooth reading of articles, analyses and announcements' },
+      { kind:'figure', src:'/images/ion-noticia.png', caption:'News page: smooth reading of articles, analyses and announcements' },
       { kind:'section', title:'Accessibility', body:[
         P("This initiative was carried out in direct collaboration with the specialized team, ensuring that the solutions were inclusive and functional for all user profiles. Robust accessibility specifications were essential to guarantee that the designed solutions were viable and delivered with quality."),
       ]},
