@@ -47,7 +47,7 @@ function renderBlock(b, idx, mobile = false) {
     <section key={idx} className="rv" style={{ width: SECTION_W, maxWidth: '100%' }}>
       {b.label && (
         <div style={{
-          fontFamily: "'JetBrains Mono', monospace", fontSize: '.58rem',
+          fontFamily: "Inter, system-ui, sans-serif", fontSize: '.58rem',
           letterSpacing: '.18em', textTransform: 'uppercase',
           color: BRAND.accent, marginBottom: 12,
         }}>{b.label}</div>
@@ -72,7 +72,7 @@ function renderBlock(b, idx, mobile = false) {
       </div>
       <figcaption style={{
         marginTop: 12, fontSize: 12, color: BRAND.textFaint,
-        fontFamily: "'JetBrains Mono', monospace", lineHeight: 1.5, textAlign: 'center',
+        fontFamily: "Inter, system-ui, sans-serif", lineHeight: 1.5, textAlign: 'center',
       }}>{b.caption}</figcaption>
     </figure>
   )
@@ -91,7 +91,7 @@ function renderBlock(b, idx, mobile = false) {
         }}>
           <div style={{
             fontSize: 13, color: BRAND.accent, fontWeight: 600,
-            fontFamily: "'JetBrains Mono', monospace",
+            fontFamily: "Inter, system-ui, sans-serif",
           }}>{d}</div>
           <div>
             <div style={{ fontSize: 17, fontWeight: 600, marginBottom: 6, color: BRAND.text }}>{t}</div>
@@ -178,7 +178,7 @@ export default function CasePage({ slug }) {
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 6,
                 color: BRAND.textMuted, fontSize: 13, background: 'none', border: 'none',
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "Inter, system-ui, sans-serif",
                 cursor: 'none', marginBottom: 32, padding: 0, animation: 'fi .8s .3s both',
               }}
             >← Back</button>
@@ -191,7 +191,7 @@ export default function CasePage({ slug }) {
                 <span key={t} style={{
                   fontSize: 11, padding: '4px 10px',
                   border: `1px solid ${BRAND.border}`, borderRadius: 999,
-                  color: BRAND.textMuted, fontFamily: "'JetBrains Mono', monospace",
+                  color: BRAND.textMuted, fontFamily: "Inter, system-ui, sans-serif",
                   letterSpacing: '.04em',
                 }}>{t}</span>
               ))}
@@ -227,7 +227,7 @@ export default function CasePage({ slug }) {
             }}>
               <div style={{
                 fontSize: 10, color: BRAND.textFaint,
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "Inter, system-ui, sans-serif",
                 textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 6,
               }}>{k}</div>
               <div style={{ fontSize: 14, fontWeight: 500, color: BRAND.text }}>{v}</div>
@@ -253,7 +253,7 @@ export default function CasePage({ slug }) {
                 cursor: 'pointer', listStyle: 'none',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 fontSize: 13, fontWeight: 600, color: BRAND.text,
-                fontFamily: "'JetBrains Mono', monospace", letterSpacing: '.04em',
+                fontFamily: "Inter, system-ui, sans-serif", letterSpacing: '.04em',
               }}>
                 <span>READ SUMMARY</span>
                 <span style={{ color: BRAND.accent }}>+</span>
@@ -272,7 +272,7 @@ export default function CasePage({ slug }) {
         <section style={{ padding: '0 96px 96px' }}>
           <div style={{
             fontSize: 11, color: BRAND.textFaint,
-            fontFamily: "'JetBrains Mono', monospace",
+            fontFamily: "Inter, system-ui, sans-serif",
             textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 16,
           }}>Next case</div>
           <div
@@ -299,7 +299,7 @@ export default function CasePage({ slug }) {
             <div style={{ flex: 1 }}>
               <div style={{
                 fontSize: 11, color: BRAND.textFaint,
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "Inter, system-ui, sans-serif",
                 marginBottom: 8, letterSpacing: '.06em',
               }}>{nextCase.tag.toUpperCase()}</div>
               <div style={{
@@ -343,7 +343,7 @@ export default function CasePage({ slug }) {
         <footer style={{
           padding: '32px 96px', display: 'flex', justifyContent: 'space-between', gap: 8,
           fontSize: 12, color: BRAND.textFaint, borderTop: `1px solid ${BRAND.border}`,
-          fontFamily: "'JetBrains Mono', monospace",
+          fontFamily: "Inter, system-ui, sans-serif",
         }}>
           <span>© 2026 · Caique Castro, Product Designer</span>
           <span>São Paulo, Brazil</span>

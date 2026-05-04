@@ -60,7 +60,7 @@ export default function Nav() {
 }
 
 const ctaPrimaryStyle = {
-  fontFamily: "'JetBrains Mono', monospace", fontSize: '.63rem', fontWeight: 500,
+  fontFamily: "Inter, system-ui, sans-serif", fontSize: '.63rem', fontWeight: 500,
   letterSpacing: '.08em', textTransform: 'uppercase', textDecoration: 'none',
   background: '#ff5b1f', color: '#0c0c0c',
   padding: '0 20px', height: 44, display: 'inline-flex', alignItems: 'center', gap: 6,
@@ -68,7 +68,7 @@ const ctaPrimaryStyle = {
 }
 
 const ctaSecStyle = {
-  fontFamily: "'JetBrains Mono', monospace", fontSize: '.63rem', fontWeight: 500,
+  fontFamily: "Inter, system-ui, sans-serif", fontSize: '.63rem', fontWeight: 500,
   letterSpacing: '.08em', textTransform: 'uppercase', textDecoration: 'none',
   color: BRAND.textMuted, border: `1.5px solid ${BRAND.border}`,
   padding: '0 16px', height: 44, display: 'inline-flex', alignItems: 'center', gap: 6,

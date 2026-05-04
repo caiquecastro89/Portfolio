@@ -45,7 +45,7 @@ export default function CursorTooltip({ children, label = '↗ VIEW CASE', onCli
           padding: '8px 14px',
           display: 'flex', alignItems: 'center', gap: 6,
           whiteSpace: 'nowrap',
-          fontFamily: "'JetBrains Mono', monospace",
+          fontFamily: "Inter, system-ui, sans-serif",
           fontSize: 11, fontWeight: 500,
           letterSpacing: '.1em', textTransform: 'uppercase',
           color: '#f4f1ec',

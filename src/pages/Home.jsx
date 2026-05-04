@@ -54,7 +54,7 @@ export default function Home() {
           animation: 'fi .8s 1.8s both',
         }}>
           <div style={{
-            fontFamily: "'JetBrains Mono', monospace",
+            fontFamily: "Inter, system-ui, sans-serif",
             fontSize: mobile ? 9 : 11,
             color: BRAND.accent, letterSpacing: '.12em', textTransform: 'uppercase',
             marginBottom: mobile ? 12 : 20,
@@ -81,13 +81,13 @@ export default function Home() {
             marginBottom: mobile ? 12 : 16,
           }}>
             <div style={{
-              fontFamily: "'JetBrains Mono', monospace", fontSize: mobile ? 9 : 11,
+              fontFamily: "Inter, system-ui, sans-serif", fontSize: mobile ? 9 : 11,
               color: BRAND.textMuted, letterSpacing: '.12em', textTransform: 'uppercase',
             }}>
               Featured · {mobile ? 'Itaú · 2022–2024' : hero.eyebrow}
             </div>
             <div style={{
-              fontFamily: "'JetBrains Mono', monospace", fontSize: mobile ? 9 : 11,
+              fontFamily: "Inter, system-ui, sans-serif", fontSize: mobile ? 9 : 11,
               color: BRAND.textFaint,
             }}>01 / 03</div>
           </div>
@@ -142,7 +142,7 @@ export default function Home() {
                   }}>{n}</div>
                   <div style={{
                     marginTop: 6, fontSize: mobile ? 9 : 11, color: BRAND.textMuted,
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "Inter, system-ui, sans-serif",
                     letterSpacing: '.04em', textTransform: 'uppercase',
                     lineHeight: 1.4,
                   }}>{label}</div>
@@ -206,7 +206,7 @@ export default function Home() {
         }}>
           <div className="rv" style={{ marginBottom: mobile ? 32 : 48 }}>
             <div style={{
-              fontFamily: "'JetBrains Mono', monospace", fontSize: mobile ? 9 : 11,
+              fontFamily: "Inter, system-ui, sans-serif", fontSize: mobile ? 9 : 11,
               color: BRAND.textMuted, letterSpacing: '.12em',
               textTransform: 'uppercase', marginBottom: 20,
               display: 'flex', alignItems: 'center', gap: 14,
@@ -241,7 +241,7 @@ export default function Home() {
               }}>
                 {!mobile && (
                   <span style={{
-                    fontFamily: "'JetBrains Mono', monospace", fontSize: '.63rem',
+                    fontFamily: "Inter, system-ui, sans-serif", fontSize: '.63rem',
                     fontWeight: 400, letterSpacing: '.1em', color: BRAND.textFaint,
                   }}>{svc.n}</span>
                 )}
@@ -254,7 +254,7 @@ export default function Home() {
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                     {svc.tags.map(t => (
                       <span key={t} style={{
-                        fontFamily: "'JetBrains Mono', monospace", fontSize: mobile ? '.6rem' : '.7rem',
+                        fontFamily: "Inter, system-ui, sans-serif", fontSize: mobile ? '.6rem' : '.7rem',
                         border: `1px solid ${BRAND.border}`, padding: '4px 10px',
                         borderRadius: 100, color: BRAND.textMuted,
                       }}>{t}</span>
@@ -276,10 +276,10 @@ export default function Home() {
           alignItems: 'center', justifyContent: 'space-between',
           gap: mobile ? 4 : 0, textAlign: mobile ? 'center' : 'left',
         }}>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '.55rem', letterSpacing: '.1em', textTransform: 'uppercase', color: BRAND.textFaint }}>
+          <span style={{ fontFamily: "Inter, system-ui, sans-serif", fontSize: '.55rem', letterSpacing: '.1em', textTransform: 'uppercase', color: BRAND.textFaint }}>
             © 2026 · Caique Castro, Product Designer
           </span>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '.55rem', letterSpacing: '.1em', textTransform: 'uppercase', color: BRAND.textFaint }}>
+          <span style={{ fontFamily: "Inter, system-ui, sans-serif", fontSize: '.55rem', letterSpacing: '.1em', textTransform: 'uppercase', color: BRAND.textFaint }}>
             São Paulo, Brazil
           </span>
         </footer>
@@ -306,7 +306,7 @@ function SmallCase({ c, num, onClick, mobile }) {
           <ImgCard src={c.image} video={mobile ? null : c.video} alt={c.title} ratio={16/10} />
           <div style={{
             position: 'absolute', top: mobile ? 10 : 12, left: mobile ? 10 : 12,
-            fontFamily: "'JetBrains Mono', monospace", fontSize: mobile ? 9 : 10,
+            fontFamily: "Inter, system-ui, sans-serif", fontSize: mobile ? 9 : 10,
             color: '#fff', background: 'rgba(0,0,0,0.55)',
             padding: '4px 8px', borderRadius: 4, letterSpacing: '.06em',
           }}>
@@ -326,7 +326,7 @@ function SmallCase({ c, num, onClick, mobile }) {
           marginTop: 'auto', paddingTop: 12,
           borderTop: `1px solid ${BRAND.border}`,
           display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8,
-          fontFamily: "'JetBrains Mono', monospace", fontSize: mobile ? 9 : 10,
+          fontFamily: "Inter, system-ui, sans-serif", fontSize: mobile ? 9 : 10,
         }}>
           {[['metric', c.metric, true], ['duration', c.duration, false],
             ['role', c.role.replace('Senior ','Sr. '), false], ['company', c.company, false]
