@@ -5,7 +5,7 @@ const UL = (...items) => ({ ul: items })
 const B = (text) => ({ strong: text })
 
 export const CASE_CONTENT = {
-  ion: {
+ion: {
     slug: 'ion',
     glow: '#41A641',
     statColor: '#5B8DEF',
@@ -24,72 +24,96 @@ export const CASE_CONTENT = {
     blocks: [
       { kind:'section', label:'The challenge', title:'A platform built for mobile, ready to conquer the web', body:[
         P("Íon is Itaú's investment platform, already well-established in the mobile environment as a robust and sophisticated solution for investors."),
-        P("The challenge was to expand this experience to the web, creating an omnichannel journey that maintained the same level of excellence. More than a simple interface adaptation, the project required rethinking flows, components, and interactions for a new usage scenario, with a strong focus on accessibility, performance, and scalability. The goal was ambitious: ", B('15,000 monthly users by December 2023'), "."),
+        P("The challenge was to expand this experience to the web, creating an omnichannel journey that maintained the same level of excellence, now adapted to the desktop context, and more than a simple interface adaptation, the project required rethinking flows, components, and interactions for a new usage scenario, with a strong focus on accessibility, performance, and scalability. The goal was ambitious: to reach ", B('15,000 monthly users by December 2023'), "."),
       ]},
       { kind:'section', label:'My role', title:'Cross-functional design at the heart of the platform', body:[
-        P("As a senior product designer, I was part of the squad responsible for the product showcase on íon web — focused on presenting investment products in a clear, engaging, and efficient way. My role was cross-functional, ranging from UX and UI decisions to technical alignment with development and QA teams."),
+        P("As a senior product designer, I was part of the squad responsible for the product showcase on íon web, one of the platform's most strategic areas, focused on presenting investment products in a clear, engaging, and efficient way. My role was cross-functional, ranging from UX and UI decisions to technical alignment with development and QA teams."),
         UL(
-          [B('Conversion: '), 'structured journeys that encouraged user engagement and decision-making, especially for complex financial products.'],
-          [B('User satisfaction: '), 'created a fluid, intuitive, and pleasant experience, reflected in 80% positive feedback through Likert-scale surveys.'],
-          [B('Accessibility: '), 'actively ensured the platform was inclusive, leading to recognition as the most accessible site in the sector.'],
+          [B('Conversion: '), 'I structured journeys that encouraged user engagement and decision-making, especially for complex financial products.'],
+          [B('User satisfaction: '), 'I worked to create a fluid, intuitive, and pleasant experience, reflected in 80% positive feedback through Likert-scale surveys.'],
+          [B('Accessibility: '), 'I actively ensured the platform was inclusive, following best practices and digital accessibility standards, which led to the site being recognized as the most accessible in the sector.'],
         ),
       ]},
       { kind:'section', label:'Roadmap and evolution', title:'Iterating in the open, from 100 users to 30,000', body:[
-        P("My involvement in the project began in August 2022. With each new release — beta, alpha, or final launch — we collected qualitative and quantitative feedback. These insights were essential for identifying friction points, validating hypotheses, and prioritizing improvements."),
+        P("My involvement in the project began in August 2022, and from the start, we followed an iterative, data-driven approach. With each new release of the platform, whether in beta, alpha, or the final launch, we collected both qualitative and quantitative feedback from users accessing the site. These insights were essential for identifying friction points, validating hypotheses, and prioritizing improvements to the features being developed."),
       ]},
       { kind:'figure', src:'/images/ion-roadmap.png', caption:'Project timeline: from beta and alpha phases to the official launch in December 2023' },
       { kind:'timeline', items:[
         ['Dec/22', 'Beta version launched', '100 selected users. This phase allowed us to validate the core flows and adjust the structure of the product showcase based on early feedback.'],
-        ['Jul/23', 'Alpha expansion', '~10,000 users. We deepened our analysis of behavior and satisfaction, refining components and interactions based on real usage data.'],
-        ['Dec/23', 'Official launch', 'Delivering a solid, validated, functional MVP, ready to scale without major rework.'],
+        ['Jul/23', 'Alpha expansion', '~10,000 users. With a larger user base, we were able to deepen our analysis of behavior and satisfaction, refining components and interactions based on real usage data.'],
+        ['Dec/23', 'Official launch', 'Delivering a solid, validated, and functional MVP, ready to scale without major rework. Throughout this process, I was directly involved in analyzing the collected data, both qualitative and quantitative, to guide design decisions and ensure the product evolved consistently and with a user-centered focus.'],
       ]},
       { kind:'section', label:'Initial assessment', title:'What we inherited, and what needed to change', body:[
-        P("When I joined the project, I was introduced to materials developed by the consultancy Work & Co. While instrumental in selling the vision, the material was still far from being a product ready for implementation."),
+        P("When I joined the project, I was introduced to a comprehensive set of materials developed by the consultancy Work & Co, which had created the initial concept for what íon web could be. This work was instrumental in selling the vision to the business team and served as a starting point for development. However, upon deeper analysis, it became clear that, despite its strategic value, the material was still far from being a product ready for implementation."),
+        P("Some of the main issues I identified early on included:"),
         UL(
-          [B('Misalignment with the iDS: '), "components didn't follow the bank's visual and functional standards."],
-          [B('Lack of accessibility: '), "several elements ignored accessibility best practices."],
-          [B('Incomplete flows: '), "alternative scenarios, empty states, and edge cases were missing."],
+          [B('Misalignment with the iDS (Itaú Design System): '), "Many of the components used did not follow the visual and functional standards of the bank's design system, compromising consistency and making technical implementation more difficult."],
+          [B('Lack of accessibility: '), "Several interface elements did not consider accessibility best practices, limiting the platform's usability for people with disabilities."],
+          [B('Incomplete flows: '), "Many navigation and interaction flows were only partially defined, lacking consideration for alternative scenarios, empty states, or expected behaviors in different usage contexts."],
         ),
+        P("These findings made it clear that, while the consultancy's material was a strong conceptual foundation, there was still significant work needed in refinement, adaptation, and depth to turn that vision into a viable, accessible, and standards-aligned digital product."),
       ]},
       { kind:'section', label:'Challenges faced', title:'Bridging the gap between design and development', body:[
-        P("Two key points stood out throughout the project."),
+        P("Throughout the project, I encountered challenges that required not only technical knowledge but also a strategic and collaborative approach to ensure that the deliveries were feasible and consistent. Two key points stood out."),
         { kind:'h3', text:'Integration with the iDS (Itaú Design System)' },
-        P("The discrepancy between design and dev libraries was constant: we worked with an up-to-date library, devs had an outdated one. I had to map what was actually available, adapt layouts based on those constraints, and negotiate intermediate solutions that maintained consistency."),
+        P("One of the main challenges was the discrepancy between the design system libraries available to the design and development teams. While we, as designers, worked with an up-to-date and complete library, developers had access to an outdated version that often lacked the same components or expected behaviors. This gap required constant alignment with the tech team. In many situations, I had to:"),
+        UL(
+          "Map what was actually available in the development stack, understanding the real limitations of the library used by the devs.",
+          "Adapt layouts and flows based on those constraints, without compromising the user experience.",
+          "Negotiate intermediate solutions, proposing visual or functional adjustments that maintained consistency with the iDS, even if the implementation wasn't 100% faithful to the original design.",
+        ),
+        P("This process demanded empathy, flexibility, and close communication with the technical team to ensure that the solutions were realistic while still aligned with the project's quality and experience standards."),
         { kind:'h3', text:'Usability testing' },
-        P("We postponed formal testing until after launch due to a tight timeline. To mitigate risk, I monitored usage metrics, collected qualitative feedback during beta and alpha phases, and adjusted based on data — even before the public release."),
+        P("Another major challenge was the strategic decision to postpone usability testing until after the launch. Due to a tight timeline and pressure to go live, we chose to validate the journeys based on best practices, internal benchmarks, and qualitative feedback during the beta and alpha phases. To mitigate these risks, I took a proactive approach:"),
+        UL(
+          "Monitoring usage metrics and user behavior in intermediate versions.",
+          "Collecting qualitative feedback from real users during controlled testing phases.",
+          "Adjusting flows and components based on data and evidence, even before the official public release.",
+        ),
+        P("This approach allowed us to launch a solid, functional, and well-received MVP, even without formal usability testing prior to go-live."),
       ]},
       { kind:'section', label:'Key deliverables', title:'Logged-in Homepage', body:[
-        P("The logged-in homepage was designed to be the user's entry point into the íon web experience. I worked on structuring a page that balanced informative content, efficient navigation, and personalization."),
+        P("The logged-in homepage was designed to be the user's entry point into the íon web experience. I worked on structuring a page that balanced informative content, efficient navigation, and personalization. Key elements included:"),
         UL(
-          'Interactive cards with stock market info, investments, and product suggestions.',
+          'Interactive cards with information about the stock market, the user\'s investments, and product suggestions.',
           'Regulatory content blocks, integrated discreetly but accessibly.',
           'Relevant news and updates for investors, curated automatically.',
         ),
       ]},
       { kind:'figure', src:'/images/ion-home.png', caption:'Logged-in home: portfolio cards, product carousels and curated news' },
       { kind:'section', title:'Product Carousels', body:[
-        P("The consultancy Work & Co had proposed a visual concept where each carousel would have a distinct color. The original concept included only 8 colors, which quickly proved insufficient given the number of carousels needed."),
-        P("I led a study to expand this palette from 8 to 16 colors, ensuring visual harmony and accessibility. We also defined the ideal card sizes for each carousel, considering different screen resolutions and breakpoints."),
+        P("The consultancy Work & Co had proposed a visual concept where each carousel would have a distinct color, forming a gradient as the user scrolled down the page. While the idea was visually appealing, the original concept included only 8 colors, which quickly proved insufficient given the number of carousels the product needed to support."),
+        P("I led a study to expand this palette from 8 to 16 colors, ensuring visual harmony and accessibility. This work was done in collaboration with designer Ayrton Mugnaini. We also defined the ideal card sizes for each carousel, considering different screen resolutions and breakpoints. Together with the business team, we segmented the content and defined strategic titles for each carousel, such as:"),
+        UL(
+          '"Diversify your investments in equities"',
+          '"Top 5 Portfolio" · "Top Gainers of the Day" · "Top Losers of the Day"',
+          '"Invest Abroad" · "Real Estate Funds Recommended by íon"',
+        ),
       ]},
       { kind:'figure', src:'/images/ion-trilhos.png', caption:'Product carousels: palette expanded from 8 to 16 colors, card sizes defined for multiple resolutions' },
       { kind:'section', title:'Product Table', body:[
-        P("The product table needed to be robust and highly functional: real-time pricing updates, advanced sorting and filtering, responsive pagination, and visual performance indicators. I also ensured full accessibility via keyboard navigation and screen readers."),
+        P("The product table needed to be robust, high-performing, and highly functional. I designed its structure with the following features in mind: real-time pricing updates, advanced sorting and filtering, responsive pagination, and visual performance indicators. I also ensured the table was fully accessible via keyboard navigation and screen readers, in line with the accessibility standards defined for the project."),
       ]},
-      { kind:'figure', src:'/images/ion-tabela.png', caption:'Product table: real-time quotes, advanced sorting and filtering, fully accessible' },
+      { kind:'figure', src:'/images/ion-tabela.png', caption:'Product table: real-time quotes, advanced sorting and filtering, fully accessible by keyboard and screen readers' },
       { kind:'section', title:'Product Detail Page', body:[
-        P("This screen displayed specific information about an asset. The price chart required significant technical refinement. Since charts are not read by screen readers, I created a ", B('complementary table that translated visual information into textual data'), "."),
+        P("This screen displayed specific information about an asset. The price chart required significant technical refinement in collaboration with the development team to balance technical constraints with user needs."),
+        P("Additionally, this delivery had a special focus on accessibility. Since charts are not read by screen readers, I created a ", B('complementary table that translated the visual information into textual data'), "."),
       ]},
-      { kind:'figure', src:'/images/ion-detalhe.png', caption:'Product detail: price chart with complementary accessibility table' },
+      { kind:'figure', src:'/images/ion-detalhe.png', caption:'Product detail: price chart with complementary accessibility table translating visual data into text' },
+      { kind:'section', title:'News Page', body:[
+        P("The news page was created to integrate informative content into the investment journey. I worked on structuring an internal page that allowed for smooth reading of articles, analyses, and announcements. This delivery helped position Ion Web not only as a transactional platform but also as a knowledge hub for investors."),
+      ]},
+      { kind:'figure', src:'/images/ion-news.png', caption:'News page: smooth reading of articles, analyses and announcements' },
       { kind:'section', title:'Accessibility', body:[
-        P("This initiative was carried out in direct collaboration with the specialized team, ensuring that the solutions were inclusive and functional for all user profiles. Robust accessibility specifications were essential to guarantee quality."),
+        P("This initiative was carried out in direct collaboration with the specialized team, ensuring that the solutions were inclusive and functional for all user profiles. Robust accessibility specifications were essential to guarantee that the designed solutions were viable and delivered with quality."),
       ]},
       { kind:'figure', src:'/images/ion-acessibilidade.png', caption:'Accessibility specifications, developed in direct collaboration with the specialized team' },
       { kind:'section', title:'Data-driven changes', body:[
-        P("Throughout the project, we evolved features based on two pillars: active customer listening and strategic data analysis. A standout case was the table display function for the chart — with a clear redesign, I transformed friction into noticeable engagement."),
+        P("Throughout the project, we evolved several features based on two pillars: active customer listening and strategic data analysis. A standout case was the table display function for the chart. In the first version, few users knew they could activate it. With a clear and intuitive redesign, I transformed friction into noticeable engagement."),
       ]},
       { kind:'figure', src:'/images/ion-dados.png', caption:'Before and after: table display function redesign driven by user behavior data' },
       { kind:'section', label:'Results', title:'Double the users, more than twice the conversion', body:[
-        P("By the end of the project, the results exceeded initial expectations. The collaborative work, combined with an iterative and user-centered approach, enabled íon web to be launched as a solid, functional, and well-received product."),
+        P("By the end of the project, the results exceeded initial expectations, both in terms of adoption and the quality of the experience delivered. The collaborative work, combined with an iterative and user-centered approach, enabled íon web to be launched as a solid, functional, and well-received product."),
       ]},
       { kind:'stats', color:'#5B8DEF', items:[
         ['+30k', 'Monthly active users, doubling the initial goal of 15,000'],
@@ -100,7 +124,7 @@ export const CASE_CONTENT = {
     ],
   },
 
-ids: {
+  ids: {
     slug: 'ids',
     glow: '#F97300',
     statColor: '#F97300',
@@ -192,7 +216,7 @@ ids: {
         ['4', 'Tech stacks aligned simultaneously'],
       ]},
     ],
-  },
+   },
 
   rite: {
     slug: 'rite',
@@ -211,17 +235,17 @@ ids: {
     ],
     blocks: [
       { kind:'section', label:'Context', title:'A new project, an untested journey and an uncertain budget', body:[
-        P("Itaú was expanding into the free energy market, following new regulations that allow consumers to migrate from the traditional regulated market to the open market. The initiative offered individual customers spending over R$200/month the chance to save 10% on their bills."),
-        P("When I joined the project, a Visioning had already been designed. I was brought in to turn it into an MVP and conduct usability testing with real users — something that had not yet been done."),
+        P("Itaú was expanding into the free energy market, aiming to become a reference in the sector following new regulations that allow consumers to migrate from the traditional regulated market to the open market. The initiative offered individual customers spending over R$200/month on electricity the chance to save 10% on their bills, without needing to invest in their own infrastructure like solar panels."),
+        P("When I joined the project, a Visioning had already been designed. I was brought in to turn it into an MVP and, at the project coordinator's request, conduct usability testing with real users, something that had not yet been done."),
       ]},
       { kind:'section', label:'The challenge', title:"We didn't know if the budget would come. So I started testing.", body:[
-        P("The project sat within IBBA, the bank's B2B structure, but the end client was Retail, a B2C structure. That difference created a bureaucratic barrier that made direct access to clients impossible. On top of that, a traditional test with a research institute cost around R$40,000."),
-        P("The project manager was working to get the budget approved, but there was no guarantee. We needed to move forward regardless. The alternative was the RITE method."),
-        P("Midway through the tests, the budget was approved. What started as a plan B became an essential part of the process."),
+        P("The project sat within IBBA, the bank's B2B structure, but the end client was Retail, a B2C structure. That difference created a bureaucratic barrier that made direct access to clients impossible. On top of that, we couldn't use Itaú's own research credits, making a traditional test with a research institute extremely expensive: around R$40,000."),
+        P("The project manager was working to get the budget approved, but there was no guarantee it would happen. We needed to move forward regardless. The alternative was the RITE method."),
+        P("Midway through the tests, the budget was approved. What started as a plan B became an essential part of the process: RITE refined the journey and the prototype to the point where the institute's test became far more efficient."),
       ]},
       { kind:'section', label:'The method', title:'The tool that solved the problem', body:[
-        P("RITE (Rapid Iterative Testing and Evaluation) is a usability testing approach designed to identify and fix problems quickly and continuously, during the testing process itself. Unlike traditional testing, RITE allows prototype adjustments between sessions, without waiting for all tests to finish before acting."),
-        P("The method originated in 2002 at Microsoft Games Studios. Engineers realized the development pace was too slow and needed an approach that allowed immediate iteration."),
+        P("RITE (Rapid Iterative Testing and Evaluation) is a usability testing approach designed to identify and fix problems quickly and continuously, during the testing process itself. Unlike traditional testing, RITE allows prototype adjustments between sessions, or even during a session, without waiting for all tests to finish before acting."),
+        P("The method originated in 2002 at Microsoft Games Studios during the development of Age of Empires II. Engineers realized the development pace was too slow and needed an approach that allowed immediate iteration and implementation of improvements."),
         P("During testing, problems are classified into three categories:"),
         UL(
           [B('Obvious cause and quick fix: '), 'corrected immediately and tested in the next session.'],
@@ -230,31 +254,32 @@ ids: {
         ),
       ]},
       { kind:'section', label:'In practice', title:'Six tests, five prototypes, many discoveries', body:[
-        P("For the tests, two journeys were considered: the end-to-end purchase journey and the post-purchase journey. I developed a test script with targeted questions aimed at validating hypotheses. For recruitment, we looked for people spending over R$200/month on electricity."),
-        P("We ran ", B('6 tests across 5 different prototype versions'), "."),
+        P("For the tests, two journeys were considered: the end-to-end purchase journey and the post-purchase journey. Based on these, I developed a test script with targeted questions aimed at validating hypotheses built by me and the business team. For recruitment, we looked for people spending over R$200/month on electricity."),
+        P("We ran ", B("6 tests across 5 different prototype versions"), "."),
       ]},
       { kind:'section', label:'What users taught us', title:'Home screen', body:[
         P("In the first version, users didn't notice there was more content below the fixed button — it was blocking the visual flow. We also identified redundancy: two buttons with the same function placed close together created confusion."),
-        P("The decision was to keep the first button to gather more data, and move the discount simulation button to the bottom of the screen."),
+        P("The decision was to keep the first button to gather more data on whether it was truly necessary, and move the discount simulation button to the bottom of the screen."),
       ]},
       { kind:'figure', src:'/images/rite-case-2.png', caption:'Home screen: v1 with fixed button blocking content flow, and final version with simulation button repositioned' },
       { kind:'section', title:'Checkout screen', body:[
-        P("In the first test, users assumed the discount would be applied the month after signing up, which was incorrect. We updated the journey to clearly communicate the onboarding process and its estimated timeframe."),
-        P('In the next test, users had no idea who the partner behind the service was. One participant joked it was the "mystery partner." We added the partner\'s name to the journey.'),
+        P("In the first test, users assumed the discount would be applied the month after signing up, which was incorrect. We updated the journey to clearly communicate that there would be an onboarding process and inform the estimated timeframe for completion."),
+        P("In the next test, a new issue emerged: users had no idea who the partner behind the service was. One participant joked it was the \"mystery partner.\" We added the partner's name to the journey."),
         P("The final version featured a closing screen with much clearer next steps in the contracting flow."),
       ]},
-      { kind:'figure', src:'/images/rite-case-3.png', caption:'Checkout screen: from unclear partner identity and missing onboarding context to a clear closing screen' },
+      { kind:'figure', src:'/images/rite-case-3.png', caption:'Checkout screen: from unclear partner identity and missing onboarding context to a clear closing screen with defined next steps' },
       { kind:'section', title:'Product and billing cards', body:[
-        P("In the first version, the open billing section competed visually with the address card. We removed the section and moved the billing line inside the card itself."),
-        P("In the next test, users could only find payment history through trial and error. We updated the section title and action button to be more direct."),
+        P("In the first version, the open billing section competed visually with the address card, and users felt the information was repetitive. We removed the section and moved the billing line inside the card itself."),
+        P("In the next test, users could only find information like payment history through trial and error. We updated the section title and action button to be more direct."),
+        P("The final version had a clearer title and a more objective call-to-action, enabling users to self-serve without friction."),
       ]},
       { kind:'figure', src:'/images/rite-case-4.png', caption:'Product and billing cards: from competing sections and unclear labels to a consolidated card with direct action' },
       { kind:'section', title:'Product cancellation', body:[
-        P("The feedback here was sharp: having to contact the partner to cancel a service purchased through the app was considered a terrible experience. We decided to gather more data before building the cancellation journey."),
+        P("The feedback here was sharp: having to contact the partner to cancel a service purchased through the app was considered a terrible experience. As it was a more complex issue to resolve, we decided to gather more data before building the cancellation journey."),
       ]},
       { kind:'section', label:'After the tests', title:'RITE opened the door for the definitive test', body:[
         P("With the prototype refined through RITE, we ran a full usability testing round conducted by a research institute."),
-        P("The RITE method was essential not just for validating hypotheses, but for refining the journey, the prototype, and the test script itself. This allowed the team to get the most out of the institute's testing sessions."),
+        P("The RITE method was essential not just for validating hypotheses, but for refining the journey, the prototype, and the test script itself. This allowed the team to get the most out of the institute's testing sessions, extracting new insights with greater depth and precision."),
       ]},
       { kind:'section', label:'Learnings', title:'What I would bring to the next project', body:[
         P(B("Think about context before applying RITE."), " Do you have time to update the prototype between sessions? Can you run multiple tests in the same day? The method only works well when there are real conditions for iteration."),
