@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Nav from '../components/Nav'
 import ImgCard from '../components/ImgCard'
+import CursorTooltip from '../components/CursorTooltip'
 import FooterCTA from '../components/FooterCTA'
 import { BRAND } from '../brand'
 import { CASES } from '../data/cases'
@@ -84,16 +85,14 @@ export default function Home() {
 
           {/* Card */}
           <div
-            data-hover
-            onClick={() => navigate('/ion')}
             style={{
               background: BRAND.bgAlt, borderRadius: 8,
               overflow: 'hidden', border: `1px solid ${BRAND.border}`,
-              cursor: 'none',
             }}
             className="rv"
           >
-            {/* Image with gradient overlay */}
+            {/* Image with gradient overlay + cursor tooltip */}
+            <CursorTooltip label="↗ VIEW CASE" onClick={() => navigate('/ion')}>
             <div style={{ position: 'relative' }}>
               <ImgCard src={hero.image} video={hero.video} alt="íon web" ratio={21/9} />
               <div style={{
@@ -112,16 +111,14 @@ export default function Home() {
                 }}>
                   Designing íon web: accessibility, scale, and 9.2% conversion at Itaú.
                 </h2>
-                <span style={{
-                  fontFamily: "'JetBrains Mono', monospace", fontSize: 11,
-                  color: 'rgba(255,255,255,0.5)', whiteSpace: 'nowrap', alignSelf: 'flex-end',
-                }}>▶ hover plays</span>
+
               </div>
             </div>
+            </CursorTooltip>
 
             {/* Metrics + CTA */}
             <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(4,1fr) auto',
+              display: 'grid', gridTemplateColumns: 'repeat(4,1fr)',
               borderTop: `1px solid ${BRAND.border}`,
             }}>
               {hero.metrics.map(({ n, label }) => (
@@ -140,36 +137,9 @@ export default function Home() {
                   }}>{label}</div>
                 </div>
               ))}
-              <a
-                href="/ion"
-                onClick={e => { e.stopPropagation(); navigate('/ion') }}
-                style={{
-                  padding: '24px 32px', background: BRAND.accent, color: '#0c0c0c',
-                  fontWeight: 600, fontSize: 14, textDecoration: 'none',
-                  display: 'flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap',
-                  cursor: 'none',
-                }}
-              >Read the case →</a>
+
             </div>
 
-            {/* Timeline */}
-            <div style={{
-              padding: '24px 32px',
-              display: 'grid', gridTemplateColumns: 'repeat(4,1fr)',
-              gap: 24,
-              borderTop: `1px solid ${BRAND.border}`,
-              background: BRAND.bg,
-            }}>
-              {hero.timeline.map(({ date, label, body }) => (
-                <div key={date}>
-                  <div style={{ display: 'flex', gap: 8, alignItems: 'baseline', marginBottom: 6 }}>
-                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: BRAND.accent }}>{date}</span>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: BRAND.text }}>{label}</span>
-                  </div>
-                  <div style={{ fontSize: 12, color: BRAND.textMuted, lineHeight: 1.5 }}>{body}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -297,17 +267,16 @@ export default function Home() {
 function SmallCase({ c, num, onClick }) {
   return (
     <article
-      data-hover
-      onClick={onClick}
       style={{
         background: BRAND.bgAlt, border: `1px solid ${BRAND.border}`,
         borderRadius: 8, overflow: 'hidden',
         display: 'flex', flexDirection: 'column',
-        cursor: 'none', transition: 'transform .3s',
+        transition: 'transform .3s',
       }}
       onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
       onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
     >
+      <CursorTooltip label="↗ VIEW CASE" onClick={onClick}>
       <div style={{ position: 'relative' }}>
         <ImgCard src={c.image} video={c.video} alt={c.title} ratio={16/10} />
         <div style={{
@@ -319,6 +288,7 @@ function SmallCase({ c, num, onClick }) {
           {String(num).padStart(2,'0')} · {c.eyebrow.split('·')[0].trim()}
         </div>
       </div>
+      </CursorTooltip>
 
       <div style={{ padding: '20px 24px 24px', display: 'flex', flexDirection: 'column', gap: 14, flex: 1 }}>
         <h4 style={{
@@ -343,10 +313,6 @@ function SmallCase({ c, num, onClick }) {
           ))}
         </div>
 
-        <span style={{
-          fontSize: 13, color: BRAND.accent, fontWeight: 500,
-          display: 'inline-flex', alignItems: 'center', gap: 6,
-        }}>Open the case →</span>
       </div>
     </article>
   )
