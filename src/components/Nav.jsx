@@ -54,21 +54,7 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* Mobile CTAs — always visible */}
-      <div style={{
-        position: 'fixed', top: 12, right: 16, zIndex: 501,
-        display: 'flex', alignItems: 'center', gap: 8,
-      }} className="mobile-nav-ctas">
-        <a
-          href="https://www.linkedin.com/in/caique-castro89/"
-          target="_blank" rel="noreferrer"
-          style={{ ...ctaSecStyle, padding: '10px 14px', fontSize: '.6rem' }}
-        >LinkedIn →</a>
-        <a
-          href="mailto:caique.castro89@gmail.com"
-          style={{ ...ctaPrimaryStyle, padding: '10px 14px', fontSize: '.6rem' }}
-        >Contact →</a>
-      </div>
+
     </>
   )
 }
