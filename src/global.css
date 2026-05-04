@@ -4,7 +4,7 @@ html { scroll-behavior: auto; overflow-x: hidden; }
 body {
   background: #0c0c0c;
   color: #f4f1ec;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Saans', system-ui, sans-serif;
   font-weight: 300;
   overflow-x: hidden;
 }
@@ -23,7 +23,7 @@ img, video { display: block; }
 }
 #loader.done { opacity: 0; transform: translateY(-8px); pointer-events: none; }
 #loader-count {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Saans', sans-serif;
   font-size: clamp(5rem, 14vw, 12rem);
   font-weight: 800; color: #f4f1ec;
   line-height: 1; letter-spacing: -.04em;

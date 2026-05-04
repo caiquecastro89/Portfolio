@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import CasePage from './pages/CasePage'
+import './fonts.css'
 import './global.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -31,7 +31,7 @@ export default function FooterCTA({ mobile = false }) {
           textDecoration: 'none', borderRadius: mobile ? 100 : 4,
         }}>
           <span>Get in touch →</span>
-          {!mobile && <span style={{ fontFamily: "Inter, system-ui, sans-serif", fontSize: 12 }}>caique.castro89@gmail.com ↗</span>}
+          {!mobile && <span style={{ fontFamily: "Saans, system-ui, sans-serif", fontSize: 12 }}>caique.castro89@gmail.com ↗</span>}
         </a>
         <a
           href="https://www.linkedin.com/in/caique-castro89/"
@@ -47,7 +47,7 @@ export default function FooterCTA({ mobile = false }) {
           }}
         >
           <span>LinkedIn →</span>
-          {!mobile && <span style={{ fontFamily: "Inter, system-ui, sans-serif", fontSize: 12, color: BRAND.textMuted }}>linkedin.com/in/caique-castro89 ↗</span>}
+          {!mobile && <span style={{ fontFamily: "Saans, system-ui, sans-serif", fontSize: 12, color: BRAND.textMuted }}>linkedin.com/in/caique-castro89 ↗</span>}
         </a>
       </div>
     </div>
