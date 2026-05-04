@@ -179,7 +179,7 @@ export default function CasePage({ slug }) {
                 display: 'inline-flex', alignItems: 'center', gap: 6,
                 color: BRAND.textMuted, fontSize: 13, background: 'none', border: 'none',
                 fontFamily: "Saans, system-ui, sans-serif",
-                cursor: 'none', marginBottom: 32, padding: 0, animation: 'fi .8s .3s both',
+                cursor: 'pointer', marginBottom: 32, padding: 0, animation: 'fi .8s .3s both',
               }}
             >← Back</button>
 
@@ -282,7 +282,7 @@ export default function CasePage({ slug }) {
               display: 'flex', gap: 32, alignItems: 'center',
               padding: 32, background: BRAND.bgAlt,
               border: `1px solid ${BRAND.border}`, borderRadius: 12,
-              cursor: 'none', textDecoration: 'none',
+              cursor: 'pointer', textDecoration: 'none',
               transition: 'background .25s',
             }}
             onMouseEnter={e => e.currentTarget.style.background = BRAND.bgCard}
