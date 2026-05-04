@@ -34,7 +34,7 @@ export default function Nav() {
         <Link to="/" style={{
           fontFamily: 'Inter, sans-serif', fontSize: '.82rem', fontWeight: 700,
           letterSpacing: '.04em', textDecoration: 'none', color: BRAND.text,
-          textTransform: 'uppercase', cursor: 'none',
+          textTransform: 'none',
         }}>
           Caique Castro
         </Link>
@@ -64,7 +64,7 @@ const ctaPrimaryStyle = {
   letterSpacing: '.08em', textTransform: 'uppercase', textDecoration: 'none',
   background: '#ff5b1f', color: '#0c0c0c',
   padding: '0 20px', height: 44, display: 'inline-flex', alignItems: 'center', gap: 6,
-  borderRadius: 100, cursor: 'none',
+  borderRadius: 100,
 }
 
 const ctaSecStyle = {
@@ -72,5 +72,5 @@ const ctaSecStyle = {
   letterSpacing: '.08em', textTransform: 'uppercase', textDecoration: 'none',
   color: BRAND.textMuted, border: `1.5px solid ${BRAND.border}`,
   padding: '0 16px', height: 44, display: 'inline-flex', alignItems: 'center', gap: 6,
-  borderRadius: 100, cursor: 'none',
+  borderRadius: 100,
 }
