@@ -22,7 +22,7 @@ export default function CursorTooltip({ children, label = '↗ VIEW CASE', onCli
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
       onMouseMove={onMove}
-      style={{ position: 'relative', cursor: 'none' }}
+      style={{ position: 'relative', cursor: 'pointer' }}
     >
       {children}
 
