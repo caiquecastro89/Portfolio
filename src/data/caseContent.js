@@ -192,9 +192,9 @@ ids: {
         ['4', 'Tech stacks aligned simultaneously'],
       ]},
     ],
-  },,
+  },
 
-    rite: {
+  rite: {
     slug: 'rite',
     glow: '#C6D167',
     statColor: '#C6D167',
