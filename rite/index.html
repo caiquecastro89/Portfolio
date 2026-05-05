@@ -144,30 +144,20 @@
     <div class="cdiv"></div>
   </div>
 
-  <div class="cnxt-new">
-    <p class="cnxt-lbl">Next case</p>
-    <div class="wi rv" id="cnxt-rite-cap" onclick="window.location.href='/cap'">
-        <div class="wi-left">
-          <div class="wtags"><span class="wtag">Product Design</span><span class="wtag">·</span><span class="wtag">Usability Testing</span><span class="wtag">·</span><span class="wtag">Prototyping</span></div>
-          <div class="wname">One product, two categories: how I redesigned Itaú's capitalization journey without disrupting the banker's routine</div>
-          <div class="wi-desc">In less than a month, I had to fit two new products into a journey bankers already knew by heart. I delivered a validated prototype, ran 4 usability tests, and left with a 5/5 confidence rating from the bankers themselves.</div>
-        </div>
-        <div class="wi-img-wrap">
-          <div class="wi-glow" style="background:radial-gradient(circle,#FF4D2E,transparent)"></div>
-          <div class="wi-img" id="wi-img-cnxt-rite-cap">
-            <img src="../images/cap-default.png" alt="Capitalization Journey">
-            <video src="../images/cap-hover.mp4" muted loop playsinline preload="none"></video>
-          </div>
-        </div>
-        <div class="wi-right">
-          <div class="wi-access">
-            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <span class="wi-access-label">View</span>
-          </div>
-        </div>
+    <div class="cnxt-new">
+    <span class="cnxt-lbl">Next case</span>
+    <a class="cnxt-card rv" href="/cap">
+      <div class="cnxt-card-img">
+        <img src="../images/cap-default.png" alt="Capitalization Journey">
       </div>
+      <div class="cnxt-card-body">
+        <div class="cnxt-card-tag">Product Design · Usability Testing · Prototyping</div>
+        <div class="cnxt-card-title">One product, two categories: how I redesigned Itaú's capitalization journey without disrupting the banker's routine</div>
+        <div class="cnxt-card-desc">In less than a month, I had to fit two new products into a journey bankers already knew by heart. I delivered a validated prototype, ran 4 usability tests, and left with a 5/5 confidence rating from the bankers themselves.</div>
+      </div>
+      <div class="cnxt-card-arrow">→</div>
+    </a>
   </div>
-
   <section class="ct-sec" id="contact">
     <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
@@ -184,6 +174,12 @@
   <footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, Brazil</span></footer>
 </div>
 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-758C94BVM2');
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-758C94BVM2"></script>
 <script>
@@ -202,5 +198,7 @@
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 <script src="../script.js"></script>
+</body>
+</html>
 </body>
 </html>
