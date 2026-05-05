@@ -289,4 +289,94 @@ ion: {
       ]},
     ],
   },
+
+  capitalizacao: {
+    slug: 'capitalizacao',
+    glow: '#1A56C4',
+    statColor: '#1A56C4',
+    tags: ['Itaú Unibanco', '2026', 'Product Design', 'Usability Testing', 'Prototyping'],
+    title: "One product, two tiers: how I redesigned Itaú's capitalization journey without disrupting the banker's routine",
+    spec: [['Period','2026'], ['Company','NTT Data × Itaú'], ['Role','Senior Product Designer'], ['Scope','UX Design · Prototyping · Usability Testing · Design System']],
+    summary: [
+      "Itaú's capitalization product went through a structural change: the single contracting tier was replaced by two products with different profiles, PIC Mais Sorteios and PIC Milionários. I was brought in to redesign the contracting journey used by relationship bankers to serve clients in-branch.",
+      "The main challenge wasn't technical — it was communicational: how do you explain a product change to bankers who already know it inside out, without creating anxiety, and without adding friction to a workflow that needs to stay fast?",
+      "In three weeks, I ran an async co-creation with Business and Tech, built first versions on top of the existing journey, facilitated a multidisciplinary critique, and from that critique developed the two versions that went into testing.",
+      "I conducted 4 moderated usability tests with relationship bankers. The single-page layout was chosen as the final solution for being more practical in the in-branch context, with all information and the action button accessible without intermediate steps.",
+      "Every banker understood the difference between the products independently and gave a 5/5 confidence rating to use the flow with a real client. The journey passed Itaú's experience quality checklist. Launch is scheduled for July 2026.",
+    ],
+    blocks: [
+      { kind:'section', label:'Context', title:"The product changed. The banker's routine couldn't.", body:[
+        P("Itaú already had a capitalization journey in their internal platform — one bankers use every day to serve clients in-branch. With it, the banker walks the client through the product, picks a value tier, and closes the contract. A familiar flow, embedded in the daily routine. The product had a single tier: simple to explain, simple to sell."),
+        P(["That changed when Itaú restructured the product: the single tier was replaced by two products with different profiles and arguments, ", B("PIC Mais Sorteios"), " and ", B("PIC Milionários"), ". The change needed to be explained to bankers clearly and without generating anxiety. After all, they already had a solid understanding of the previous product and would need to absorb what changed, what stayed the same, and how to argue two new tiers to clients. At the same time, the new journey couldn't add complexity to a flow that needs to be fast."]),
+        P("The operational context made this challenge even more sensitive. Bankers serve clients face-to-face in the branch, under pressure to be efficient — and capitalization is just one of many products they sell. Less time per flow means more business opportunities throughout the day. Any friction along the way, whether an extra screen, an ambiguous piece of information, or a button in the wrong place, directly impacts the banker's productivity and the client's experience."),
+        { kind:'callout', text:['The question that guided everything: ', B('"How do you explain to the banker that the product changed, but that change won\'t affect their work?"')] },
+        P("My role was to lead the design of this journey from scratch — from planning and scope alignment with Business and Technology, through prototype creation and iteration, all the way to usability testing with real bankers and Itaú's experience quality checklist."),
+      ]},
+      { kind:'section', label:'Planning', title:'Three weeks, four stages.', body:[
+        P("With roughly a month to deliver a validated prototype and complete handoff for development, my first step was setting up a clear roadmap with well-defined start criteria. Before touching any screen, I needed the business rules for each product formalized, co-creation sessions confirmed with Business, BT and Technology teams, and access to the iDS — Itaú's design system — secured from day one."),
+      ]},
+      { kind:'timeline', items:[
+        ['Week 01 · Apr 06–10', 'Co-creation', 'Workshop with Business, Technology and Design to map the new products and define how to integrate them into the existing journey. Current journey mapping, screen inventory, and identification of the banker\'s key decision points.'],
+        ['Week 02 · Apr 13–17', 'Flow and prototype', 'Created user flows for each product in Figma following the iDS. Validated flows with Business before moving to screens. Presented and collected stakeholder feedback.'],
+        ['Week 03 · Apr 22–24', 'Usability testing', 'Moderated tests with Itaú relationship bankers. Application of Itaú\'s journey quality checklist. Recorded and prioritized findings by impact.'],
+        ['Week 04 · Apr 27–May 01', 'Fixes and handoff', 'Adjustments based on test findings and delivery of the complete handoff to the tech team, with behavior specs, states, and business rule annotations.'],
+      ]},
+      { kind:'section', label:'Co-creation', title:'A co-creation that happened in the chat.', body:[
+        P("With a tight deadline, the co-creation didn't follow the traditional format of in-person workshops. Instead, it happened asynchronously over Microsoft Teams — working out the solution paths, the argument differentiation for each product, and the presentation logic directly in the chat, with screenshots, sketches, and references shared in real time."),
+        P("Despite the unconventional format, the Business team's engagement produced insights that directly shaped the final design decisions. The most important definitions from this stage:"),
+        P([B("Each product has a different core argument."), " PIC Mais Sorteios should communicate volume and frequency of draws as its differentiator, with 700 weekly draws as the main hook. PIC Milionários should lead with prize size — up to R$ 2.1 million every month — as the dominant element. This narrative distinction needed to be visible on the very first screen the banker touches."]),
+        P([B("The change shouldn't feel like a break."), " Bankers already know the capitalization product. The new journey needed to anchor on what hadn't changed — the client saves money, keeps entering draws, and gets everything back at the end — before introducing what was new."]),
+      ]},
+      { kind:'section', label:'Design decisions', title:'From hypothesis to tested solution.', body:[
+        P("With the business direction defined, my starting point was the journey that already existed. Rather than designing from scratch, I took the current contracting flow and made targeted adjustments — a new image, vertical scroll, and card backgrounds to visually differentiate the products. These first versions were deliberately conservative: the goal was to have something concrete to react to, not a finished solution."),
+        P("With those versions in hand, I facilitated a multidisciplinary critique with Design, Business, and Technology. That session was where the real design work happened. The team challenged assumptions, flagged what wasn't working, and pushed for clearer ways to communicate the product change. Two distinct directions emerged from the critique:"),
+        P([B("Single-page layout."), " All the new product information on one screen: a 'new product' badge, a title contextualizing the change, a 'what hasn't changed' section, and both product cards with action buttons. The hypothesis was that having everything in one place would reduce clicks and speed up the banker's flow."]),
+        P([B("Modal overlaid on the journey."), " An overlay with the new product information appearing before the banker enters the contracting flow. When dismissed, the next step's content is already visible behind it, creating visual continuity. The hypothesis was that the modal would match the interaction pattern bankers already know from other features in the platform."]),
+        P(["These were the two versions I brought to usability testing. At the end of the process, I chose the ", B("single-page layout as the final solution"), " for two reasons: it's more practical for the banker to execute the sale, with all information and the action button accessible without an intermediate step, and the modal came from a non-modernized line of the platform, conflicting with the product's technical direction. A variation with CTAs directly inside the modal cards, suggested by a banker during testing, was also ruled out: while it addressed the speed concern, it placed a decision action at a moment when the banker was still absorbing the product information, which could create confusion."]),
+        P([B("On the product offer page"), ", I guided the redesign by a clear principle: show only what differentiates. I moved shared information — duration, grace period, and lucky numbers — out of the cards and into a single note below the listing. Inside each card, I focused on draws and total saved, the two numbers bankers told me they use to make their pitch."]),
+        P("The illustration idea came out of the critique. The team raised the question of how to visually show the value progression across products: the amount the client pays, the draw values, and the total saved at the end. I explored several approaches to represent this progression, and during that process I had an insight drawn from online games like Fortnite and Arc Raider. Their in-game currency purchase screens use illustrations where the larger the pack, the bigger the pile of coins — the value progression is immediate, visual, no numbers needed. I wanted to bring that same logic to the cards: illustrations that grow with each tier, making the scale of value intuitive at a glance, while also bringing dynamism and life to a screen that would otherwise be nothing but cards and text."),
+      ]},
+      { kind:'section', label:'Usability testing', title:'What the bankers told me.', body:[
+        P("I conducted 4 moderated remote usability tests with Itaú relationship bankers, all with prior knowledge of the capitalization product. Each session averaged 30 minutes, with a script I structured in 4 blocks: single-page vs modal, understanding of the tiers, clarity of offer cards, and perception of the illustrations."),
+      ]},
+      { kind:'stats', color:'#1A56C4', items:[
+        ['4', 'Moderated tests with relationship bankers'],
+        ['5/5', 'Confidence to use the flow with a real client'],
+        ['4/4', 'Understood the products without any help'],
+      ]},
+      { kind:'section', body:[
+        UL(
+          [B('Every banker understood the difference between the products independently. '), 'Without any explanation, all of them differentiated Mais Sorteios and Milionários and mapped each product to the right client profile. Exactly what I needed to validate.'],
+          [B('"Only R$ X per day" was the most praised element across all sessions. '), "Spontaneous, enthusiastic reaction in every test. Bankers told me they already use this argument in their day-to-day — I just needed to make it visible and accessible on screen, and it worked."],
+          [B('Single-page confirmed as the most practical layout for the in-branch context. '), "Even bankers who initially leaned toward the modal acknowledged the single-page's advantage once they navigated it: all information and the action button on the same screen, no intermediate click."],
+        ),
+        { kind:'callout', text:[{ accent: '"Before, it was like — you\'re entering draws worth up to 4 million, but I honestly didn\'t know if that was 4 million every week, once a month, or once a year. Now it\'s really informative."' }, ' — Viviam · Relationship Banker, Digital Branch'] },
+        { kind:'callout', text:[{ accent: '"For me, 5. Every second, every little minute we can save — that\'s one more opportunity to do business."'}, ' — Suellen · Relationship Banker, Digital Branch'] },
+      ]},
+      { kind:'section', label:'Experience quality', title:"Itaú's journey quality checklist.", body:[
+        P("Before any delivery goes into production at Itaú, the journey goes through an experience quality checklist — a multidisciplinary review that brings together designers, business, and technology teams to evaluate a set of criteria organized around experience pillars. Each criterion is rated as Compliant, Partially compliant, or Non-compliant."),
+        P("I submitted the capitalization journey to this process with all the teams involved. The result was positive: the experience was rated Compliant on most criteria, with two partially compliant points that I logged as follow-up actions for the next stages."),
+        UL(
+          [B('✓ Simple language: '), "Clear communication, free of banking jargon, aligned with Itaú's tone of voice."],
+          [B('✓ Visual standardization and consistency: '), 'Correct use of iDS tokens and components throughout the journey.'],
+          [B('~ Accessibility and inclusion: '), 'Accessibility handoff still open — flagged as an action for upcoming stages.'],
+          [B('✓ Simple, friction-free experience: '), 'Reduced cognitive load, organized information, minimum clicks to complete the contract.'],
+          [B('✓ Step visibility and location awareness: '), 'Stepper present on all contracting screens, providing progress tracking and predictability.'],
+          [B('✓ Navigation autonomy: '), 'No dead ends — the banker always has a way to go back, exit, or move forward.'],
+          [B('✓ Prior team alignment: '), 'Co-creation and critique conducted with Business, Technology, and Design before delivery.'],
+          [B('~ Communications and channels: '), 'Verification of updated communications mapped as a post-launch action.'],
+        ),
+      ]},
+      { kind:'section', label:'Outcome', title:'What I delivered and what it left behind.', body:[
+        P("At the end of the cycle, I delivered a validated prototype covering the full contracting flow for both new products — from the explanatory landing screen through to the development handoff — with all behavior specs, states, and business rule annotations documented in Figma."),
+        P("The tests confirmed the approach worked: every banker understood the difference between the products independently, mapped each one to the right client profile, and gave me a maximum confidence rating to use the flow with a real client. The one improvement I identified — the ambiguity between quantity and value in the '700 draws' field — was fixed before handoff."),
+        P("Launch is scheduled for July 2026, starting with a pilot at selected branches before rolling out across the network."),
+      ]},
+      { kind:'callout', text:[B('4 tests. 4 perfect scores. One decision backed by data.'), ' I chose the single-page layout not by consensus, but because the tests showed it shortened the banker\'s path to action without sacrificing clarity. The modal was ruled out for conflicting with the platform\'s modernized direction. And the tests gave me something no isolated version could have revealed: the "only R$ X per day" argument is already part of how bankers sell — I just needed to make it visible.'] },
+      { kind:'section', body:[
+        P([B("What I learned from this project:"), " a tight deadline and an async team don't prevent a rigorous design process. What they demand is sharp focus on the decisions that actually matter, clear start criteria before touching any screen, and the willingness to put the prototype in front of the people who'll use it before handing it off to the people who'll build it."]),
+      ]},
+    ],
+  },
+
 }
