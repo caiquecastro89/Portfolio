@@ -62,6 +62,27 @@ function renderBlock(b, idx, mobile = false) {
     </section>
   )
 
+  if (b.kind === 'video') return (
+    <figure key={idx} className="rv" style={{ margin: 0, width: FIGURE_W, maxWidth: '100%' }}>
+      <div style={{
+        background: BRAND.bgAlt, border: `1px solid ${BRAND.border}`,
+        borderRadius: 8, overflow: 'hidden',
+      }}>
+        <video
+          src={b.src}
+          autoPlay loop muted playsInline
+          style={{ width: '100%', display: 'block' }}
+        />
+      </div>
+      {b.caption && (
+        <figcaption style={{
+          marginTop: 12, fontSize: 12, color: BRAND.textFaint,
+          fontFamily: "Saans, system-ui, sans-serif", lineHeight: 1.5, textAlign: 'center',
+        }}>{b.caption}</figcaption>
+      )}
+    </figure>
+  )
+
   if (b.kind === 'figure') return (
     <figure key={idx} className="rv" style={{ margin: 0, width: FIGURE_W, maxWidth: '100%' }}>
       <div style={{
