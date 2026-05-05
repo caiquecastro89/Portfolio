@@ -371,3 +371,8 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
 .work-sec .eyebrow{padding-left:calc(48px + max(0px, (100vw - 1366px) / 2));padding-right:calc(48px + max(0px, (100vw - 1366px) / 2))}
 
 .wi:hover .wi-desc{max-height:200px;opacity:1;margin-top:10px}
+
+/* Fallback: show all content when JS is disabled */
+@media (scripting: none) {
+  .rv{opacity:1!important;transform:none!important}
+}
