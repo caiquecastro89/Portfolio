@@ -13,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/ion" element={<CasePage slug="ion" />} />
       <Route path="/ids" element={<CasePage slug="ids" />} />
       <Route path="/rite" element={<CasePage slug="rite" />} />
+      <Route path="/capitalizacao" element={<CasePage slug="capitalizacao" />} />
     </Routes>
   </BrowserRouter>
 )
