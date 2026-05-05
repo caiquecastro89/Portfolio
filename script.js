@@ -89,9 +89,11 @@ function initAllVideos(){
   initCardVideo('wi-ion', 'wi-img-ion');
   initCardVideo('wi-ids', 'wi-img-ids');
   initCardVideo('wi-rite', 'wi-img-rite');
+  initCardVideo('wi-cap', 'wi-img-cap');
   initCardVideo('cnxt-ids-rite', 'wi-img-cnxt-ids-rite');
   initCardVideo('cnxt-rite-ion', 'wi-img-cnxt-rite-ion');
   initCardVideo('cnxt-ids-card', 'wi-img-cnxt-ids');
+  initCardVideo('cnxt-cap-ion', 'wi-img-cnxt-cap-ion');
 }
 
 // Schedule rev after hero animations finish (~1s)
