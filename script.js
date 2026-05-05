@@ -4,6 +4,22 @@
   var count = document.getElementById('loader-count');
   if(!loader) return;
 
+  // Hard fallback: always hide loader after 4s no matter what
+  setTimeout(function(){
+    if(loader && loader.style.display !== 'none'){
+      loader.classList.add('done');
+      setTimeout(function(){ loader.style.display='none'; }, 700);
+    }
+  }, 4000);
+
+  // Fallback on window load
+  window.addEventListener('load', function(){
+    if(loader && loader.style.display !== 'none' && !loader.classList.contains('done')){
+      loader.classList.add('done');
+      setTimeout(function(){ loader.style.display='none'; }, 700);
+    }
+  });
+
   if(sessionStorage.getItem('visited')){
     loader.style.display='none';
     document.body.classList.add('no-loader');
@@ -39,14 +55,7 @@
   requestAnimationFrame(tick);
 })();
 
-// Cursor
-var c=document.getElementById('cur'),r=document.getElementById('cur-ring'),mx=0,my=0,tx=0,ty=0;
-document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;if(c){c.style.left=mx+'px';c.style.top=my+'px'}});
-(function loop(){if(r){tx+=(mx-tx)*.15;ty+=(my-ty)*.15;r.style.left=tx+'px';r.style.top=ty+'px'}requestAnimationFrame(loop)})();
-document.querySelectorAll('a,button,[onclick]').forEach(function(el){
-  el.addEventListener('mouseenter',function(){document.body.classList.add('cur-hover')});
-  el.addEventListener('mouseleave',function(){document.body.classList.remove('cur-hover')});
-});
+// Cursor removed - using system default
 
 // Detect if we are on a case page
 var isCase = document.body.dataset.page && document.body.dataset.page !== 'home';
