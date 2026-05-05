@@ -6,16 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="canonical" href="https://caique-castro.com"/>
 <title>Caique Castro · Product Designer</title>
-<link rel="stylesheet" href="./fonts.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="./style.css"/>
 </head>
 <body data-page="home">
 
-<div id="loader">
-  <span id="loader-count">0</span>
-</div>
-<div id="cur"></div>
-<div id="cur-ring"></div>
 <nav id="nav">
   <a class="nav-logo" href="/">Caique Castro</a>
   <div class="nav-cta-group" id="navDesktopGroup"><a class="nav-cta-secondary" href="https://www.linkedin.com/in/caique-castro89/" target="_blank">LinkedIn <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="nav-cta" href="mailto:caique.castro89@gmail.com">Get in touch <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
@@ -51,7 +48,7 @@
           <div class="wi-glow" style="background:radial-gradient(circle,#41A641,transparent)"></div>
           <div class="wi-img" id="wi-img-ion">
             <img src="images/ion-cover.png" onerror="this.src='images/ion-home.png'" alt="íon Itaú Web Platform">
-            <video src="images/ion-hover.mp4" muted loop playsinline preload="metadata"></video>
+            <video src="images/ion-hover.mp4" muted loop playsinline preload="none"></video>
           </div>
         </div>
         <div class="wi-right">
@@ -72,7 +69,7 @@
           <div class="wi-glow" style="background:radial-gradient(circle,#F97300,transparent)"></div>
           <div class="wi-img" id="wi-img-ids">
             <img src="images/ids-cover.png" onerror="this.src='images/ids-analise1.png'" alt="Itaú Design System">
-            <video src="images/ids-hover.mp4" muted loop playsinline preload="metadata"></video>
+            <video src="images/ids-hover.mp4" muted loop playsinline preload="none"></video>
           </div>
         </div>
         <div class="wi-right">
@@ -93,7 +90,7 @@
           <div class="wi-glow" style="background:radial-gradient(circle,#C6D167,transparent)"></div>
           <div class="wi-img" id="wi-img-rite">
             <img src="images/rite-cover.png" onerror="this.src='images/rite-case-1.png'" alt="RITE Method">
-            <video src="images/rite-hover.mp4" muted loop playsinline preload="metadata"></video>
+            <video src="images/rite-hover.mp4" muted loop playsinline preload="none"></video>
           </div>
         </div>
         <div class="wi-right">
@@ -164,6 +161,14 @@
   </section>
   <footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, Brazil</span></footer>
 </div>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-758C94BVM2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-758C94BVM2');
+</script>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
