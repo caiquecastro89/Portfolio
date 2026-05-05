@@ -1,59 +1,3 @@
-// Loader - only on first visit per session
-(function(){
-  var loader = document.getElementById('loader');
-  var count = document.getElementById('loader-count');
-  if(!loader) return;
-
-  // Hard fallback: always hide loader after 4s no matter what
-  setTimeout(function(){
-    if(loader && loader.style.display !== 'none'){
-      loader.classList.add('done');
-      setTimeout(function(){ loader.style.display='none'; }, 700);
-    }
-  }, 4000);
-
-  // Fallback on window load
-  window.addEventListener('load', function(){
-    if(loader && loader.style.display !== 'none' && !loader.classList.contains('done')){
-      loader.classList.add('done');
-      setTimeout(function(){ loader.style.display='none'; }, 700);
-    }
-  });
-
-  if(sessionStorage.getItem('visited')){
-    loader.style.display='none';
-    document.body.classList.add('no-loader');
-    return;
-  }
-  sessionStorage.setItem('visited','1');
-
-  var start = null;
-  var duration = 1200;
-  var current = 0;
-
-  function easeOut(t){ return 1 - Math.pow(1-t, 3); }
-
-  function tick(ts){
-    if(!start) start = ts;
-    var progress = Math.min((ts - start) / duration, 1);
-    var eased = easeOut(progress);
-    var num = Math.floor(eased * 100);
-    if(num !== current){
-      current = num;
-      count.textContent = current;
-    }
-    if(progress < 1){
-      requestAnimationFrame(tick);
-    } else {
-      count.textContent = '100';
-      setTimeout(function(){
-        loader.classList.add('done');
-        setTimeout(function(){ loader.style.display='none'; }, 700);
-      }, 150);
-    }
-  }
-  requestAnimationFrame(tick);
-})();
 
 // Cursor removed - using system default
 
@@ -142,18 +86,10 @@ function initAllVideos(){
   initCardVideo('cnxt-ids-card','wi-img-cnxt-ids');
 }
 
-// Delay rev() based on whether loader is showing
-// With loader: hero finishes ~3.2s, so start rev at 3300ms
-// Without loader (no-loader class): hero finishes ~1.2s, so start rev at 1300ms
+// Start rev after hero animations finish (~1s)
 function scheduleRev(){
-  var noLoader = document.body.classList.contains('no-loader');
-  var isMobile = window.innerWidth <= 900;
-  // Mobile has no loader, hero finishes ~1.2s
-  // Desktop no-loader: ~1.2s, with loader: ~3.2s
-  var isFirstVisit = !noLoader;
-var delay = (isMobile && isFirstVisit) ? 2600 : (noLoader ? 1300 : 2600);
-  setTimeout(rev, delay);
-  setTimeout(rev, delay + 500);
+  setTimeout(rev, 1000);
+  setTimeout(rev, 1500);
 }
 
 if(document.readyState==='loading'){
