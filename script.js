@@ -86,14 +86,16 @@ document.querySelectorAll('.csummary-toggle').forEach(function(btn){
 
 function initAllVideos(){
   if(window.innerWidth <= 900) return;
+  // Home cards
   initCardVideo('wi-ion', 'wi-img-ion');
   initCardVideo('wi-ids', 'wi-img-ids');
   initCardVideo('wi-rite', 'wi-img-rite');
   initCardVideo('wi-cap', 'wi-img-cap');
+  // Next case cards
   initCardVideo('cnxt-ids-rite', 'wi-img-cnxt-ids-rite');
-  initCardVideo('cnxt-rite-ion', 'wi-img-cnxt-rite-ion');
-  initCardVideo('cnxt-ids-card', 'wi-img-cnxt-ids');
+  initCardVideo('cnxt-rite-cap', 'wi-img-cnxt-rite-cap');
   initCardVideo('cnxt-cap-ion', 'wi-img-cnxt-cap-ion');
+  initCardVideo('cnxt-ids-card', 'wi-img-cnxt-ids');
 }
 
 // Schedule rev after hero animations finish (~1s)
