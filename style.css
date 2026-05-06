@@ -26,10 +26,10 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .nav-cta-secondary{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);padding:0 16px;height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:100px;border:1.5px solid rgba(13,12,10,.2);transition:all .2s}
 .nav-cta-secondary:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .nav-cta-group{display:flex;align-items:center;gap:8px;opacity:1;pointer-events:auto;transition:opacity .7s ease}
+.nav-mobile-group,.nav-mobile-group.visible{display:none!important}
 .nav-cta-mobile{display:none;font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:#fff;padding:13px 20px;min-height:44px;border-radius:100px;transition:background .2s}
-.nav-mobile-group{display:flex;align-items:center;gap:8px;opacity:1;pointer-events:auto;transition:opacity .7s ease}
+.nav-mobile-group{display:none;align-items:center;gap:8px;opacity:1;pointer-events:auto;transition:opacity .7s ease}
 .nav-mobile-group.visible{opacity:1;pointer-events:auto}
-.nav-mobile-group.visible .nav-cta-mobile{display:flex!important;opacity:1;pointer-events:auto}
 .nav-cta-mobile-secondary{background:transparent!important;color:var(--ink)!important;border:1.5px solid rgba(13,12,10,.2);padding:11px 16px!important}
 .nav-cta-mobile-secondary:hover{border-color:var(--ink)}
 .nav-cta-mobile:hover{background:#d93e22}
@@ -206,7 +206,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   nav{padding:16px 24px;background:rgba(242,240,236,.92)!important;backdrop-filter:blur(12px)!important}
   .nav-cta,.nav-cta-secondary,.nav-cta-group{display:none}
   .nav-cta-mobile{display:flex!important;align-items:center;gap:6px}
-  .nav-mobile-group{display:flex;opacity:1;pointer-events:auto}
+  .nav-mobile-group{display:flex!important;opacity:1;pointer-events:auto}
   .hero-about{display:flex;flex-direction:column}
   .hero-left{padding:80px 24px 40px;order:1}
   body{cursor:auto}
