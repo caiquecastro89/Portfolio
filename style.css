@@ -107,16 +107,16 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 
 /* CONTACT */
 .ct-sec{padding:72px calc(48px + max(0px, (100vw - 1366px) / 2)) 80px;background:var(--ink)}
-.ct-big{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--white);margin-bottom:48px}
-.ct-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:48px}
-.ct-card{display:flex;align-items:center;justify-content:space-between;padding:44px 36px;border-radius:16px;background:rgba(250,250,248,.06);text-decoration:none;color:var(--white);cursor:pointer;transition:background .25s,transform .2s}
-.ct-card:hover{background:rgba(250,250,248,.12);transform:translateY(-3px)}
-.ct-card-accent{background:var(--accent)!important}
-.ct-card-accent:hover{background:#d93e22!important}
-.ct-card-label{font-family:var(--display);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;letter-spacing:-.02em}
-.ct-card-arrow{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(250,250,248,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s}
-.ct-card:hover .ct-card-arrow{border-color:rgba(250,250,248,.6)}
-.ct-card-accent .ct-card-arrow{border-color:rgba(255,255,255,.4)}
+.ct-big{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--white);margin-bottom:48px;text-align:center}
+.ct-cards{display:flex;gap:12px;margin-top:48px;justify-content:center;flex-wrap:wrap}
+.ct-card{display:inline-flex;align-items:center;gap:8px;padding:16px 28px;border-radius:100px;background:rgba(250,250,248,.08);border:1px solid rgba(250,250,248,.15);text-decoration:none;color:var(--white);cursor:pointer;transition:background .25s,transform .2s;font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.ct-card:hover{background:rgba(250,250,248,.15);transform:translateY(-2px)}
+.ct-card-accent{background:var(--accent)!important;border-color:var(--accent)!important}
+.ct-card-accent:hover{background:#d93e22!important;border-color:#d93e22!important}
+.ct-card-label{font-size:.75rem;font-weight:500;letter-spacing:.06em}
+.ct-card-arrow{font-size:.9rem;flex-shrink:0}
+
+
 footer{background:var(--ink);border-top:1px solid rgba(250,250,248,.05);padding:18px calc(48px + max(0px, (100vw - 1366px) / 2));display:flex;align-items:center;justify-content:space-between}
 footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,250,248,.18)}
 
