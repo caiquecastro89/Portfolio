@@ -62,10 +62,7 @@ function initCardVideo(cardId, imgId){
   if(!video) return;
   var loaded = false;
   card.addEventListener('mouseenter', function(){
-    if(!loaded){
-      video.load();
-      loaded = true;
-    }
+    if(!loaded){ video.load(); loaded = true; }
     imgWrap.classList.add('playing');
     video.play().catch(function(){});
   });
@@ -79,8 +76,7 @@ function initCardVideo(cardId, imgId){
 // Summary card toggle
 document.querySelectorAll('.csummary-toggle').forEach(function(btn){
   btn.addEventListener('click', function(){
-    var card = btn.closest('.csummary');
-    card.classList.toggle('open');
+    btn.closest('.csummary').classList.toggle('open');
   });
 });
 
@@ -89,22 +85,16 @@ function initAllVideos(){
   initCardVideo('wi-ion', 'wi-img-ion');
   initCardVideo('wi-ids', 'wi-img-ids');
   initCardVideo('wi-rite', 'wi-img-rite');
-  initCardVideo('cnxt-ids-rite', 'wi-img-cnxt-ids-rite');
-  initCardVideo('cnxt-rite-ion', 'wi-img-cnxt-rite-ion');
-  initCardVideo('cnxt-ids-card', 'wi-img-cnxt-ids');
+  initCardVideo('wi-cap', 'wi-img-cap');
 }
 
-// Schedule rev after hero animations finish (~1s)
 function scheduleRev(){
   setTimeout(rev, 1000);
   setTimeout(rev, 1500);
 }
 
 if(document.readyState === 'loading'){
-  document.addEventListener('DOMContentLoaded', function(){
-    initAllVideos();
-    scheduleRev();
-  });
+  document.addEventListener('DOMContentLoaded', function(){ initAllVideos(); scheduleRev(); });
 } else {
   initAllVideos();
   scheduleRev();
