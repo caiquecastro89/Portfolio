@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="canonical" href="https://caique-castro.com/cap"/>
 <title>One product, two categories · Caique Castro</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/fonts/HankenGrotesk-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css"/>
 </head>
 <body data-page="cap">
@@ -66,17 +64,14 @@
     <div class="csec" data-section="context">
       <div class="cslbl">Context</div>
       <h2 class="csh2" data-track="cap-context">The product changed. The banker's routine couldn't.</h2>
-      <p class="cp">Itaú already had a capitalization journey in its internal platform, used daily by relationship bankers to serve clients face-to-face. In this flow, the banker presents the product, selects a value tier, and completes the contract. It’s a familiar and well-established process. The product had a single tier, which made it straightforward to explain and easy to sell.</p>
-      <p class="cp">This changed when Itaú restructured the offering. The single tier was replaced by two products with distinct profiles and value propositions: PIC Mais Sorteios and PIC Milionários. This shift needed to be communicated clearly, without creating anxiety. Bankers already understood the previous product, so they now had to quickly grasp what changed, what stayed the same, and how to position two options to clients. At the same time, the new journey couldn’t add complexity to a flow that needs to remain fast.</p>
+      <p class="cp">Itaú already had a capitalization journey in its internal platform, used daily by relationship bankers to serve clients face-to-face. In this flow, the banker presents the product, selects a value tier, and completes the contract. It's a familiar and well-established process. The product had a single tier, which made it straightforward to explain and easy to sell.</p>
+      <p class="cp">This changed when Itaú restructured the offering. The single tier was replaced by two products with distinct profiles and value propositions: PIC Mais Sorteios and PIC Milionários. This shift needed to be communicated clearly, without creating anxiety. Bankers already understood the previous product, so they now had to quickly grasp what changed, what stayed the same, and how to position two options to clients. At the same time, the new journey couldn't add complexity to a flow that needs to remain fast.</p>
       <p class="cp">The context made this even more critical. Bankers operate face-to-face, often under time pressure, and capitalization is just one of many products they offer. The faster the flow, the more opportunities they have throughout the day. Any friction, such as extra steps, unclear information, or poorly placed actions, directly affects both productivity and the client experience.</p>
       <p class="cp">This led to a central question: how do you communicate a product change without making the process feel more complex?</p>
-      <p class="cp">My role was to lead the design of this journey end to end, from planning and alignment with Business and Technology to prototyping, iteration, usability testing with real bankers, and validation through Itaú’s experience quality checklist.</p>
+      <p class="cp">My role was to lead the design of this journey end to end, from planning and alignment with Business and Technology to prototyping, iteration, usability testing with real bankers, and validation through Itaú's experience quality checklist.</p>
     </div>
 
-
-
-
- <div class="csec rv" data-section="planning">
+    <div class="csec rv" data-section="planning">
       <div class="cslbl">Planning</div>
       <h2 class="csh2">Three weeks, four stages.</h2>
       <p class="cp">With roughly a month to deliver a validated prototype and complete the handoff for development, I started by defining a clear roadmap with well-established entry criteria. Before designing any screen, I needed the business rules for each product to be formalized, co-creation sessions aligned with Business, BT, and Technology, and full access to iDS, Itaú's design system, secured from day one.</p>
@@ -88,28 +83,24 @@
       </div>
     </div>
 
-
-
- <div class="csec rv" data-section="cocreation">
+    <div class="csec rv" data-section="cocreation">
       <div class="cslbl">Co-creation</div>
       <h2 class="csh2">A co-creation that happened in the chat.</h2>
-      <p class="cp">With a tight deadline, the co-creation didn’t follow the traditional format of in-person workshops. Instead, it unfolded asynchronously on Microsoft Teams, where we explored solution paths, defined argument differentiation for each product, and shaped the presentation logic directly in the chat. Screenshots, sketches, and references were shared in real time, allowing decisions to move forward without blocking on meetings.</p>
+      <p class="cp">With a tight deadline, the co-creation didn't follow the traditional format of in-person workshops. Instead, it unfolded asynchronously on Microsoft Teams, where we explored solution paths, defined argument differentiation for each product, and shaped the presentation logic directly in the chat. Screenshots, sketches, and references were shared in real time, allowing decisions to move forward without blocking on meetings.</p>
     </div>
     <div class="cimg rv"><img src="../images/cap-cocriacao.png" alt="Async co-creation on Microsoft Teams"><p class="ccap">Async co-creation on Microsoft Teams — decisions moved forward without blocking on meetings</p></div>
 
     <div class="csec rv">
-      <p class="cp">Despite the unconventional format, the Business team’s engagement generated insights that directly influenced the final design decisions. The most relevant definitions from this stage were:</p>
+      <p class="cp">Despite the unconventional format, the Business team's engagement generated insights that directly influenced the final design decisions. The most relevant definitions from this stage were:</p>
       <p class="cp">Each product has a distinct core argument. PIC Mais Sorteios should emphasize volume and frequency, highlighting 700 weekly draws as its main hook. PIC Milionários should focus on prize size, leading with up to R$ 2.1 million every month as the dominant element. This distinction in narrative needed to be clear from the very first screen the banker interacts with.</p>
     </div>
+    <div class="cimg rv"><img src="../images/cap-argumentos.png" alt="Product argument differentiation"><p class="ccap">Product argument differentiation: Mais Sorteios leads with volume and frequency, Milionários with prize size</p></div>
 
- <div class="cimg rv"><img src="../images/cap-argumentos.png" alt="Product argument differentiation"><p class="ccap">Product argument differentiation: Mais Sorteios leads with volume and frequency, Milionários with prize size</p></div>
-    
     <div class="csec rv">
-      <p class="cp">The change shouldn’t feel like a disruption. Bankers already understand how the capitalization product works, so the new journey needed to reinforce what remained the same, such as saving money, participating in draws, and receiving the full amount back at the end, before introducing what had changed.</p>
+      <p class="cp">The change shouldn't feel like a disruption. Bankers already understand how the capitalization product works, so the new journey needed to reinforce what remained the same, such as saving money, participating in draws, and receiving the full amount back at the end, before introducing what had changed.</p>
     </div>
 
-
-<div class="csec rv" data-section="design">
+    <div class="csec rv" data-section="design">
       <div class="cslbl">Design decisions</div>
       <h2 class="csh2">From hypothesis to tested solution.</h2>
       <p class="cp">With the business direction defined, I built on top of the existing journey instead of starting from scratch. I introduced targeted adjustments to create quick, testable versions. The goal was to give the team something concrete to react to, not a final solution.</p>
@@ -124,7 +115,6 @@
     <div class="csec rv">
       <p class="cp">Both directions were tested. The single-page layout was selected for being more practical, with all information and actions accessible without interruption. The modal was discarded due to added friction and misalignment with the platform's technical direction. A variation with CTAs inside the modal was also ruled out, as it introduced decisions before bankers fully understood the products.</p>
     </div>
-
     <div class="cimg rv">
       <video src="../images/cap-modal-exemplo.mp4" autoplay muted loop playsinline preload="none" style="width:100%;display:block;border-radius:12px"></video>
       <p class="ccap">Modal direction: introduced the new products before the flow — discarded due to added friction</p>
@@ -147,9 +137,7 @@
     </div>
     <div class="cimg rv"><img src="../images/cap-ilustracoes.png" alt="Illustration concept"><p class="ccap">Illustration concept: visuals scale with each product, making differences intuitive at a glance</p></div>
 
-
-
- <div class="csec rv" data-section="testing">
+    <div class="csec rv" data-section="testing">
       <div class="cslbl">Usability testing</div>
       <h2 class="csh2" data-track="cap-testing">What the bankers told me.</h2>
       <p class="cp">I conducted four moderated remote usability tests with Itaú relationship bankers, all familiar with the capitalization product. Each session lasted around 30 minutes and followed a structured script covering layout preference (single-page vs. modal), understanding of the tiers, clarity of the offer cards, and perception of the illustrations.</p>
@@ -162,21 +150,17 @@
         <div class="csc"><div class="csn" style="color:var(--accent)">5/5</div><div class="csd">Confidence rating across all participants</div></div>
         <div class="csc"><div class="csn" style="color:var(--accent)">4/4</div><div class="csd">Understood the products independently</div></div>
       </div>
-
-
- <h2 class="csh2" style="margin-top:48px">Key findings</h2>
-<ul class="cul"> 
-  <li><strong>Clear differentiation between products.</strong> All bankers were able to distinguish between Mais Sorteios and Milionários without any guidance and correctly matched each one to the appropriate client profile.</li> 
-  <li><strong>"Only R$ X per day" stood out immediately.</strong>This was the most praised element across sessions. Bankers reacted spontaneously and mentioned they already use this argument in practice. Making it visible on screen proved effective.</li> 
-  <li><strong>Single-page confirmed as the most practical solution.</strong>Even those who initially preferred the modal recognized the advantage of having all information and the action in one place, with no intermediate steps.</li> 
-</ul>
-
+      <h2 class="csh2" style="margin-top:48px">Key findings</h2>
+      <ul class="cul">
+        <li><strong>Clear differentiation between products.</strong> All bankers were able to distinguish between Mais Sorteios and Milionários without any guidance and correctly matched each one to the appropriate client profile.</li>
+        <li><strong>"Only R$ X per day" stood out immediately.</strong> This was the most praised element across sessions. Bankers reacted spontaneously and mentioned they already use this argument in practice. Making it visible on screen proved effective.</li>
+        <li><strong>Single-page confirmed as the most practical solution.</strong> Even those who initially preferred the modal recognized the advantage of having all information and the action in one place, with no intermediate steps.</li>
+      </ul>
       <div class="ccall"><p>"Before, it was unclear if the 4 million was weekly, monthly, or yearly. Now it's much more informative." <strong>— Viviam, Relationship Banker, Digital Branch</strong></p></div>
       <div class="ccall" style="margin-top:16px"><p>"For me, it's a 5. Every second we save is another opportunity to do business." <strong>— Suellen, Relationship Banker, Digital Branch</strong></p></div>
     </div>
 
-
- <div class="csec rv" data-section="quality">
+    <div class="csec rv" data-section="quality">
       <div class="cslbl">Experience quality</div>
       <h2 class="csh2">Itaú's journey quality checklist.</h2>
       <p class="cp">Before any delivery goes into production at Itaú, it goes through an experience quality checklist. This is a multidisciplinary review where Design, Business, and Technology evaluate the journey against a set of criteria based on experience pillars, rating each one as compliant, partially compliant, or non-compliant.</p>
@@ -184,37 +168,33 @@
     </div>
     <div class="cimg rv"><img src="../images/cap-checklist.png" alt="Experience quality checklist"><p class="ccap">Experience quality checklist: fully compliant across all criteria</p></div>
 
-
- <div class="csec rv" data-section="outcome">
+    <div class="csec rv" data-section="outcome">
       <div class="cslbl">Outcome</div>
       <h2 class="csh2" data-track="cap-outcome">What I delivered and what it left behind.</h2>
       <p class="cp">At the end of the cycle, I delivered a validated prototype covering the full contracting flow for both products, from the explanatory entry point to the development handoff, with all behavior specs, states, and business rules documented in Figma.</p>
     </div>
-
-        <div class="cimg rv"><img src="../images/cap-handoff.png" alt="Development handoff"><p class="ccap">Development handoff: behavior specs, component states, and business rules documented in Figma</p>
-        </div>
-      <div>
+    <div class="cimg rv"><img src="../images/cap-handoff.png" alt="Development handoff"><p class="ccap">Development handoff: behavior specs, component states, and business rules documented in Figma</p></div>
+    <div class="csec rv">
       <p class="cp">Testing confirmed the approach worked. Every banker understood the difference between the products independently, mapped each one to the right client profile, and gave maximum confidence to use the flow with a real client.</p>
       <p class="cp">Launch is scheduled for July 2026, starting with a pilot in selected branches before scaling across the network.</p>
-      </div>
+    </div>
 
-
-<div class="csec rv" data-section="Insights">
+    <div class="csec rv" data-section="insights">
       <div class="cslbl">Insights</div>
-      <h2 class="csh2" data-track="cap-outcome">What I would bring to the next project</h2>
-      <p class="cp">What this project reinforced is that good design under constraints is about focus. It’s about solving the right problem in the best possible way within the time available, not trying to reinvent everything.</p>
-      <p class="cp">As a senior designer, the role is to be pragmatic. You don’t have all the answers, so you bring in the people who do. Design, Business, and Technology each see the product from a different angle, and the best solutions come from combining those perspectives, not from working in isolation.</p>
-      <p class="cp">It also means being objective in decision-making. If something doesn’t work, you move on. If it works, you double down. The goal is not perfection, it’s reaching the best possible outcome with the time and context you have.</p>
+      <h2 class="csh2">What I would bring to the next project</h2>
+      <p class="cp">What this project reinforced is that good design under constraints is about focus. It's about solving the right problem in the best possible way within the time available, not trying to reinvent everything.</p>
+      <p class="cp">As a senior designer, the role is to be pragmatic. You don't have all the answers, so you bring in the people who do. Design, Business, and Technology each see the product from a different angle, and the best solutions come from combining those perspectives, not from working in isolation.</p>
+      <p class="cp">It also means being objective in decision-making. If something doesn't work, you move on. If it works, you double down. The goal is not perfection, it's reaching the best possible outcome with the time and context you have.</p>
     </div>
 
     <div class="cdiv"></div>
   </div>
 
-    <div class="cnxt-new">
+  <div class="cnxt-new">
     <span class="cnxt-lbl">Next case</span>
     <a class="cnxt-card rv" href="/ion">
       <div class="cnxt-card-img">
-        <img src="../images/ion-cover.png" alt="íon Itaú Web Platform">
+        <img src="../images/ion-cover.png" width="1920" height="1080" alt="íon Itaú Web Platform">
       </div>
       <div class="cnxt-card-body">
         <div class="cnxt-card-tag">Product Design · Accessibility · Data Driven</div>
@@ -224,6 +204,7 @@
       <div class="cnxt-card-arrow">→</div>
     </a>
   </div>
+
   <section class="ct-sec" id="contact">
     <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
@@ -239,13 +220,6 @@
   </section>
   <footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, Brazil</span></footer>
 </div>
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-758C94BVM2');
-</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-758C94BVM2"></script>
 <script>
@@ -263,8 +237,7 @@
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
+<script data-host="https://app.microanalytics.io" data-dnt="false" src="https://app.microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 <script src="../script.js"></script>
-</body>
-</html>
 </body>
 </html>

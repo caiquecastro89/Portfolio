@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="canonical" href="https://caique-castro.com/ids"/>
 <title>Fixing Itaú's Design System · Caique Castro</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/fonts/HankenGrotesk-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css"/>
 </head>
 <body data-page="ids">
@@ -21,7 +19,6 @@
   </div>
 </nav>
 <div class="page" id="page-ids">
-
   <div class="ch">
     <div class="ch-bg" style="display:none"></div>
     <div class="ch-glow" style="background:radial-gradient(circle,#F97300,transparent)"></div>
@@ -69,7 +66,7 @@
       <p class="cp">One of the first steps in the project was a general alignment among the nearly 20 professionals involved. After initial introductions, we conducted a detailed assessment based on the client's briefings, establishing a clear understanding of the project scope and execution timeline for each area. Our primary responsibility was to systematically review over 60 designated components, analyzing them in detail, identifying inconsistencies, and implementing the necessary corrections.</p>
       <p class="cp">To ensure alignment on what aspects of each component we would evaluate and how far our revisions would extend, we developed initial sketches and diagrams in FigJam. These artifacts helped define our workflow and delineate the responsibility structure within the team. The workstream framework and accountability map became foundational elements guiding our approach throughout the project.</p>
     </div>
-    <div class="cimg rv"><img src="../images/ids-estrategia.png" alt="Strategy and planning — FigJam workflow diagram"><p class="ccap">Workflow diagram and accountability map developed in FigJam, the foundational elements guiding our approach throughout the project</p></div>
+    <div class="cimg rv"><img src="../images/ids-estrategia.png" alt="Strategy and planning"><p class="ccap">Workflow diagram and accountability map developed in FigJam, the foundational elements guiding our approach throughout the project</p></div>
 
     <div class="csec rv">
       <div class="cslbl">Component analysis</div>
@@ -158,9 +155,7 @@
   <div class="cnxt-new">
     <span class="cnxt-lbl">Next case</span>
     <a class="cnxt-card rv" href="/rite">
-      <div class="cnxt-card-img">
-        <img src="../images/rite-cover.png" alt="RITE Method">
-      </div>
+      <div class="cnxt-card-img"><img src="../images/rite-cover.png" width="1920" height="1080" alt="RITE Method"></div>
       <div class="cnxt-card-body">
         <div class="cnxt-card-tag">UX Research · Usability Testing · Prototyping</div>
         <div class="cnxt-card-title">No budget, plenty of bureaucracy: how I built a testing process from scratch</div>
@@ -173,12 +168,10 @@
     <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
     <div class="ct-cards rv">
       <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="ct-card">
-        <span class="ct-card-label">LinkedIn</span>
-        <span class="ct-card-arrow">→</span>
+        <span class="ct-card-label">LinkedIn</span><span class="ct-card-arrow">→</span>
       </a>
       <a href="mailto:caique.castro89@gmail.com" class="ct-card ct-card-accent">
-        <span class="ct-card-label">Get in touch</span>
-        <span class="ct-card-arrow">→</span>
+        <span class="ct-card-label">Get in touch</span><span class="ct-card-arrow">→</span>
       </a>
     </div>
   </section>
@@ -201,6 +194,7 @@
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
+<script data-host="https://app.microanalytics.io" data-dnt="false" src="https://app.microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 <script src="../script.js"></script>
 </body>
 </html>
