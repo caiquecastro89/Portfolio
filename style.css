@@ -92,7 +92,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .wi-img.playing video{opacity:1}
 
 /* SERVICES */
-.services-sec{padding:96px calc(48px + max(0px,(100vw - 1366px)/2));background:var(--bg);margin-top:0}
+.services-sec{padding:96px calc(48px + max(0px,(100vw - 1366px)/2)) 0;background:var(--bg);margin-top:0}
 .svc-header{margin-bottom:72px}
 .svc-eyebrow{font-family:var(--mono);font-size:.6rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin-bottom:20px}
 .svc-headline{font-family:var(--display);font-size:clamp(1.1rem,1.8vw,1.6rem);font-weight:700;line-height:1.5;letter-spacing:-.01em;color:var(--ink);max-width:none}
@@ -106,7 +106,7 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 .svc-tag{font-family:var(--mono);font-size:.75rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(13,12,10,.15);padding:6px 14px;border-radius:100px;color:var(--mid)}
 
 /* SKILLS */
-.sk-sec{padding:96px calc(48px + max(0px,(100vw - 1366px)/2));background:var(--bg)}
+.sk-sec{padding:96px calc(48px + max(0px,(100vw - 1366px)/2)) 0;background:var(--bg)}
 .sk-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
 .sk-sec .eyebrow{color:var(--mid)}
 .sk{font-family:var(--display);font-size:clamp(.88rem,1.4vw,1.15rem);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;padding:11px 22px;border:1.5px solid rgba(13,12,10,.15);border-radius:100px;transition:all .22s;color:var(--ink)}
@@ -212,7 +212,7 @@ footer span{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-tr
   .hero-left{padding:120px 24px 0;order:1}
   body{cursor:auto}
   .work-sec{padding-top:64px!important;padding-bottom:0!important}
-  .work-sec,.services-sec,.sk-sec,.ct-sec{padding-left:24px;padding-right:24px;padding-top:64px;padding-bottom:64px}
+  .work-sec,.services-sec,.sk-sec{padding-left:24px;padding-right:24px;padding-top:64px;padding-bottom:0}.ct-sec{padding-left:24px;padding-right:24px;padding-top:64px;padding-bottom:64px}
   .wtr{margin-bottom:20px!important;padding-left:0!important;padding-right:0!important}
   .work-sec .eyebrow{padding-left:0!important;padding-right:0!important}
   .wi{display:block!important;min-height:auto!important;padding:24px 0!important}
