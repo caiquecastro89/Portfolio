@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="canonical" href="https://caique-castro.com"/>
 <title>Caique Castro · Product Designer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/fonts/HankenGrotesk-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./style.css"/>
 </head>
 <body data-page="home">
@@ -29,7 +27,7 @@
       <div class="hero-badge"><span class="dot"></span>Open to new opportunities</div>
       <p class="hero-impact">Hi, I'm Caique</p>
       <p class="hero-desc">I'm a Senior Product Designer based in São Paulo, with 13 years of experience in design field and, between that, 7 years as a Product Designer. Currently at NTT Data, collaborating with Itaú, Latin America's largest bank. My work spans UX, UI Design, digital accessibility, design systems, AI, storytelling and much more. Here you'll find some of the projects I'm most proud of.</p>
-      </div>
+    </div>
   </section>
 
   <!-- Work -->
@@ -38,7 +36,7 @@
     <div class="wtr rv"><h2 class="wtitle">Recent work</h2><span class="wcnt">(4 projects)</span></div>
     <div class="wlist">
 
-<div class="wi rv" id="wi-cap" onclick="window.location.href='/cap'">
+      <div class="wi rv" id="wi-cap" onclick="window.location.href='/cap'">
         <div class="wi-left">
           <div class="wtags"><span class="wtag">Product Design</span><span class="wtag">·</span><span class="wtag">Usability Testing</span><span class="wtag">·</span><span class="wtag">Prototyping</span></div>
           <div class="wname">How I redesigned Itaú's capitalization journey without disrupting the banker's routine</div>
@@ -47,18 +45,15 @@
         <div class="wi-img-wrap">
           <div class="wi-glow" style="background:radial-gradient(circle,#FF4D2E,transparent)"></div>
           <div class="wi-img" id="wi-img-cap">
-            <img src="images/cap-default.png" alt="Capitalization Journey">
-            <video src="images/cap-hover.mp4" muted loop playsinline preload="none"></video>
+            <img src="images/cap-default.png" width="1920" height="1080" alt="Capitalization Journey">
+            <video src="images/cap-hover.mp4" muted loop playsinline preload="metadata"></video>
           </div>
         </div>
-        <div class="wi-right">
-          <div class="wi-access">
-            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          </div>
-        </div>
+        <div class="wi-right"><div class="wi-access"><div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
       </div>
 
-      
+    
+
       <div class="wi rv" id="wi-ion" onclick="window.location.href='/ion'">
         <div class="wi-left">
           <div class="wtags"><span class="wtag">Product Design</span><span class="wtag">·</span><span class="wtag">Accessibility</span><span class="wtag">·</span><span class="wtag">Data Driven</span></div>
@@ -68,15 +63,11 @@
         <div class="wi-img-wrap">
           <div class="wi-glow" style="background:radial-gradient(circle,#41A641,transparent)"></div>
           <div class="wi-img" id="wi-img-ion">
-            <img src="images/ion-cover.png" onerror="this.src='images/ion-home.png'" alt="íon Itaú Web Platform">
-            <video src="images/ion-hover.mp4" muted loop playsinline preload="none"></video>
+            <img src="images/ion-cover.png" width="1920" height="1080" onerror="this.src='images/ion-home.png'" alt="íon Itaú Web Platform">
+            <video src="images/ion-hover.mp4" muted loop playsinline preload="metadata"></video>
           </div>
         </div>
-        <div class="wi-right">
-          <div class="wi-access">
-            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          </div>
-        </div>
+        <div class="wi-right"><div class="wi-access"><div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
       </div>
 
       <div class="wi rv" id="wi-ids" onclick="window.location.href='/ids'">
@@ -88,15 +79,11 @@
         <div class="wi-img-wrap">
           <div class="wi-glow" style="background:radial-gradient(circle,#F97300,transparent)"></div>
           <div class="wi-img" id="wi-img-ids">
-            <img src="images/ids-cover.png" onerror="this.src='images/ids-analise1.png'" alt="Itaú Design System">
-            <video src="images/ids-hover.mp4" muted loop playsinline preload="none"></video>
+            <img src="images/ids-cover.png" width="1920" height="1080" onerror="this.src='images/ids-analise1.png'" alt="Itaú Design System">
+            <video src="images/ids-hover.mp4" muted loop playsinline preload="metadata"></video>
           </div>
         </div>
-        <div class="wi-right">
-          <div class="wi-access">
-            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          </div>
-        </div>
+        <div class="wi-right"><div class="wi-access"><div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
       </div>
 
       <div class="wi rv" id="wi-rite" onclick="window.location.href='/rite'">
@@ -108,18 +95,13 @@
         <div class="wi-img-wrap">
           <div class="wi-glow" style="background:radial-gradient(circle,#C6D167,transparent)"></div>
           <div class="wi-img" id="wi-img-rite">
-            <img src="images/rite-cover.png" onerror="this.src='images/rite-case-1.png'" alt="RITE Method">
-            <video src="images/rite-hover.mp4" muted loop playsinline preload="none"></video>
+            <img src="images/rite-cover.png" width="1920" height="1080" onerror="this.src='images/rite-case-1.png'" alt="RITE Method">
+            <video src="images/rite-hover.mp4" muted loop playsinline preload="metadata"></video>
           </div>
         </div>
-        <div class="wi-right">
-          <div class="wi-access">
-            <div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          </div>
-        </div>
+        <div class="wi-right"><div class="wi-access"><div class="warr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
       </div>
 
-     
     </div>
   </section>
 
@@ -127,7 +109,7 @@
   <section class="services-sec" id="services">
     <div class="svc-header rv">
       <p class="svc-eyebrow" style="display:flex;align-items:center;gap:14px"><span style="color:var(--accent);font-family:var(--mono)">02</span>About</p>
-      <h2 class="svc-headline">I've spent the last years designing large-scale experiences for Itaú Unibanco, the largest bank in Latin America, across a diverse range of segments: automotive, investments, design systems, artificial intelligence, free energy market, and insurance. My work has impacted millions of users, focusing on UX, digital accessibility, and design systems that are consistent, inclusive, and high-performance. Evolving with every project, my process combines product design, user research, and human centered design to deliver clarity and business impact.<br><span class="gr">I design for people.</span></h2>
+      <h2 class="svc-headline">I've spent the last years designing large-scale experiences for Itaú Unibanco, the largest bank in Latin America, across a diverse range of segments: automotive, investments, design systems, artificial intelligence, free energy market, and insurance. My work has impacted millions of users, focusing on UX, digital accessibility, and design systems that are consistent, inclusive, and high-performance. Evolving with every project, my process combines product design, user research, and human centered design to deliver clarity and business impact. <span class="red">I design for people.</span></h2>
     </div>
     <div class="svc-list">
       <div class="svc-item rv">
@@ -166,7 +148,7 @@
 
   <!-- Contact -->
   <section class="ct-sec" id="contact">
-    <h2 class="ct-big rv">Let's create the future <span class="gr">together.</span></h2>
+    <h2 class="ct-big rv">Let's create the future <span class="red">together.</span></h2>
     <div class="ct-cards rv">
       <a href="https://www.linkedin.com/in/caique-castro89/" target="_blank" class="ct-card">
         <span class="ct-card-label">LinkedIn</span>
@@ -180,7 +162,6 @@
   </section>
   <footer><span>© 2026 · Caique Castro, Product Designer</span><span>São Paulo, Brazil</span></footer>
 </div>
-<script data-host="https://app.microanalytics.io" data-dnt="false" src="https://app.microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-758C94BVM2"></script>
 <script>
@@ -198,6 +179,7 @@
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
+<script data-host="https://app.microanalytics.io" data-dnt="false" src="https://app.microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 <script src="./script.js"></script>
 </body>
 </html>

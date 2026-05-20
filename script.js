@@ -1,5 +1,3 @@
-// Cursor removed - using system default cursor
-
 // Detect if we are on a case page
 var isCase = document.body.dataset.page && document.body.dataset.page !== 'home';
 
@@ -7,24 +5,17 @@ var isCase = document.body.dataset.page && document.body.dataset.page !== 'home'
 window.addEventListener('scroll', function(){
   var y = window.scrollY;
   document.getElementById('nav').classList.toggle('sc', y > 20);
-  var mobileGrp = document.getElementById('navMobileGroup');
   var desktopGrp = document.getElementById('navDesktopGroup');
-  if(isCase){
-    if(mobileGrp) mobileGrp.classList.add('visible');
-    if(desktopGrp) desktopGrp.classList.add('visible');
-  } else {
+  if(!isCase && desktopGrp){
     var threshold = window.innerHeight * 0.75;
-    if(mobileGrp) mobileGrp.classList.toggle('visible', y > threshold);
-    if(desktopGrp) desktopGrp.classList.toggle('visible', y > threshold);
+    desktopGrp.classList.toggle('visible', y > threshold);
   }
 });
 
 // On case pages, show nav CTAs immediately
 if(isCase){
   document.addEventListener('DOMContentLoaded', function(){
-    var mobileGrp = document.getElementById('navMobileGroup');
     var desktopGrp = document.getElementById('navDesktopGroup');
-    if(mobileGrp) mobileGrp.classList.add('visible');
     if(desktopGrp) desktopGrp.classList.add('visible');
   });
 }
@@ -32,7 +23,7 @@ if(isCase){
 // Scroll to section
 function gt(id){
   var el = document.getElementById(id);
-  if(el) el.scrollIntoView({behavior: 'smooth'});
+  if(el) el.scrollIntoView({behavior:'smooth'});
 }
 
 // Reveal animations using IntersectionObserver
@@ -53,17 +44,28 @@ function rev(){
   });
 }
 
-// Video hover on cards
+// Video hover on cards — preload video when card enters viewport
 function initCardVideo(cardId, imgId){
   var card = document.getElementById(cardId);
   var imgWrap = document.getElementById(imgId);
   if(!card || !imgWrap) return;
   var video = imgWrap.querySelector('video');
   if(!video) return;
-  var loaded = false;
+  var ready = false;
+
+  // Preload video when card becomes visible
+  var preloadObs = new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting && !ready){
+      video.load();
+      ready = true;
+      preloadObs.disconnect();
+    }
+  }, {rootMargin:'200px'});
+  preloadObs.observe(card);
+
   card.addEventListener('mouseenter', function(){
-    if(!loaded){ video.load(); loaded = true; }
     imgWrap.classList.add('playing');
+    if(!ready){ video.load(); ready = true; }
     video.play().catch(function(){});
   });
   card.addEventListener('mouseleave', function(){
@@ -82,15 +84,15 @@ document.querySelectorAll('.csummary-toggle').forEach(function(btn){
 
 function initAllVideos(){
   if(window.innerWidth <= 900) return;
-  initCardVideo('wi-ion', 'wi-img-ion');
-  initCardVideo('wi-ids', 'wi-img-ids');
-  initCardVideo('wi-rite', 'wi-img-rite');
-  initCardVideo('wi-cap', 'wi-img-cap');
+  initCardVideo('wi-cap','wi-img-cap');
+  initCardVideo('wi-ion','wi-img-ion');
+  initCardVideo('wi-ids','wi-img-ids');
+  initCardVideo('wi-rite','wi-img-rite');
 }
 
 function scheduleRev(){
-  setTimeout(rev, 1000);
-  setTimeout(rev, 1500);
+  setTimeout(rev, 100);
+  setTimeout(rev, 400);
 }
 
 if(document.readyState === 'loading'){
