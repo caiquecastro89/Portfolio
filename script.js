@@ -91,8 +91,8 @@ function initAllVideos(){
 }
 
 function scheduleRev(){
-  setTimeout(rev, 1000);
-  setTimeout(rev, 1500);
+  setTimeout(rev, 100);
+  setTimeout(rev, 400);
 }
 
 if(document.readyState === 'loading'){
