@@ -44,17 +44,28 @@ function rev(){
   });
 }
 
-// Video hover on cards
+// Video hover on cards — preload video when card enters viewport
 function initCardVideo(cardId, imgId){
   var card = document.getElementById(cardId);
   var imgWrap = document.getElementById(imgId);
   if(!card || !imgWrap) return;
   var video = imgWrap.querySelector('video');
   if(!video) return;
-  var loaded = false;
+  var ready = false;
+
+  // Preload video when card becomes visible
+  var preloadObs = new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting && !ready){
+      video.load();
+      ready = true;
+      preloadObs.disconnect();
+    }
+  }, {rootMargin:'200px'});
+  preloadObs.observe(card);
+
   card.addEventListener('mouseenter', function(){
-    if(!loaded){ video.load(); loaded = true; }
     imgWrap.classList.add('playing');
+    if(!ready){ video.load(); ready = true; }
     video.play().catch(function(){});
   });
   card.addEventListener('mouseleave', function(){
@@ -73,10 +84,10 @@ document.querySelectorAll('.csummary-toggle').forEach(function(btn){
 
 function initAllVideos(){
   if(window.innerWidth <= 900) return;
+  initCardVideo('wi-cap','wi-img-cap');
   initCardVideo('wi-ion','wi-img-ion');
   initCardVideo('wi-ids','wi-img-ids');
   initCardVideo('wi-rite','wi-img-rite');
-  initCardVideo('wi-cap','wi-img-cap');
 }
 
 function scheduleRev(){
