@@ -45,15 +45,15 @@ nav.sc{border-color:rgba(13,12,10,.08);background:rgba(242,240,236,.92);backdrop
 /* HERO */
 .hero-about{min-height:auto;display:grid;grid-template-columns:1fr;position:relative;overflow:visible}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:160px calc(48px + max(0px,(100vw - 1366px)/2)) 0}
-.hero-badge{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);display:inline-flex;align-items:center;gap:10px;margin-bottom:40px;opacity:0;animation:fi .8s .2s forwards;background:var(--pale);padding:8px 16px;border-radius:100px;align-self:flex-start;width:fit-content}
+.hero-badge{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);display:inline-flex;align-items:center;gap:10px;margin-bottom:40px;background:var(--pale);padding:8px 16px;border-radius:100px;align-self:flex-start;width:fit-content}
 .dot{width:6px;height:6px;border-radius:50%;background:#2D8A2D;animation:pu 2s infinite;display:inline-block;flex-shrink:0}
 @keyframes pu{0%,100%{opacity:1}50%{opacity:.2}}
 .red{color:var(--accent)}.gr{color:var(--green)}
-.hero-impact{font-family:var(--display);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;color:var(--ink);line-height:.92;letter-spacing:-.03em;margin-bottom:20px;max-width:none;opacity:0;animation:fi .6s .1s forwards}
-.hero-desc{font-size:1.125rem;font-weight:400;color:var(--mid);max-width:none;line-height:1.75;margin-top:0;opacity:0;animation:fi .6s .2s forwards}
+.hero-impact{font-family:var(--display);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;color:var(--ink);line-height:.92;letter-spacing:-.03em;margin-bottom:20px;max-width:none}
+.hero-desc{font-size:1.125rem;font-weight:400;color:var(--mid);max-width:none;line-height:1.75;margin-top:0}
 .hero-right{display:none!important}
 .hero-overlay{display:none}
-.hero-glow{position:absolute;width:1200px;height:1200px;border-radius:50%;top:-700px;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(255,220,200,.9),transparent);filter:blur(80px);opacity:0;animation:fi .8s .2s forwards;z-index:0;pointer-events:none}
+.hero-glow{position:absolute;width:1200px;height:1200px;border-radius:50%;top:-700px;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(255,220,200,.9),transparent);filter:blur(80px);z-index:0;pointer-events:none}
 
 /* WORK */
 .work-sec{padding:96px 0 0}
